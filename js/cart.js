@@ -158,4 +158,4 @@ async function submitOrderEmail(event) {
   }
 }
 
-document.addEventListener("DOMContentLoaded",renderCart);
+document.addEventListener("DOMContentLoaded",()=>{if(window.NEKO_STORE_READY)renderCart();else window.addEventListener("neko-store-ready",renderCart,{once:true});});

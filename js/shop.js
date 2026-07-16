@@ -25,7 +25,7 @@ function escapeHtml(value) {
 }
 
 function getProduct(id) {
-  return products.find(product => product.id === Number(id) && product.active !== false);
+  return products.find(product => product.id === Number(id));
 }
 
 function firstImage(product) {
@@ -415,7 +415,7 @@ function declineFskAge() {
   hideAgeModal();
   currentCategory = "Alle";
   document.getElementById("age-warning")?.classList.add("hidden");
-  renderProducts(products.filter(product => product.active !== false && product.category !== "FSK 18"));
+  renderProducts(products.filter(product => product.category !== "FSK 18"));
 }
 
 function scrollToShop() {
@@ -451,21 +451,26 @@ function filterProducts(category) {
   }
   document.getElementById("age-warning")?.classList.add("hidden");
   const list = category === "Alle"
-    ? products.filter(product => product.active !== false && product.category !== "FSK 18")
-    : products.filter(product => product.active !== false && product.category === category);
+    ? products.filter(product => product.category !== "FSK 18")
+    : products.filter(product => product.category === category);
   renderProducts(list);
   scrollToShop();
 }
 
 function searchProducts() {
   const query = (document.getElementById("search")?.value || "").toLowerCase().trim();
-  let list = products.filter(product => product.active !== false && (product.category !== "FSK 18" || isFskConfirmed()));
+  let list = products.filter(product => product.category !== "FSK 18" || isFskConfirmed());
   if (currentCategory !== "Alle") list = list.filter(product => product.category === currentCategory);
   if (query) list = list.filter(product => `${product.name} ${product.category} ${product.description}`.toLowerCase().includes(query));
   renderProducts(list);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderProducts(products.filter(product => product.active !== false && product.category !== "FSK 18"));
+function initShopPage() {
+  renderProducts(products.filter(product => product.category !== "FSK 18"));
   renderCart();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.NEKO_STORE_READY) initShopPage();
+  else window.addEventListener("neko-store-ready", initShopPage, { once: true });
 });

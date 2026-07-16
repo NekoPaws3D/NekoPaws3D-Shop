@@ -101,24 +101,3 @@ select{width:100%;background:#111;color:white;border:1px solid #ff2f85;border-ra
 .form-status.success{color:#78e08f}
 .form-status.error{color:#ff6b81}
 button:disabled{opacity:.6;cursor:not-allowed}
-
-/* Adminbereich – bestehender Shopstil bleibt unverändert */
-.admin-body{background:#050505 url("../assets/background.png") center/cover fixed no-repeat}
-.admin-title{font-size:20px;color:#ff2f85}
-.admin-shell{max-width:1500px;margin:0 auto;padding:28px}
-.admin-panel{background:rgba(0,0,0,.9);border:1px solid #ff2f85;border-radius:18px;padding:22px;box-shadow:0 0 25px rgba(255,47,133,.12)}
-.admin-login{max-width:480px;margin:70px auto}
-.admin-toolbar{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:20px;background:rgba(0,0,0,.9);border:1px solid #ff2f85;border-radius:18px;padding:20px}
-.admin-toolbar-actions,.admin-form-actions,.admin-row-actions{display:flex;gap:8px;flex-wrap:wrap}
-.admin-grid{display:grid;grid-template-columns:minmax(330px,480px) 1fr;gap:20px;align-items:start}
-.admin-products-panel{min-width:0}
-.admin-list-head{display:flex;justify-content:space-between;align-items:center;gap:16px}.admin-list-head input{max-width:320px}
-.admin-product-list{display:grid;gap:12px;max-height:75vh;overflow:auto;padding-right:4px}
-.admin-product-row{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:14px;align-items:center;background:#101010;border:1px solid #333;border-radius:14px;padding:12px}
-.admin-product-row.is-inactive{opacity:.58}.admin-product-row img{width:90px;height:90px;object-fit:contain;background:#070707;border-radius:10px}
-.admin-product-info h3{margin:0 0 6px}.admin-product-info p{margin:0 0 5px}.admin-row-actions{justify-content:flex-end;max-width:300px}
-.admin-row-actions button{margin:2px;padding:8px 10px}.admin-check{display:flex;align-items:center;gap:10px;margin:12px 0}.admin-check input{width:auto;margin:0;accent-color:#ff2f85}
-.admin-help{margin-top:20px}.admin-help li{margin:8px 0}.warning-inline{background:#21000f;border:1px solid #ff2f85;border-radius:12px;padding:14px}
-code{background:#181818;color:#ff8fbd;padding:2px 6px;border-radius:5px}
-@media(max-width:1000px){.admin-grid{grid-template-columns:1fr}.admin-product-list{max-height:none}.admin-toolbar{flex-direction:column}}
-@media(max-width:700px){.admin-shell{padding:14px}.admin-product-row{grid-template-columns:70px 1fr}.admin-product-row img{width:70px;height:70px}.admin-row-actions{grid-column:1/-1;justify-content:flex-start}.admin-list-head{flex-direction:column;align-items:stretch}.admin-list-head input{max-width:none}}
