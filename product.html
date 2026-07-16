@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produkt – NekoPaws3D</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="header simple">
+  <a href="index.html" class="back-link">⬅ Zurück zum Shop</a>
+  <button class="icon-btn" onclick="openCart()">🛒 <span id="cart-count">0</span></button>
+</header>
+
+<main id="product-detail" class="product-detail"></main>
+
+
+<div id="age-modal" class="age-modal hidden" role="dialog" aria-modal="true" aria-labelledby="age-title">
+  <div class="age-card">
+    <h2 id="age-title">🔞 Altersbestätigung erforderlich</h2>
+    <p>Der FSK-18-Bereich enthält Inhalte und Produkte, die ausschließlich für Erwachsene bestimmt sind.</p>
+    <p><b>Bitte bestätige ausdrücklich, dass du mindestens 18 Jahre alt bist.</b></p>
+    <label for="age-birthday">Geburtsdatum</label>
+    <input type="date" id="age-birthday" onchange="toggleAgeConfirmButton()" required>
+    <label class="age-check">
+      <input type="checkbox" id="age-confirm-checkbox" onchange="toggleAgeConfirmButton()">
+      Ich bestätige wahrheitsgemäß, dass ich mindestens 18 Jahre alt bin.
+    </label>
+    <div class="age-actions">
+      <button class="main-btn" id="age-confirm-btn" type="button" onclick="confirmFskAge()" disabled>Bestätigen und betreten</button>
+      <button class="outline-btn" type="button" onclick="declineFskAge()">Abbrechen</button>
+    </div>
+    <small class="muted">Die Bestätigung wird lokal in deinem Browser gespeichert und kann jederzeit über die Browserdaten gelöscht werden.</small>
+  </div>
+</div>
+
+<div id="cart" class="cart hidden">
+  <h2>🛒 Warenkorb</h2>
+  <div id="cart-items"></div>
+  <label>Gutscheincode:</label>
+  <div class="coupon-row">
+    <input id="coupon-code" placeholder="Gutscheincode eingeben">
+    <button type="button" class="main-btn" onclick="applyCoupon()">Anwenden</button>
+    <button type="button" class="outline-btn" onclick="clearCoupon()">Löschen</button>
+  </div>
+  <small class="muted">Rabatte sind nur über fest hinterlegte Gutscheincodes möglich.</small>
+
+  <label>Versandart:</label>
+  <select id="shipping-method" onchange="setShippingMethod(this.value)">
+    <option value="hermes">Hermes Versand 4,95 €</option>
+    <option value="dhl">DHL Paket 5,49 €</option>
+  </select>
+
+  <div id="cart-summary"></div>
+  <button class="outline-btn full danger" onclick="clearCart()">Warenkorb leeren</button>
+  <button class="main-btn full" onclick="checkout()">Zur Kasse</button>
+  <button class="outline-btn full" onclick="closeCart()">Schließen</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/email-config.js"></script>
+<script src="js/email-service.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>

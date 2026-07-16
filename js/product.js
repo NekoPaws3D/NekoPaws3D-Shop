@@ -1,0 +1,22 @@
+"use strict";
+
+const params = new URLSearchParams(window.location.search);
+const product = products.find(item => item.id === Number(params.get("id")));
+const detail = document.getElementById("product-detail");
+const FSK_KEY = "nekopaws_fsk18_confirmed";
+const FSK_MAX_AGE_MS = 24 * 60 * 60 * 1000;
+
+function escapeHtml(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);}
+function productImages(){return product?.images?.length?product.images:[product?.image].filter(Boolean);}
+function isFskConfirmed(){const timestamp=Number(localStorage.getItem(FSK_KEY));return Number.isFinite(timestamp)&&Date.now()-timestamp<FSK_MAX_AGE_MS;}
+function calculateAge(value){const birth=new Date(`${value}T00:00:00`);if(Number.isNaN(birth.getTime()))return-1;const now=new Date();let age=now.getFullYear()-birth.getFullYear();const md=now.getMonth()-birth.getMonth();if(md<0||(md===0&&now.getDate()<birth.getDate()))age--;return age;}
+function showAgeModal(){document.getElementById("age-modal")?.classList.remove("hidden");document.body.classList.add("modal-open");const box=document.getElementById("age-confirm-checkbox"),date=document.getElementById("age-birthday"),button=document.getElementById("age-confirm-btn");if(box)box.checked=false;if(date)date.value="";if(button)button.disabled=true;}
+function hideAgeModal(){document.getElementById("age-modal")?.classList.add("hidden");document.body.classList.remove("modal-open");}
+function toggleAgeConfirmButton(){const box=document.getElementById("age-confirm-checkbox"),date=document.getElementById("age-birthday"),button=document.getElementById("age-confirm-btn");if(button)button.disabled=!(box?.checked&&date?.value);}
+function confirmFskAge(){const box=document.getElementById("age-confirm-checkbox"),date=document.getElementById("age-birthday");if(!box?.checked||!date?.value){alert("Bitte gib dein Geburtsdatum an und bestätige die Altersangabe.");return;}if(calculateAge(date.value)<18){alert("Dieses Produkt darf nur von volljährigen Personen angesehen werden.");return;}localStorage.setItem(FSK_KEY,String(Date.now()));hideAgeModal();renderProduct();}
+function declineFskAge(){window.location.href="index.html";}
+function setMainImage(index){const images=productImages();const image=document.getElementById("main-product-image");if(image)image.src=images[index];document.querySelectorAll(".thumb").forEach((thumb,i)=>thumb.classList.toggle("active",i===index));}
+function renderProduct(){if(!product){detail.innerHTML='<div class="page">Produkt nicht gefunden.</div>';return;}if(product.category==="FSK 18"&&!isFskConfirmed()){detail.innerHTML='<div class="page"><h2>🔞 Altersbestätigung erforderlich</h2><p>Dieses Produkt ist ausschließlich für Erwachsene bestimmt.</p><button class="main-btn" onclick="showAgeModal()">Alter bestätigen</button></div>';return;}const images=productImages();detail.innerHTML=`<article class="detail-card"><div class="gallery"><img id="main-product-image" class="main-product-image" src="${images[0]}" alt="${escapeHtml(product.name)}"><div class="thumbs">${images.map((src,index)=>`<button class="thumb ${index===0?"active":""}" type="button" onclick="setMainImage(${index})"><img src="${src}" alt="Ansicht ${index+1}"></button>`).join("")}</div></div><div><span class="badge">${escapeHtml(product.category)}</span>${product.customizable?'<span class="badge">Personalisierbar</span>':""}<h2>${escapeHtml(product.name)}</h2><p>${escapeHtml(product.description)}</p><div class="price">${product.price.toFixed(2)} €</div><div class="qty"><button onclick="changeDetailQty(-1)">−</button><span id="detail-qty">1</span><button onclick="changeDetailQty(1)">+</button></div>${product.customizable?'<textarea id="note" placeholder="Farbe, Name oder Wunschmotiv"></textarea>':""}<button class="main-btn" onclick="addDetailToCart()">In den Warenkorb</button></div></article>`;}
+function changeDetailQty(amount){const box=document.getElementById("detail-qty");if(!box)return;box.textContent=String(Math.max(1,Number(box.textContent)+amount));}
+function addDetailToCart(){if(product.category==="FSK 18"&&!isFskConfirmed()){showAgeModal();return;}addToCart(product.id,Number(document.getElementById("detail-qty")?.textContent||1),document.getElementById("note")?.value||"");alert("Produkt wurde zum Warenkorb hinzugefügt.");}
+document.addEventListener("DOMContentLoaded",()=>{renderProduct();renderCart();});
