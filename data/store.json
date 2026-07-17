@@ -38,21 +38,6 @@
       "sort": 2
     },
     {
-      "id": 3,
-      "name": "Sticker Set – Fantasy",
-      "category": "Sticker",
-      "price": 5.49,
-      "image": "",
-      "images": [],
-      "description": "Fantasy-Stickerset für kreative Dekorationen.",
-      "customizable": false,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-003",
-      "featured": true,
-      "sort": 3
-    },
-    {
       "id": 4,
       "name": "Sticker Überraschungsset",
       "category": "Sticker",
@@ -81,21 +66,6 @@
       "sku": "NEKO-005",
       "featured": false,
       "sort": 5
-    },
-    {
-      "id": 6,
-      "name": "Premium Großformat-Anhänger",
-      "category": "3D Druck",
-      "price": 10.99,
-      "image": "",
-      "images": [],
-      "description": "Größerer Premium-Anhänger mit besonderem Finish.",
-      "customizable": true,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-006",
-      "featured": false,
-      "sort": 6
     },
     {
       "id": 7,
@@ -128,36 +98,6 @@
       "sort": 8
     },
     {
-      "id": 9,
-      "name": "Epoxidharz Pfote",
-      "category": "Epoxidharz",
-      "price": 9.49,
-      "image": "",
-      "images": [],
-      "description": "Handgefertigte Pfote aus Epoxidharz.",
-      "customizable": true,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-009",
-      "featured": false,
-      "sort": 9
-    },
-    {
-      "id": 10,
-      "name": "Epoxidharz Anhänger",
-      "category": "Epoxidharz",
-      "price": 8.49,
-      "image": "",
-      "images": [],
-      "description": "Glänzender Harzanhänger mit individuellem Charakter.",
-      "customizable": true,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-010",
-      "featured": false,
-      "sort": 10
-    },
-    {
       "id": 11,
       "name": "Epoxidharz Deko-Unikat",
       "category": "Epoxidharz",
@@ -171,36 +111,6 @@
       "sku": "NEKO-011",
       "featured": false,
       "sort": 11
-    },
-    {
-      "id": 12,
-      "name": "UV-Harz Schlüsselanhänger",
-      "category": "Epoxidharz",
-      "price": 7.99,
-      "image": "",
-      "images": [],
-      "description": "Kompakter Schlüsselanhänger, mit UV-Harz versiegelt.",
-      "customizable": true,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-012",
-      "featured": false,
-      "sort": 12
-    },
-    {
-      "id": 13,
-      "name": "Sticker Bundle",
-      "category": "Bundles",
-      "price": 11.99,
-      "image": "",
-      "images": [],
-      "description": "Drei Stickerbögen zum Vorteilspreis.",
-      "customizable": false,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-013",
-      "featured": false,
-      "sort": 13
     },
     {
       "id": 14,
@@ -218,36 +128,6 @@
       "sort": 14
     },
     {
-      "id": 15,
-      "name": "Premium Anhänger Bundle",
-      "category": "Bundles",
-      "price": 23.99,
-      "image": "",
-      "images": [],
-      "description": "Drei ausgewählte Anhänger im Premium-Bundle.",
-      "customizable": false,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-015",
-      "featured": false,
-      "sort": 15
-    },
-    {
-      "id": 16,
-      "name": "Mixed Neko Bundle",
-      "category": "Bundles",
-      "price": 12.99,
-      "image": "",
-      "images": [],
-      "description": "Ein Anhänger und ein Stickerbogen als gemischtes Set.",
-      "customizable": false,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-016",
-      "featured": false,
-      "sort": 16
-    },
-    {
       "id": 17,
       "name": "FSK-18 Sammlerfigur A",
       "category": "FSK 18",
@@ -263,43 +143,13 @@
       "sort": 17
     },
     {
-      "id": 18,
-      "name": "FSK-18 Sammlerfigur B",
-      "category": "FSK 18",
-      "price": 34.99,
-      "image": "",
-      "images": [],
-      "description": "Detailreicher Sammlerartikel für Erwachsene.",
-      "customizable": false,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-018",
-      "featured": false,
-      "sort": 18
-    },
-    {
-      "id": 19,
-      "name": "FSK-18 Sammlerset",
-      "category": "FSK 18",
-      "price": 54.99,
-      "image": "",
-      "images": [],
-      "description": "Mehrteiliges Sammlerset ausschließlich für Erwachsene.",
-      "customizable": false,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-019",
-      "featured": false,
-      "sort": 19
-    },
-    {
       "id": 20,
       "name": "Individuelle Sonderanfertigung",
       "category": "3D Druck",
       "price": 999,
-      "image": "assets/products/1784287299834-whatsapp-image-2026-07-17-at-13-11-35-2.jpeg",
+      "image": "assets/products/1784305264416-chatgpt-image-17-juli-2026-18-20-35.png",
       "images": [
-        "assets/products/1784287299834-whatsapp-image-2026-07-17-at-13-11-35-2.jpeg"
+        "assets/products/1784305264416-chatgpt-image-17-juli-2026-18-20-35.png"
       ],
       "description": "Individuelle Fertigung nach vorheriger Abstimmung.",
       "customizable": true,
