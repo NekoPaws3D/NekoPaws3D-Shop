@@ -73,15 +73,19 @@
     },
     {
       "id": 7,
-      "name": "3D-Druck Katzenfigur",
+      "name": "Filament 3D-Druck Zucker Katzen",
       "category": "3D Druck",
-      "price": 14.99,
-      "image": "",
-      "images": [],
-      "description": "Dekorative Katzenfigur aus dem 3D-Drucker.",
+      "price": 4.99,
+      "image": "assets/products/1784307443343-trgeztr.jpeg",
+      "images": [
+        "assets/products/1784307443343-trgeztr.jpeg",
+        "assets/products/1784307444681-ujhzrt.jpeg",
+        "assets/products/1784307445945-whatsapp-image-2026-07-17-at-18-29-4k.jpg"
+      ],
+      "description": "Die kleinen Zuckerkatzen für die Tasche oder zum Verschenken.\nin Verschiedenen Größen, Design, formen, Farben erhältlich.\nDekorative Katzenfigur aus dem 3D-Drucker.",
       "customizable": true,
       "visible": true,
-      "stock": 99,
+      "stock": 20,
       "sku": "NEKO-007",
       "featured": false,
       "sort": 7
