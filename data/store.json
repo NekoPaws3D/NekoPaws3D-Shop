@@ -133,15 +133,17 @@
     },
     {
       "id": 17,
-      "name": "FSK-18 Sammlerfigur A",
+      "name": "Sexy Kuh Maid",
       "category": "FSK 18",
-      "price": 29.99,
-      "image": "",
-      "images": [],
-      "description": "Sammlerartikel ausschließlich für volljährige Personen.",
-      "customizable": false,
+      "price": 79.99,
+      "image": "assets/products/1784306520116-ze5.jpeg",
+      "images": [
+        "assets/products/1784306520116-ze5.jpeg"
+      ],
+      "description": "Attraktive Anime  25cm große Kuh- Maid,\nPersonalisierbar ein echter Blickfang für alle sexy Anime Frauen Fans\nKomplett aus Resin gedruckt und Handbemalt.\n Sammlerartikel ausschließlich für volljährige Personen.",
+      "customizable": true,
       "visible": true,
-      "stock": 99,
+      "stock": 10,
       "sku": "NEKO-017",
       "featured": false,
       "sort": 17
@@ -150,7 +152,7 @@
       "id": 20,
       "name": "Individuelle Sonderanfertigung",
       "category": "3D Druck",
-      "price": 999,
+      "price": 0,
       "image": "assets/products/1784305264416-chatgpt-image-17-juli-2026-18-20-35.png",
       "images": [
         "assets/products/1784305264416-chatgpt-image-17-juli-2026-18-20-35.png"
@@ -165,15 +167,18 @@
     },
     {
       "id": 21,
-      "name": "Neues Produkt",
+      "name": "Personalisierte Big Head Figur",
       "category": "3D Druck",
       "price": 0,
-      "image": "",
-      "images": [],
-      "description": "",
-      "customizable": false,
-      "visible": false,
-      "stock": 0,
+      "image": "assets/products/1784306756229-whatsapp-image-2026-07-17-at-18-29-41.jpeg",
+      "images": [
+        "assets/products/1784306756229-whatsapp-image-2026-07-17-at-18-29-41.jpeg",
+        "assets/products/1784306757669-whatsapp-image-2026-07-17-at-18-29-42.jpeg"
+      ],
+      "description": "Gestalte dein eigenes ICH, \npersonalisierbar abgestimmt, bis hin zu kleinsten Details,\n\naus Resin oder Filament gedruckt und Für dich gefertigt.\n\nein einzigartiges Unikat als Geschenk für Freunde oder Familie.",
+      "customizable": true,
+      "visible": true,
+      "stock": 10,
       "sku": "NEKO-021",
       "featured": false,
       "sort": 21
