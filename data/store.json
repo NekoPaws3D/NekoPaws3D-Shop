@@ -12,11 +12,8 @@
       "name": "A6 Sticker Sheet – Neko",
       "category": "Sticker",
       "price": 4.49,
-      "image": "assets/products/product-01.jpg",
-      "images": [
-        "assets/products/product-01.jpg",
-        "assets/products/product-02.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "A6 Stickerbogen mit liebevollen Neko-Motiven.",
       "customizable": false,
       "visible": true,
@@ -343,42 +340,19 @@
       "sort": 18
     },
     {
-      "id": 19,
-      "name": "FSK-18 Sammlerset",
-      "category": "FSK 18",
-      "price": 54.99,
-      "image": "assets/products/product-19.jpg",
-      "images": [
-        "assets/products/product-19.jpg",
-        "assets/products/product-20.jpg",
-        "assets/products/product-17.jpg"
-      ],
-      "description": "Mehrteiliges Sammlerset ausschließlich für Erwachsene.",
-      "customizable": false,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-019",
-      "featured": false,
-      "sort": 19
-    },
-    {
-      "id": 20,
-      "name": "Individuelle Sonderanfertigung",
+      "id": 21,
+      "name": "Neues Produkt",
       "category": "3D Druck",
-      "price": 39.99,
-      "image": "assets/products/product-20.jpg",
-      "images": [
-        "assets/products/product-20.jpg",
-        "assets/products/product-05.jpg",
-        "assets/products/product-06.jpg"
-      ],
-      "description": "Individuelle Fertigung nach vorheriger Abstimmung.",
-      "customizable": true,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-020",
+      "price": 0,
+      "image": "",
+      "images": [],
+      "description": "",
+      "customizable": false,
+      "visible": false,
+      "stock": 0,
+      "sku": "NEKO-021",
       "featured": false,
-      "sort": 20
+      "sort": 21
     }
   ],
   "shippingMethods": [
