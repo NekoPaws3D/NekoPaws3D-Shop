@@ -54,7 +54,7 @@
       "description": "Eine abwechslungsreiche Auswahl verschiedener Sticker.",
       "customizable": false,
       "visible": true,
-      "stock": 99,
+      "stock": 10,
       "sku": "NEKO-004",
       "featured": false,
       "sort": 4
@@ -406,13 +406,13 @@
       "id": 31,
       "name": "Lehrer Kuro- Sensei Emotes",
       "category": "Epoxidharz",
-      "price": 0,
+      "price": 30,
       "image": "assets/products/1784316428413-chatgpt-image-17-juli-2026-21-24-02.png",
       "images": [
         "assets/products/1784316428413-chatgpt-image-17-juli-2026-21-24-02.png",
         "assets/products/1784316430789-u76z.jpg"
       ],
-      "description": "Lehrer Kuro-Sensei\n\n- Verschiedene Emotes\n- Größe Personalisierbar\n- aus Resin gefertigt\n- Handbemalt\n\nPreis ist auf Anfrage",
+      "description": "Lehrer Kuro-Sensei 25cm\n\n- Verschiedene Emotes\n- Größe Personalisierbar\n- aus Resin gefertigt\n- Handbemalt\n\nPreis ist auf Anfrage",
       "customizable": true,
       "visible": true,
       "stock": 10,
@@ -433,7 +433,7 @@
       "description": "Gestalte dein eigenes ICH, \npersonalisierbar abgestimmt, bis hin zu kleinsten Details,\n\naus Resin oder Filament gedruckt und Für dich gefertigt.\n\nein einzigartiges Unikat als Geschenk für Freunde oder Familie.\nPreis per Anfrage",
       "customizable": true,
       "visible": true,
-      "stock": 10,
+      "stock": 99,
       "sku": "NEKO-021",
       "featured": false,
       "sort": 21
@@ -450,7 +450,7 @@
       "description": "Figur Zero Two 15cm\n\n- aus Resin gefertigt\n- Handbemalt\n- UV geschützt",
       "customizable": false,
       "visible": true,
-      "stock": 0,
+      "stock": 10,
       "sku": "NEKO-032",
       "featured": false,
       "sort": 21
