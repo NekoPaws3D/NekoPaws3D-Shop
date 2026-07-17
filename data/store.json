@@ -296,9 +296,11 @@
       "id": 20,
       "name": "Individuelle Sonderanfertigung",
       "category": "3D Druck",
-      "price": 39.99,
-      "image": "",
-      "images": [],
+      "price": 999,
+      "image": "assets/products/1784287299834-whatsapp-image-2026-07-17-at-13-11-35-2.jpeg",
+      "images": [
+        "assets/products/1784287299834-whatsapp-image-2026-07-17-at-13-11-35-2.jpeg"
+      ],
       "description": "Individuelle Fertigung nach vorheriger Abstimmung.",
       "customizable": true,
       "visible": true,
