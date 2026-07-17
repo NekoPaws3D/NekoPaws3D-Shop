@@ -94,15 +94,18 @@
     },
     {
       "id": 8,
-      "name": "3D-Druck",
-      "category": "3D Druck",
-      "price": 18.99,
-      "image": "",
-      "images": [],
-      "description": "Detailreiche Fantasyfigur, sorgfältig nachbearbeitet.",
+      "name": "Blind Box Waldgeister",
+      "category": "Epoxidharz",
+      "price": 25,
+      "image": "assets/products/1784308182297-iouziz.jpeg",
+      "images": [
+        "assets/products/1784308182297-iouziz.jpeg",
+        "assets/products/1784308286705-chatgpt-image-29-apr-2026-09-03-21.png"
+      ],
+      "description": "Blind Box Waldgeister\n- 8 Figuren von Common bis Secret\n- 40 Common\n- 3 Rare\n- 4 Rare\n- 2 Super Rare\n- 1 Secret\n- Sammelkarte und Magnet\n\nSammle sie und lass dich überraschen welcher Waldgeist bei dir Einzieht",
       "customizable": true,
       "visible": true,
-      "stock": 99,
+      "stock": 43,
       "sku": "NEKO-008",
       "featured": false,
       "sort": 8
