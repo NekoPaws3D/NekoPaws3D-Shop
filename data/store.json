@@ -94,7 +94,7 @@
     },
     {
       "id": 8,
-      "name": "3D-Druck Fantasyfigur",
+      "name": "3D-Druck",
       "category": "3D Druck",
       "price": 18.99,
       "image": "",
@@ -109,15 +109,19 @@
     },
     {
       "id": 11,
-      "name": "Epoxidharz Deko-Unikat",
+      "name": "Epoxidharz Anime Figur Albedo im Hochzeitskleid",
       "category": "Epoxidharz",
-      "price": 16.99,
-      "image": "",
-      "images": [],
-      "description": "Ein handgegossenes Deko-Unikat aus Epoxidharz.",
+      "price": 199.99,
+      "image": "assets/products/1784307775124-1.png",
+      "images": [
+        "assets/products/1784307775124-1.png",
+        "assets/products/1784307780157-2.png",
+        "assets/products/1784307784249-d.jpeg"
+      ],
+      "description": "Albedo im wunderschönen Hochzeitskleid\n- Höhe 30cm ohne Base \n- Kompletter Resin Druck\n- Stoff Akzente am Kleid\n- Handbemalt und mit UV Lack versiegelt",
       "customizable": true,
       "visible": true,
-      "stock": 99,
+      "stock": 10,
       "sku": "NEKO-011",
       "featured": false,
       "sort": 11
