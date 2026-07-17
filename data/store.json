@@ -403,6 +403,24 @@
       "sort": 20
     },
     {
+      "id": 31,
+      "name": "Lehrer Kuro- Sensei Emotes",
+      "category": "Epoxidharz",
+      "price": 0,
+      "image": "assets/products/1784316428413-chatgpt-image-17-juli-2026-21-24-02.png",
+      "images": [
+        "assets/products/1784316428413-chatgpt-image-17-juli-2026-21-24-02.png",
+        "assets/products/1784316430789-u76z.jpg"
+      ],
+      "description": "Lehrer Kuro-Sensei\n\n- Verschiedene Emotes\n- Größe Personalisierbar\n- aus Resin gefertigt\n- Handbemalt\n\nPreis ist auf Anfrage",
+      "customizable": true,
+      "visible": true,
+      "stock": 10,
+      "sku": "NEKO-031",
+      "featured": false,
+      "sort": 20
+    },
+    {
       "id": 21,
       "name": "Personalisierte Big Head Figur Preis per Anfrage",
       "category": "3D Druck",
