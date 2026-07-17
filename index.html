@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NekoPaws3D – Unikate mit Herz</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span>♡ Handgemacht mit Herz</span>
+  <span>Einzigartige Unikate aus 3D-Druck & UV-Harz</span>
+  <span>🇩🇪 Versand aus Deutschland</span>
+</div>
+
+<header class="header">
+  <a class="brand" href="index.html">
+    <img src="assets/logo.png" class="logo" alt="NekoPaws3D Logo">
+    <div>
+      <h1 id="site-shop-name">Neko<span>Paws</span>3D</h1>
+      <p id="site-tagline">Unikate mit Herz ♡</p>
+    </div>
+  </a>
+
+  <nav class="nav">
+    <a href="index.html">Startseite</a>
+    <button onclick="scrollToShop()">Shop</button>
+    <button onclick="filterProducts('Bundles')">Bundles</button>
+    <button onclick="requestFskAccess()">FSK 18 Bereich</button>
+    <a href="gaestebuch.html">Gästebuch</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+  </nav>
+
+  <div class="header-actions">
+    <input id="search" placeholder="Suche..." oninput="searchProducts()">
+    <button class="icon-btn" onclick="openCart()">🛒 <span id="cart-count">0</span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2 id="site-hero-title">Einzigartige Unikate<br>mit <span>Herz</span> gemacht ♡</h2>
+    <p id="site-hero-text">3D-gedruckt, von Hand bemalt und mit UV-Harz versiegelt – für dich mit Liebe gefertigt.</p>
+    <button class="main-btn" onclick="scrollToShop()">🐾 Jetzt entdecken</button>
+    <button class="outline-btn" onclick="filterProducts('Bundles')">🎁 Zu den Bundles</button>
+  </div>
+  <div class="hero-cat">🐱</div>
+</section>
+
+<section class="features">
+  <div>💖 <b>Mit Liebe handgemacht</b><br>Jedes Stück ist ein Unikat.</div>
+  <div>🐾 <b>Hochwertige Materialien</b><br>UV-Harz versiegelt für Langlebigkeit.</div>
+  <div>⭐ <b>Einzigartige Designs</b><br>Von Katzen bis Fantasy.</div>
+  <div>🚚 <b>Schneller Versand</b><br>Hermes oder DHL Versand aus Deutschland.</div>
+</section>
+
+<main id="shop" class="shop-section">
+  <h2 class="section-title">🐾 Unsere Produkte 🐾</h2>
+
+  <div class="filters">
+    <button onclick="filterProducts('Alle')">Alle</button>
+    <button onclick="filterProducts('Sticker')">Sticker</button>
+    <button onclick="filterProducts('Epoxidharz')">Epoxidharz</button>
+    <button onclick="filterProducts('3D Druck')">3D Druck</button>
+    <button onclick="filterProducts('Bundles')">Bundles</button>
+    <button onclick="requestFskAccess()">FSK 18</button>
+  </div>
+
+  <div id="age-warning" class="warning hidden">
+    <b>🔞 Geschützter FSK-18-Bereich</b><br>
+    Dieser Bereich ist nur für Erwachsene. Du musst zuerst bestätigen, dass du mindestens 18 Jahre alt bist.
+    <button class="main-btn" type="button" onclick="requestFskAccess()">Alter bestätigen</button>
+  </div>
+
+  <div class="products" id="product-list"></div>
+</main>
+
+<section class="warning">
+  ⚠️ <b>Hinweis:</b> Kein Spielzeug. Nicht für Kinder bestimmt. Enthält verschluckbare Kleinteile.
+</section>
+
+
+<div id="age-modal" class="age-modal hidden" role="dialog" aria-modal="true" aria-labelledby="age-title">
+  <div class="age-card">
+    <h2 id="age-title">🔞 Altersbestätigung erforderlich</h2>
+    <p>Der FSK-18-Bereich enthält Inhalte und Produkte, die ausschließlich für Erwachsene bestimmt sind.</p>
+    <p><b>Bitte bestätige ausdrücklich, dass du mindestens 18 Jahre alt bist.</b></p>
+    <label for="age-birthday">Geburtsdatum</label>
+    <input type="date" id="age-birthday" onchange="toggleAgeConfirmButton()" required>
+    <label class="age-check">
+      <input type="checkbox" id="age-confirm-checkbox" onchange="toggleAgeConfirmButton()">
+      Ich bestätige wahrheitsgemäß, dass ich mindestens 18 Jahre alt bin.
+    </label>
+    <div class="age-actions">
+      <button class="main-btn" id="age-confirm-btn" type="button" onclick="confirmFskAge()" disabled>Bestätigen und betreten</button>
+      <button class="outline-btn" type="button" onclick="declineFskAge()">Abbrechen</button>
+    </div>
+    <small class="muted">Die Bestätigung wird lokal in deinem Browser gespeichert und kann jederzeit über die Browserdaten gelöscht werden.</small>
+  </div>
+</div>
+
+<div id="cart" class="cart hidden">
+  <h2>🛒 Warenkorb</h2>
+  <div id="cart-items"></div>
+
+  <label>Gutscheincode:</label>
+  <div class="coupon-row">
+    <input id="coupon-code" placeholder="Gutscheincode eingeben">
+    <button type="button" class="main-btn" onclick="applyCoupon()">Anwenden</button>
+    <button type="button" class="outline-btn" onclick="clearCoupon()">Löschen</button>
+  </div>
+  <small class="muted">Rabatte sind nur über fest hinterlegte Gutscheincodes möglich.</small>
+
+  <label>Versandart:</label>
+  <select id="shipping-method" onchange="setShippingMethod(this.value)">
+    <option value="hermes">Hermes Versand 4,95 €</option>
+    <option value="dhl">DHL Paket 5,49 €</option>
+  </select>
+
+  <div id="cart-summary"></div>
+
+  <button class="outline-btn full danger" onclick="clearCart()">Warenkorb leeren</button>
+  <button class="main-btn full" onclick="checkout()">Zur Kasse</button>
+  <button class="outline-btn full" onclick="closeCart()">Schließen</button>
+</div>
+
+<footer class="footer">
+  <div>
+    <img src="assets/logo.png" class="footer-logo" alt="Logo">
+    <h3>NekoPaws3D</h3>
+    <p>Liebevoll handgemachte Unikate aus 3D-Druck, Acrylfarben und UV-Harz.</p>
+  </div>
+  <div>
+    <h3>Shop</h3>
+    <p>Sticker<br>Anhänger<br>Epoxidharz<br>Bundles<br>FSK 18 Bereich</p>
+  </div>
+  <div>
+    <h3>Informationen</h3>
+    <p><a href="kontakt.html">Kontakt</a><br><a href="impressum.html">Impressum</a><br>Versand mit Hermes & DHL<br>Rabatt nur per Gutscheincode</p>
+  </div>
+  <div>
+    <h3>Kontakt</h3>
+    <p>📧 <span id="site-contact-email">Neko.paws3d@gmail.com</span></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/email-config.js"></script>
+<script src="js/email-service.js"></script>
+<script src="js/products.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+*{box-sizing:border-box}body{margin:0;background:#050505 url("../assets/background.png") center center / cover fixed no-repeat;color:white;font-family:"Comic Sans MS",Arial,sans-serif;min-height:100vh;position:relative}body::before{content:"";position:fixed;inset:0;background:rgba(0,0,0,.58);z-index:-1;pointer-events:none}.topbar{display:flex;justify-content:space-between;gap:15px;padding:8px 24px;background:#12000a;color:#fff;border-bottom:1px solid #ff2f85;font-size:14px}.header{background:rgba(0,0,0,.94);border-bottom:2px solid #ff2f85;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:50}.header.simple{position:static}.brand{display:flex;align-items:center;gap:14px;color:white;text-decoration:none}.logo{width:82px;height:82px;object-fit:contain}.brand h1{margin:0;font-size:34px}.brand h1 span,.hero span{color:#ff2f85}.brand p{margin:0;color:white}.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px}.nav a,.nav button,.back-link{background:none;border:none;color:white;text-decoration:none;font-size:16px;cursor:pointer}.nav a:hover,.nav button:hover,.back-link:hover{color:#ff2f85}.header-actions{display:flex;align-items:center;gap:10px}.header-actions input{width:150px}.icon-btn,.cart-button{background:#ff2f85;color:white;border:none;padding:10px 14px;border-radius:10px;cursor:pointer}.hero{margin:22px;border:1px solid #ff2f85;border-radius:28px;padding:42px;background:radial-gradient(circle at right,#4a0a25,#070707 62%);display:flex;align-items:center;justify-content:space-between}.hero h2{font-size:46px;margin:0 0 14px}.hero p{font-size:18px}.hero-cat{font-size:120px;filter:drop-shadow(0 0 16px #ff2f85)}.main-btn,.outline-btn,.filters button,.product-card button{border:none;padding:11px 18px;border-radius:9px;margin:6px;cursor:pointer;font-weight:bold}.main-btn{background:#ff2f85;color:white}.outline-btn{background:#111;color:white;border:1px solid #ff2f85}.full{width:100%;margin:8px 0}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:22px}.features div,.warning,.page,.product-card,.detail-card{background:rgba(0,0,0,.82);border:1px solid #ff2f85;border-radius:18px;padding:18px}.section-title{text-align:center;font-size:34px}.filters{text-align:center}.shop-section{padding:10px 20px}.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}.product-card{text-align:center}.product-card a{color:white;text-decoration:none}.product-card img{width:100%;height:210px;object-fit:contain;border-radius:14px;background:#111;padding:8px}.product-card strong{color:#ff2f85;font-size:24px;display:block;margin:10px}.badge{display:inline-block;background:#ff2f85;padding:4px 9px;border-radius:999px;margin:4px;font-size:12px}.cart{position:fixed;right:0;top:0;width:380px;height:100%;background:#070707;border-left:2px solid #ff2f85;padding:20px;z-index:100;overflow-y:auto}.hidden{display:none}.cart-item{border-bottom:1px solid #333;padding:12px 0}.cart-item button{background:#ff2f85;border:none;color:white;padding:5px 9px;border-radius:6px;margin:4px;cursor:pointer}input,textarea{width:100%;background:#111;color:white;border:1px solid #ff2f85;border-radius:8px;padding:10px;margin:8px 0}.product-detail{padding:30px}.detail-card{display:grid;grid-template-columns:1fr 1fr;gap:26px}.detail-card img{width:100%;max-height:520px;object-fit:contain;border-radius:16px;background:#111;padding:10px}.detail-card h2{font-size:34px}.price{color:#ff2f85;font-size:28px;font-weight:bold}.qty button{background:#ff2f85;color:white;border:none;border-radius:7px;padding:9px 15px;margin:8px;cursor:pointer}.page{margin:30px}.guest-entry{background:#111;border:1px solid #ff2f85;border-radius:12px;margin-top:14px;padding:14px}.footer{border-top:1px solid #ff2f85;padding:30px;background:#060606;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.footer a{color:white}.footer-logo{width:70px;height:70px;object-fit:contain}@media(max-width:850px){.topbar{flex-direction:column;text-align:center}.header{flex-direction:column}.hero{flex-direction:column;text-align:center}.hero h2{font-size:34px}.cart{width:100%}.detail-card{grid-template-columns:1fr}}
+
+select{width:100%;background:#111;color:white;border:1px solid #ff2f85;border-radius:8px;padding:10px;margin:8px 0}
+.muted{color:#bbb}
+.cart-row-actions{margin-top:8px}
+.gallery{width:100%}
+.main-product-image{width:100%;max-height:520px;height:auto;object-fit:contain;border-radius:16px;background:#111;padding:10px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(72px,1fr));gap:10px;margin-top:12px}
+.thumb{border:2px solid transparent;background:#111;border-radius:10px;padding:4px;cursor:pointer}
+.thumb.active{border-color:#ff2f85}
+.thumb img{width:100%;height:70px;object-fit:contain;border-radius:7px;background:#111}
+.product-card img:hover{filter:brightness(1.12)}
+
+/* Rabatt nur per Gutscheincode */
+.coupon-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.coupon-row input {
+  flex: 1;
+}
+.coupon-row button {
+  white-space: nowrap;
+}
+
+.danger{border-color:#ff4f4f!important;color:#fff!important;background:#260000!important}
+.danger:hover{background:#600000!important}
+
+
+/* FSK-18 Altersbestätigung */
+.age-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.82);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+  padding:20px;
+}
+.age-modal.hidden{display:none}
+.age-card{
+  width:min(560px,100%);
+  background:#090909;
+  border:2px solid #ff2f85;
+  border-radius:22px;
+  padding:26px;
+  box-shadow:0 0 35px rgba(255,47,133,.35);
+}
+.age-card h2{color:#ff2f85;margin-bottom:12px}
+.age-check{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin:18px 0;
+  background:#111;
+  border:1px solid #ff2f85;
+  border-radius:12px;
+  padding:14px;
+}
+.age-check input{width:auto;margin:3px 0 0 0;accent-color:#ff2f85}
+.age-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.age-actions button:disabled{opacity:.45;cursor:not-allowed;filter:grayscale(1)}
+.fsk-locked-note{max-width:760px;margin:20px auto;text-align:center}
+
+/* Altersprüfung */
+.age-modal{position:fixed;inset:0;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;padding:20px;z-index:500}
+.age-modal.hidden{display:none}
+.age-card{width:min(560px,100%);background:#090909;border:2px solid #ff2f85;border-radius:20px;padding:26px;box-shadow:0 0 35px rgba(255,47,133,.35)}
+.age-card h2{color:#ff2f85}
+.age-check{display:flex;gap:10px;align-items:flex-start;margin:15px 0}
+.age-check input{width:auto;margin-top:4px}
+.age-actions{display:flex;flex-wrap:wrap;gap:10px;margin:15px 0}
+.age-actions button:disabled{opacity:.45;cursor:not-allowed}
+.modal-open{overflow:hidden}
+.guest-entry small{display:block;color:#bbb;margin-top:4px}
+.product-card img,.main-product-image,.thumb img{object-fit:contain!important}
+
+
+/* Kontakt- und Bestellformulare */
+.mail-form{max-width:760px;margin:24px auto;background:rgba(0,0,0,.82);border:1px solid #ff2f85;border-radius:18px;padding:22px}
+.mail-form label{display:block;margin-top:12px;font-weight:bold}
+.mail-form textarea{resize:vertical;min-height:150px}
+.consent-check{display:flex!important;align-items:flex-start;gap:10px;font-weight:normal!important}
+.consent-check input{width:auto;margin-top:4px}
+.mail-notice{max-width:760px;margin:20px auto;padding:18px;border:1px solid #ff2f85;border-radius:14px;background:rgba(20,0,10,.9)}
+.order-modal{position:fixed;inset:0;background:rgba(0,0,0,.82);display:flex;align-items:center;justify-content:center;padding:20px;z-index:250}
+.order-modal.hidden{display:none}
+.order-card{width:min(760px,100%);max-height:92vh;overflow-y:auto;background:#080808;border:2px solid #ff2f85;border-radius:20px;padding:24px;box-shadow:0 0 35px rgba(255,47,133,.35)}
+.order-card h2{margin-bottom:8px}
+.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.order-grid .wide{grid-column:1/-1}
+.order-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.order-preview{white-space:pre-wrap;background:#111;border:1px solid #333;border-radius:10px;padding:12px;max-height:220px;overflow:auto}
+@media(max-width:700px){.order-grid{grid-template-columns:1fr}.order-grid .wide{grid-column:auto}}
+
+
+/* Statusmeldungen für EmailJS, ohne Änderung am bestehenden Layout */
+.form-status{min-height:1.4em;margin:12px 0;font-weight:bold}
+.form-status.success{color:#78e08f}
+.form-status.error{color:#ff6b81}
+button:disabled{opacity:.6;cursor:not-allowed}

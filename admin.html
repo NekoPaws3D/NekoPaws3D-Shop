@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin – NekoPaws3D</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="admin-body">
+<header class="header simple">
+  <a href="index.html" class="back-link">⬅ Zurück zum Shop</a>
+  <strong class="admin-title">NekoPaws3D Adminbereich</strong>
+</header>
+
+<main class="admin-shell">
+  <section id="admin-login" class="admin-panel admin-login">
+    <h1>Adminbereich</h1>
+    <p class="muted">Dieser Bereich ist ein lokaler Produkteditor für PyCharm und GitHub Pages.</p>
+    <label for="admin-password">Passwort</label>
+    <input id="admin-password" type="password" autocomplete="current-password">
+    <button class="main-btn full" type="button" onclick="adminLogin()">Anmelden</button>
+    <p id="admin-login-status" class="form-status"></p>
+  </section>
+
+  <section id="admin-app" class="hidden">
+    <div class="admin-toolbar">
+      <div>
+        <h1>Produktverwaltung</h1>
+        <p class="muted">Produkte hinzufügen, bearbeiten, löschen und anschließend eine neue <code>products.js</code> herunterladen.</p>
+      </div>
+      <div class="admin-toolbar-actions">
+        <button class="outline-btn" type="button" onclick="adminLogout()">Abmelden</button>
+        <button class="outline-btn" type="button" onclick="resetAdminDraft()">Entwurf zurücksetzen</button>
+        <button class="main-btn" type="button" onclick="downloadProductsFile()">products.js herunterladen</button>
+      </div>
+    </div>
+
+    <div class="admin-grid">
+      <section class="admin-panel">
+        <h2 id="product-form-title">Neues Produkt</h2>
+        <form id="admin-product-form" onsubmit="saveAdminProduct(event)">
+          <input id="admin-product-id" type="hidden">
+
+          <label for="admin-name">Produktname *</label>
+          <input id="admin-name" required>
+
+          <label for="admin-category">Kategorie *</label>
+          <select id="admin-category" required>
+            <option value="Sticker">Sticker</option>
+            <option value="Epoxidharz">Epoxidharz</option>
+            <option value="3D Druck">3D Druck</option>
+            <option value="Bundles">Bundles</option>
+            <option value="FSK 18">FSK 18</option>
+          </select>
+
+          <label for="admin-price">Preis in Euro *</label>
+          <input id="admin-price" type="number" min="0" step="0.01" required>
+
+          <label for="admin-description">Beschreibung *</label>
+          <textarea id="admin-description" rows="5" required></textarea>
+
+          <label for="admin-images">Bildpfade – ein Pfad pro Zeile *</label>
+          <textarea id="admin-images" rows="7" placeholder="assets/products/product-01.jpg&#10;assets/products/product-02.jpg" required></textarea>
+          <small class="muted">Neue Bilder zuerst in <code>assets/products/</code> kopieren und hier den relativen Pfad eintragen.</small>
+
+          <label class="admin-check"><input id="admin-customizable" type="checkbox"> Produkt ist personalisierbar</label>
+          <label class="admin-check"><input id="admin-active" type="checkbox" checked> Produkt im Shop anzeigen</label>
+
+          <div class="admin-form-actions">
+            <button class="main-btn" type="submit">Produkt speichern</button>
+            <button class="outline-btn" type="button" onclick="clearProductForm()">Formular leeren</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-panel admin-products-panel">
+        <div class="admin-list-head">
+          <h2>Produkte</h2>
+          <input id="admin-search" placeholder="Produkte suchen …" oninput="renderAdminProducts()">
+        </div>
+        <div id="admin-product-list" class="admin-product-list"></div>
+      </section>
+    </div>
+
+    <section class="admin-panel admin-help">
+      <h2>Änderungen veröffentlichen</h2>
+      <ol>
+        <li>Produkte im Adminbereich bearbeiten.</li>
+        <li><b>products.js herunterladen</b> anklicken.</li>
+        <li>Die heruntergeladene Datei in PyCharm nach <code>js/products.js</code> kopieren und die vorhandene Datei ersetzen.</li>
+        <li>Neue Produktbilder nach <code>assets/products/</code> kopieren.</li>
+        <li>Änderungen zu GitHub hochladen. GitHub Pages veröffentlicht die neue Version.</li>
+      </ol>
+      <p class="warning-inline"><b>Wichtig:</b> GitHub Pages besitzt kein Backend. Ein sicherer Adminbereich, der die öffentliche Website direkt verändert, ist ohne zusätzlichen Dienst nicht möglich. Dieser Editor erstellt deshalb die fertige Produktdatei für deinen PyCharm-/GitHub-Workflow.</p>
+    </section>
+  </section>
+</main>
+
+<script src="js/products.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
