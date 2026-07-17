@@ -452,6 +452,24 @@
       "sku": "NEKO-032",
       "featured": false,
       "sort": 21
+    },
+    {
+      "id": 33,
+      "name": "Albedo Chibi mit Plüsch",
+      "category": "Epoxidharz",
+      "price": 30,
+      "image": "assets/products/1784321867821-chatgpt-image-17-juli-2026-22-49-44.png",
+      "images": [
+        "assets/products/1784321867821-chatgpt-image-17-juli-2026-22-49-44.png",
+        "assets/products/1784321880886-aa.png"
+      ],
+      "description": "Albedo mit Plüsch\n- 15cm groß\n- Resin gefertigt\n- Handbemalt",
+      "customizable": false,
+      "visible": true,
+      "stock": 10,
+      "sku": "NEKO-033",
+      "featured": false,
+      "sort": 22
     }
   ],
   "shippingMethods": [
