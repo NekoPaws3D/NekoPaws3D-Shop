@@ -33,6 +33,7 @@ Die Weiterleitungsadresse ist standardmäßig:
 
 `Neko.paws3d@gmail.com`
 
+
 Sie kann im Admin unter **Shop & E-Mail** geändert werden. Zusätzlich müssen einmalig in `js/email-config.js` die EmailJS-Werte eingetragen werden:
 
 ```js
