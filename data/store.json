@@ -58,15 +58,17 @@
     },
     {
       "id": 5,
-      "name": "Standard 3D-Anhänger",
+      "name": "Standard 3D-Anhänger Wald - Zuckerkatze",
       "category": "3D Druck",
-      "price": 8.99,
-      "image": "",
-      "images": [],
+      "price": 3.99,
+      "image": "assets/products/1784307539305-whatsapp-image-2026-07-17-at-18-25-03.jpeg",
+      "images": [
+        "assets/products/1784307539305-whatsapp-image-2026-07-17-at-18-25-03.jpeg"
+      ],
       "description": "3D-gedruckter Anhänger, handbemalt und mit UV-Harz versiegelt.",
-      "customizable": true,
+      "customizable": false,
       "visible": true,
-      "stock": 99,
+      "stock": 10,
       "sku": "NEKO-005",
       "featured": false,
       "sort": 5
@@ -119,6 +121,40 @@
       "sku": "NEKO-011",
       "featured": false,
       "sort": 11
+    },
+    {
+      "id": 22,
+      "name": "Standard 3D-Anhänger Spiegelei - Zuckerkatze",
+      "category": "3D Druck",
+      "price": 3.99,
+      "image": "assets/products/1784307622607-grdegr.jpeg",
+      "images": [
+        "assets/products/1784307622607-grdegr.jpeg"
+      ],
+      "description": "3D-gedruckter Anhänger, handbemalt und mit UV-Harz versiegelt.",
+      "customizable": false,
+      "visible": true,
+      "stock": 10,
+      "sku": "NEKO-005-KOPIE",
+      "featured": false,
+      "sort": 12
+    },
+    {
+      "id": 23,
+      "name": "Standard 3D-Anhänger Gaming - Zuckerkatze",
+      "category": "3D Druck",
+      "price": 3.99,
+      "image": "assets/products/1784307668842-gfdfsd.jpeg",
+      "images": [
+        "assets/products/1784307668842-gfdfsd.jpeg"
+      ],
+      "description": "3D-gedruckter Anhänger, handbemalt und mit UV-Harz versiegelt.",
+      "customizable": false,
+      "visible": true,
+      "stock": 10,
+      "sku": "NEKO-005-KOPIE-KOPIE",
+      "featured": false,
+      "sort": 13
     },
     {
       "id": 14,
