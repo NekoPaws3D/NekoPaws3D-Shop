@@ -226,6 +226,23 @@
       "sort": 16
     },
     {
+      "id": 27,
+      "name": "Miniatur Ohngesicht",
+      "category": "Epoxidharz",
+      "price": 7.99,
+      "image": "assets/products/1784315144421-chatgpt-image-17-juli-2026-20-56-52.png",
+      "images": [
+        "assets/products/1784315144421-chatgpt-image-17-juli-2026-20-56-52.png"
+      ],
+      "description": "Miniatur Ohngesicht mit kleiner Blüte\nin einer kleinen Glaskuppel\n\nfür alle Ghibli Liebhaber und die wenig Platz haben",
+      "customizable": false,
+      "visible": true,
+      "stock": 10,
+      "sku": "NEKO-021",
+      "featured": false,
+      "sort": 16
+    },
+    {
       "id": 17,
       "name": "Sexy Kuh Maid",
       "category": "FSK 18",
