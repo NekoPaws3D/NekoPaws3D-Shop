@@ -43,17 +43,20 @@
     },
     {
       "id": 4,
-      "name": "Sticker Überraschungsset",
+      "name": "Mini Sticker Überraschungsset",
       "category": "Sticker",
-      "price": 6.99,
-      "image": "",
-      "images": [],
+      "price": 0.99,
+      "image": "assets/products/1784308490013-675.jpeg",
+      "images": [
+        "assets/products/1784308490013-675.jpeg",
+        "assets/products/1784308491486-ujztu.jpeg"
+      ],
       "description": "Eine abwechslungsreiche Auswahl verschiedener Sticker.",
       "customizable": false,
       "visible": true,
       "stock": 99,
       "sku": "NEKO-004",
-      "featured": true,
+      "featured": false,
       "sort": 4
     },
     {
