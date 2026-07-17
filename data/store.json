@@ -199,6 +199,48 @@
       "sort": 14
     },
     {
+      "id": 25,
+      "name": "Resin Furry Sona Figuren",
+      "category": "Epoxidharz",
+      "price": 0,
+      "image": "assets/products/1784310295845-a.jpeg",
+      "images": [
+        "assets/products/1784310295845-a.jpeg",
+        "assets/products/1784310297319-chatgpt-image-17-juli-2026-19-44-19.png",
+        "assets/products/1784310299421-ds.jpeg",
+        "assets/products/1784310300383-dsf.jpeg",
+        "assets/products/1784310301365-whatsapp-image-2026-07-17-at-18-27-34d.jpeg"
+      ],
+      "description": "Personalisiere deinen Furry Sona \n- Größe selbst entscheiden\n- erschaffe eine Figur für dich zum hinstellen\n- Kompletter Resin Druck\n- Handbemalt und mit UV Lack versiegelt\n\nPreis Variiert nach Aufwand und Detailgrad",
+      "customizable": true,
+      "visible": true,
+      "stock": 10,
+      "sku": "NEKO-011",
+      "featured": false,
+      "sort": 15
+    },
+    {
+      "id": 26,
+      "name": "Filament  Furry Sona Figuren",
+      "category": "3D Druck",
+      "price": 0,
+      "image": "assets/products/1784310295845-a.jpeg",
+      "images": [
+        "assets/products/1784310295845-a.jpeg",
+        "assets/products/1784310297319-chatgpt-image-17-juli-2026-19-44-19.png",
+        "assets/products/1784310299421-ds.jpeg",
+        "assets/products/1784310300383-dsf.jpeg",
+        "assets/products/1784310301365-whatsapp-image-2026-07-17-at-18-27-34d.jpeg"
+      ],
+      "description": "Personalisiere deinen Furry Sona \n- Größe selbst entscheiden\n- erschaffe eine Figur für dich zum hinstellen\n- Kompletter Filament Druck\n- Handbemalt und mit UV Lack versiegelt\n\nPreis Variiert nach Aufwand und Detailgrad",
+      "customizable": true,
+      "visible": true,
+      "stock": 10,
+      "sku": "NEKO-011",
+      "featured": false,
+      "sort": 16
+    },
+    {
       "id": 17,
       "name": "Sexy Kuh Maid",
       "category": "FSK 18",
