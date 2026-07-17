@@ -9,30 +9,34 @@
   "products": [
     {
       "id": 1,
-      "name": "A6 Sticker Sheet – Neko",
+      "name": "A6 Sticker Sheet – Baking Time",
       "category": "Sticker",
-      "price": 4.49,
-      "image": "",
-      "images": [],
-      "description": "A6 Stickerbogen mit liebevollen Neko-Motiven.",
+      "price": 1.99,
+      "image": "assets/products/1784306423549-erwew.jpeg",
+      "images": [
+        "assets/products/1784306423549-erwew.jpeg"
+      ],
+      "description": "A6 Sticker Bogen mit liebevollen Baking Time -Motiven.",
       "customizable": false,
       "visible": true,
-      "stock": 99,
+      "stock": 10,
       "sku": "NEKO-001",
       "featured": true,
       "sort": 1
     },
     {
       "id": 2,
-      "name": "A6 Holo Sticker Sheet",
+      "name": "A6 Holo Sticker Sheet Black Kitty",
       "category": "Sticker",
-      "price": 4.99,
-      "image": "",
-      "images": [],
+      "price": 2.99,
+      "image": "assets/products/1784306344291-zhurt.jpeg",
+      "images": [
+        "assets/products/1784306344291-zhurt.jpeg"
+      ],
       "description": "Holografischer Stickerbogen mit glänzendem Effekt.",
       "customizable": false,
       "visible": true,
-      "stock": 99,
+      "stock": 10,
       "sku": "NEKO-002",
       "featured": true,
       "sort": 2
