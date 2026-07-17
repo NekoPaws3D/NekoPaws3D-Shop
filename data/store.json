@@ -109,7 +109,7 @@
     },
     {
       "id": 11,
-      "name": "Epoxidharz Anime Figur Albedo im Hochzeitskleid",
+      "name": "Resin Anime Figur Albedo im Hochzeitskleid",
       "category": "Epoxidharz",
       "price": 199.99,
       "image": "assets/products/1784307775124-1.png",
@@ -172,6 +172,25 @@
       "visible": true,
       "stock": 99,
       "sku": "NEKO-014",
+      "featured": false,
+      "sort": 14
+    },
+    {
+      "id": 24,
+      "name": "Resin Anime Figur",
+      "category": "Epoxidharz",
+      "price": 199.99,
+      "image": "assets/products/1784307775124-1.png",
+      "images": [
+        "assets/products/1784307775124-1.png",
+        "assets/products/1784307780157-2.png",
+        "assets/products/1784307784249-d.jpeg"
+      ],
+      "description": "Albedo im wunderschönen Hochzeitskleid\n- Höhe 30cm ohne Base \n- Kompletter Resin Druck\n- Stoff Akzente am Kleid\n- Handbemalt und mit UV Lack versiegelt",
+      "customizable": true,
+      "visible": true,
+      "stock": 10,
+      "sku": "NEKO-011-KOPIE",
       "featured": false,
       "sort": 14
     },
