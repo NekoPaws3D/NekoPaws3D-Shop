@@ -68,7 +68,7 @@
       "images": [
         "assets/products/1784307539305-whatsapp-image-2026-07-17-at-18-25-03.jpeg"
       ],
-      "description": "3D-gedruckter Anhänger, handbemalt und mit UV-Harz versiegelt.",
+      "description": "Die kleinen Zuckerkatzen für die Tasche oder zum Verschenken.\nin Verschiedenen Größen, Design, formen, Farben erhältlich.\nDekorative Katzenfigur aus dem 3D-Drucker.",
       "customizable": false,
       "visible": true,
       "stock": 10,
@@ -141,7 +141,7 @@
       "images": [
         "assets/products/1784307622607-grdegr.jpeg"
       ],
-      "description": "3D-gedruckter Anhänger, handbemalt und mit UV-Harz versiegelt.",
+      "description": "Die kleinen Zuckerkatzen für die Tasche oder zum Verschenken.\nin Verschiedenen Größen, Design, formen, Farben erhältlich.\nDekorative Katzenfigur aus dem 3D-Drucker.",
       "customizable": false,
       "visible": true,
       "stock": 10,
@@ -158,28 +158,13 @@
       "images": [
         "assets/products/1784307668842-gfdfsd.jpeg"
       ],
-      "description": "3D-gedruckter Anhänger, handbemalt und mit UV-Harz versiegelt.",
+      "description": "Die kleinen Zuckerkatzen für die Tasche oder zum Verschenken.\nin Verschiedenen Größen, Design, formen, Farben erhältlich.\nDekorative Katzenfigur aus dem 3D-Drucker.",
       "customizable": false,
       "visible": true,
       "stock": 10,
       "sku": "NEKO-005-KOPIE-KOPIE",
       "featured": false,
       "sort": 13
-    },
-    {
-      "id": 14,
-      "name": "Anhänger Doppelpack",
-      "category": "Bundles",
-      "price": 16.99,
-      "image": "",
-      "images": [],
-      "description": "Zwei Anhänger als günstiges Set.",
-      "customizable": false,
-      "visible": true,
-      "stock": 99,
-      "sku": "NEKO-014",
-      "featured": false,
-      "sort": 14
     },
     {
       "id": 24,
@@ -200,7 +185,7 @@
     },
     {
       "id": 25,
-      "name": "Resin Furry Sona Figuren",
+      "name": "Resin Furry Sona Figuren Preis per Anfrage",
       "category": "Epoxidharz",
       "price": 0,
       "image": "assets/products/1784310295845-a.jpeg",
@@ -221,7 +206,7 @@
     },
     {
       "id": 26,
-      "name": "Filament  Furry Sona Figuren",
+      "name": "Filament  Furry Sona Figuren Preis per Anfrage",
       "category": "3D Druck",
       "price": 0,
       "image": "assets/products/1784310295845-a.jpeg",
@@ -259,14 +244,14 @@
     },
     {
       "id": 20,
-      "name": "Individuelle Sonderanfertigung",
+      "name": "Individuelle Sonderanfertigung Preis per Anfrage",
       "category": "3D Druck",
       "price": 0,
       "image": "assets/products/1784305264416-chatgpt-image-17-juli-2026-18-20-35.png",
       "images": [
         "assets/products/1784305264416-chatgpt-image-17-juli-2026-18-20-35.png"
       ],
-      "description": "Individuelle Fertigung nach vorheriger Abstimmung.",
+      "description": "Individuelle Fertigung nach vorheriger Abstimmung.\nPreis per Anfrage",
       "customizable": true,
       "visible": true,
       "stock": 99,
@@ -276,7 +261,7 @@
     },
     {
       "id": 21,
-      "name": "Personalisierte Big Head Figur",
+      "name": "Personalisierte Big Head Figur Preis per Anfrage",
       "category": "3D Druck",
       "price": 0,
       "image": "assets/products/1784306756229-whatsapp-image-2026-07-17-at-18-29-41.jpeg",
@@ -284,7 +269,7 @@
         "assets/products/1784306756229-whatsapp-image-2026-07-17-at-18-29-41.jpeg",
         "assets/products/1784306757669-whatsapp-image-2026-07-17-at-18-29-42.jpeg"
       ],
-      "description": "Gestalte dein eigenes ICH, \npersonalisierbar abgestimmt, bis hin zu kleinsten Details,\n\naus Resin oder Filament gedruckt und Für dich gefertigt.\n\nein einzigartiges Unikat als Geschenk für Freunde oder Familie.",
+      "description": "Gestalte dein eigenes ICH, \npersonalisierbar abgestimmt, bis hin zu kleinsten Details,\n\naus Resin oder Filament gedruckt und Für dich gefertigt.\n\nein einzigartiges Unikat als Geschenk für Freunde oder Familie.\nPreis per Anfrage",
       "customizable": true,
       "visible": true,
       "stock": 10,
