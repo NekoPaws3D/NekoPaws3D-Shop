@@ -12,11 +12,8 @@
       "name": "A6 Sticker Sheet – Neko",
       "category": "Sticker",
       "price": 4.49,
-      "image": "assets/products/product-01.jpg",
-      "images": [
-        "assets/products/product-01.jpg",
-        "assets/products/product-02.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "A6 Stickerbogen mit liebevollen Neko-Motiven.",
       "customizable": false,
       "visible": true,
@@ -30,11 +27,8 @@
       "name": "A6 Holo Sticker Sheet",
       "category": "Sticker",
       "price": 4.99,
-      "image": "assets/products/product-02.jpg",
-      "images": [
-        "assets/products/product-02.jpg",
-        "assets/products/product-03.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Holografischer Stickerbogen mit glänzendem Effekt.",
       "customizable": false,
       "visible": true,
@@ -48,11 +42,8 @@
       "name": "Sticker Set – Fantasy",
       "category": "Sticker",
       "price": 5.49,
-      "image": "assets/products/product-03.jpg",
-      "images": [
-        "assets/products/product-03.jpg",
-        "assets/products/product-04.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Fantasy-Stickerset für kreative Dekorationen.",
       "customizable": false,
       "visible": true,
@@ -66,11 +57,8 @@
       "name": "Sticker Überraschungsset",
       "category": "Sticker",
       "price": 6.99,
-      "image": "assets/products/product-04.jpg",
-      "images": [
-        "assets/products/product-04.jpg",
-        "assets/products/product-01.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Eine abwechslungsreiche Auswahl verschiedener Sticker.",
       "customizable": false,
       "visible": true,
@@ -84,12 +72,8 @@
       "name": "Standard 3D-Anhänger",
       "category": "3D Druck",
       "price": 8.99,
-      "image": "assets/products/product-05.jpg",
-      "images": [
-        "assets/products/product-05.jpg",
-        "assets/products/product-06.jpg",
-        "assets/products/product-07.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "3D-gedruckter Anhänger, handbemalt und mit UV-Harz versiegelt.",
       "customizable": true,
       "visible": true,
@@ -103,12 +87,8 @@
       "name": "Premium Großformat-Anhänger",
       "category": "3D Druck",
       "price": 10.99,
-      "image": "assets/products/product-06.jpg",
-      "images": [
-        "assets/products/product-06.jpg",
-        "assets/products/product-07.jpg",
-        "assets/products/product-08.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Größerer Premium-Anhänger mit besonderem Finish.",
       "customizable": true,
       "visible": true,
@@ -122,12 +102,8 @@
       "name": "3D-Druck Katzenfigur",
       "category": "3D Druck",
       "price": 14.99,
-      "image": "assets/products/product-07.jpg",
-      "images": [
-        "assets/products/product-07.jpg",
-        "assets/products/product-08.jpg",
-        "assets/products/product-09.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Dekorative Katzenfigur aus dem 3D-Drucker.",
       "customizable": true,
       "visible": true,
@@ -141,12 +117,8 @@
       "name": "3D-Druck Fantasyfigur",
       "category": "3D Druck",
       "price": 18.99,
-      "image": "assets/products/product-08.jpg",
-      "images": [
-        "assets/products/product-08.jpg",
-        "assets/products/product-09.jpg",
-        "assets/products/product-10.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Detailreiche Fantasyfigur, sorgfältig nachbearbeitet.",
       "customizable": true,
       "visible": true,
@@ -160,12 +132,8 @@
       "name": "Epoxidharz Pfote",
       "category": "Epoxidharz",
       "price": 9.49,
-      "image": "assets/products/product-09.jpg",
-      "images": [
-        "assets/products/product-09.jpg",
-        "assets/products/product-10.jpg",
-        "assets/products/product-11.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Handgefertigte Pfote aus Epoxidharz.",
       "customizable": true,
       "visible": true,
@@ -179,12 +147,8 @@
       "name": "Epoxidharz Anhänger",
       "category": "Epoxidharz",
       "price": 8.49,
-      "image": "assets/products/product-10.jpg",
-      "images": [
-        "assets/products/product-10.jpg",
-        "assets/products/product-11.jpg",
-        "assets/products/product-12.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Glänzender Harzanhänger mit individuellem Charakter.",
       "customizable": true,
       "visible": true,
@@ -198,12 +162,8 @@
       "name": "Epoxidharz Deko-Unikat",
       "category": "Epoxidharz",
       "price": 16.99,
-      "image": "assets/products/product-11.jpg",
-      "images": [
-        "assets/products/product-11.jpg",
-        "assets/products/product-12.jpg",
-        "assets/products/product-13.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Ein handgegossenes Deko-Unikat aus Epoxidharz.",
       "customizable": true,
       "visible": true,
@@ -217,11 +177,8 @@
       "name": "UV-Harz Schlüsselanhänger",
       "category": "Epoxidharz",
       "price": 7.99,
-      "image": "assets/products/product-12.jpg",
-      "images": [
-        "assets/products/product-12.jpg",
-        "assets/products/product-13.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Kompakter Schlüsselanhänger, mit UV-Harz versiegelt.",
       "customizable": true,
       "visible": true,
@@ -235,12 +192,8 @@
       "name": "Sticker Bundle",
       "category": "Bundles",
       "price": 11.99,
-      "image": "assets/products/product-13.jpg",
-      "images": [
-        "assets/products/product-13.jpg",
-        "assets/products/product-14.jpg",
-        "assets/products/product-15.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Drei Stickerbögen zum Vorteilspreis.",
       "customizable": false,
       "visible": true,
@@ -254,12 +207,8 @@
       "name": "Anhänger Doppelpack",
       "category": "Bundles",
       "price": 16.99,
-      "image": "assets/products/product-14.jpg",
-      "images": [
-        "assets/products/product-14.jpg",
-        "assets/products/product-15.jpg",
-        "assets/products/product-16.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Zwei Anhänger als günstiges Set.",
       "customizable": false,
       "visible": true,
@@ -273,12 +222,8 @@
       "name": "Premium Anhänger Bundle",
       "category": "Bundles",
       "price": 23.99,
-      "image": "assets/products/product-15.jpg",
-      "images": [
-        "assets/products/product-15.jpg",
-        "assets/products/product-16.jpg",
-        "assets/products/product-17.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Drei ausgewählte Anhänger im Premium-Bundle.",
       "customizable": false,
       "visible": true,
@@ -292,12 +237,8 @@
       "name": "Mixed Neko Bundle",
       "category": "Bundles",
       "price": 12.99,
-      "image": "assets/products/product-16.jpg",
-      "images": [
-        "assets/products/product-16.jpg",
-        "assets/products/product-13.jpg",
-        "assets/products/product-05.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Ein Anhänger und ein Stickerbogen als gemischtes Set.",
       "customizable": false,
       "visible": true,
@@ -311,11 +252,8 @@
       "name": "FSK-18 Sammlerfigur A",
       "category": "FSK 18",
       "price": 29.99,
-      "image": "assets/products/product-17.jpg",
-      "images": [
-        "assets/products/product-17.jpg",
-        "assets/products/product-18.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Sammlerartikel ausschließlich für volljährige Personen.",
       "customizable": false,
       "visible": true,
@@ -329,11 +267,8 @@
       "name": "FSK-18 Sammlerfigur B",
       "category": "FSK 18",
       "price": 34.99,
-      "image": "assets/products/product-18.jpg",
-      "images": [
-        "assets/products/product-18.jpg",
-        "assets/products/product-19.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Detailreicher Sammlerartikel für Erwachsene.",
       "customizable": false,
       "visible": true,
@@ -347,12 +282,8 @@
       "name": "FSK-18 Sammlerset",
       "category": "FSK 18",
       "price": 54.99,
-      "image": "assets/products/product-19.jpg",
-      "images": [
-        "assets/products/product-19.jpg",
-        "assets/products/product-20.jpg",
-        "assets/products/product-17.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Mehrteiliges Sammlerset ausschließlich für Erwachsene.",
       "customizable": false,
       "visible": true,
@@ -366,12 +297,8 @@
       "name": "Individuelle Sonderanfertigung",
       "category": "3D Druck",
       "price": 39.99,
-      "image": "assets/products/product-20.jpg",
-      "images": [
-        "assets/products/product-20.jpg",
-        "assets/products/product-05.jpg",
-        "assets/products/product-06.jpg"
-      ],
+      "image": "",
+      "images": [],
       "description": "Individuelle Fertigung nach vorheriger Abstimmung.",
       "customizable": true,
       "visible": true,
@@ -379,6 +306,21 @@
       "sku": "NEKO-020",
       "featured": false,
       "sort": 20
+    },
+    {
+      "id": 21,
+      "name": "Neues Produkt",
+      "category": "3D Druck",
+      "price": 0,
+      "image": "",
+      "images": [],
+      "description": "",
+      "customizable": false,
+      "visible": false,
+      "stock": 0,
+      "sku": "NEKO-021",
+      "featured": false,
+      "sort": 21
     }
   ],
   "shippingMethods": [
