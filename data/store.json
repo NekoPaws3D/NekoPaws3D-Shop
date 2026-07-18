@@ -22,7 +22,8 @@
       "stock": 10,
       "sku": "NEKO-001",
       "featured": true,
-      "sort": 1
+      "sort": 1,
+      "priceOnRequest": false
     },
     {
       "id": 2,
@@ -39,7 +40,8 @@
       "stock": 10,
       "sku": "NEKO-002",
       "featured": true,
-      "sort": 2
+      "sort": 2,
+      "priceOnRequest": false
     },
     {
       "id": 4,
@@ -57,7 +59,8 @@
       "stock": 10,
       "sku": "NEKO-004",
       "featured": false,
-      "sort": 4
+      "sort": 4,
+      "priceOnRequest": false
     },
     {
       "id": 5,
@@ -74,7 +77,8 @@
       "stock": 10,
       "sku": "NEKO-005",
       "featured": false,
-      "sort": 5
+      "sort": 5,
+      "priceOnRequest": false
     },
     {
       "id": 7,
@@ -93,7 +97,8 @@
       "stock": 20,
       "sku": "NEKO-007",
       "featured": false,
-      "sort": 7
+      "sort": 7,
+      "priceOnRequest": false
     },
     {
       "id": 8,
@@ -111,7 +116,8 @@
       "stock": 43,
       "sku": "NEKO-008",
       "featured": false,
-      "sort": 8
+      "sort": 8,
+      "priceOnRequest": false
     },
     {
       "id": 11,
@@ -130,7 +136,8 @@
       "stock": 10,
       "sku": "NEKO-011",
       "featured": false,
-      "sort": 11
+      "sort": 11,
+      "priceOnRequest": false
     },
     {
       "id": 22,
@@ -147,7 +154,8 @@
       "stock": 10,
       "sku": "NEKO-005-KOPIE",
       "featured": false,
-      "sort": 12
+      "sort": 12,
+      "priceOnRequest": false
     },
     {
       "id": 23,
@@ -164,7 +172,8 @@
       "stock": 10,
       "sku": "NEKO-005-KOPIE-KOPIE",
       "featured": false,
-      "sort": 13
+      "sort": 13,
+      "priceOnRequest": false
     },
     {
       "id": 24,
@@ -181,7 +190,8 @@
       "stock": 10,
       "sku": "NEKO-011-KOPIE",
       "featured": false,
-      "sort": 14
+      "sort": 14,
+      "priceOnRequest": false
     },
     {
       "id": 25,
@@ -201,7 +211,8 @@
       "stock": 10,
       "sku": "NEKO-011",
       "featured": false,
-      "sort": 15
+      "sort": 15,
+      "priceOnRequest": false
     },
     {
       "id": 26,
@@ -221,7 +232,8 @@
       "stock": 10,
       "sku": "NEKO-011",
       "featured": false,
-      "sort": 16
+      "sort": 16,
+      "priceOnRequest": false
     },
     {
       "id": 27,
@@ -238,7 +250,8 @@
       "stock": 10,
       "sku": "NEKO-021",
       "featured": false,
-      "sort": 16
+      "sort": 16,
+      "priceOnRequest": false
     },
     {
       "id": 17,
@@ -255,7 +268,8 @@
       "stock": 10,
       "sku": "NEKO-017",
       "featured": false,
-      "sort": 17
+      "sort": 17,
+      "priceOnRequest": false
     },
     {
       "id": 28,
@@ -297,7 +311,8 @@
       "stock": 10,
       "sku": "NEKO-021a",
       "featured": false,
-      "sort": 17
+      "sort": 17,
+      "priceOnRequest": false
     },
     {
       "id": 29,
@@ -339,7 +354,8 @@
       "stock": 10,
       "sku": "NEKO-021b",
       "featured": false,
-      "sort": 18
+      "sort": 18,
+      "priceOnRequest": false
     },
     {
       "id": 30,
@@ -381,7 +397,8 @@
       "stock": 10,
       "sku": "NEKO-021b",
       "featured": false,
-      "sort": 19
+      "sort": 19,
+      "priceOnRequest": false
     },
     {
       "id": 20,
@@ -398,7 +415,8 @@
       "stock": 99,
       "sku": "NEKO-020",
       "featured": false,
-      "sort": 20
+      "sort": 20,
+      "priceOnRequest": false
     },
     {
       "id": 31,
@@ -416,7 +434,8 @@
       "stock": 10,
       "sku": "NEKO-031",
       "featured": false,
-      "sort": 20
+      "sort": 20,
+      "priceOnRequest": false
     },
     {
       "id": 21,
@@ -434,7 +453,8 @@
       "stock": 99,
       "sku": "NEKO-021",
       "featured": false,
-      "sort": 21
+      "sort": 21,
+      "priceOnRequest": false
     },
     {
       "id": 32,
@@ -451,7 +471,8 @@
       "stock": 10,
       "sku": "NEKO-032",
       "featured": false,
-      "sort": 21
+      "sort": 21,
+      "priceOnRequest": false
     },
     {
       "id": 33,
@@ -469,7 +490,8 @@
       "stock": 10,
       "sku": "NEKO-033",
       "featured": false,
-      "sort": 22
+      "sort": 22,
+      "priceOnRequest": false
     }
   ],
   "shippingMethods": [
@@ -507,6 +529,15 @@
       "value": 0,
       "label": "Kostenloser Versand",
       "active": true
+    }
+  ],
+  "guestbookEntries": [
+    {
+      "name": "David Dornheim",
+      "date": "18.7.2026",
+      "rating": 5,
+      "message": "Eine wahnsinns Künstlerin mit Blick auch für die kleinsten Details.",
+      "visible": true
     }
   ]
 }
