@@ -1,0 +1,37 @@
+NekoPaws3D – Update „Preis auf Anfrage“
+
+Dieses Paket ist absichtlich nur ein UPDATE und enthält NICHT:
+- data/store.json
+- js/email-config.js
+- assets/
+- bestehende Produktbilder
+- Gutscheine oder Versanddaten
+
+Dadurch bleiben deine bereits angelegten Artikel, Bilder und EmailJS-Einstellungen erhalten.
+
+ZU ERSETZENDE DATEIEN
+- admin/index.html
+- admin/admin.js
+- js/shop.js
+- js/product.js
+- kontakt.html
+- js/contact.js
+
+INSTALLATION
+1. ZIP entpacken.
+2. Im GitHub-Repository nur die enthaltenen Dateien an dieselben Stellen hochladen.
+3. Vorhandene Dateien ersetzen.
+4. Committen.
+5. GitHub Pages kurz aktualisieren lassen.
+6. Website und Adminbereich mit Strg+F5 neu laden.
+
+VERWENDUNG
+1. Im Adminbereich Produkt öffnen oder neu anlegen.
+2. „Preis auf Anfrage / Kontaktformular“ aktivieren.
+3. Preisfeld leer lassen.
+4. Produkt veröffentlichen.
+
+Im Shop erscheint dann:
+- „Preis auf Anfrage“
+- Button „Bestellung anfragen“
+- vorausgefülltes Kontaktformular mit Artikelname und Artikelnummer
