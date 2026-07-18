@@ -212,7 +212,7 @@
       "sku": "NEKO-011",
       "featured": false,
       "sort": 15,
-      "priceOnRequest": false
+      "priceOnRequest": true
     },
     {
       "id": 26,
@@ -233,7 +233,7 @@
       "sku": "NEKO-011",
       "featured": false,
       "sort": 16,
-      "priceOnRequest": false
+      "priceOnRequest": true
     },
     {
       "id": 27,
@@ -416,7 +416,7 @@
       "sku": "NEKO-020",
       "featured": false,
       "sort": 20,
-      "priceOnRequest": false
+      "priceOnRequest": true
     },
     {
       "id": 31,
@@ -454,7 +454,7 @@
       "sku": "NEKO-021",
       "featured": false,
       "sort": 21,
-      "priceOnRequest": false
+      "priceOnRequest": true
     },
     {
       "id": 32,
