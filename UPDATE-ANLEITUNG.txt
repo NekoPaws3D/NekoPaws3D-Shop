@@ -1,21 +1,32 @@
-NekoPaws3D – Update: Zeichenaufträge & Textildruck
+NekoPaws3D – Update für die aktuelle Website
 
-Enthalten:
+Änderungen:
+- Das Katzen-Emoji im oberen Hero-Bereich wird durch ein richtiges Katzenbild ersetzt.
+- Ein neuer FSK-18-Banner wird auf der Startseite ergänzt.
+- Der Banner zeigt ausschließlich neutrale, jugendfreie Motive.
+- Der vorhandene Altersprüfungs-Button und die bestehende Altersprüfung werden weiterverwendet.
+- Produkte und Produktdaten werden nicht verändert.
+
+Zu ersetzen/hochzuladen:
 - index.html
-- admin/index.html
+- css/styles.css
+- assets/hero-cat.png
+- assets/fsk-banner-safe.png
 
-Installation:
-1. ZIP entpacken.
-2. index.html im Hauptverzeichnis ersetzen.
-3. admin/index.html im Ordner admin ersetzen.
-4. Änderungen auf GitHub committen.
-5. Shop und Adminseite mit Strg+F5 neu laden.
-
-Unverändert bleiben:
-- store.json
+Nicht enthalten und daher unverändert:
+- data/store.json
+- js/email-config.js
+- EmailJS-Einstellungen
 - Produkte
 - Produktbilder
-- EmailJS
 - Gutscheine
 - Versand
 - Gästebuch
+- Adminbereich
+
+Installation:
+1. ZIP entpacken.
+2. Die enthaltenen Ordner und Dateien in das Hauptverzeichnis des GitHub-Repositories hochladen.
+3. Vorhandene index.html und css/styles.css ersetzen.
+4. Commit erstellen.
+5. GitHub Pages abwarten und die Seite mit Strg+F5 neu laden.
