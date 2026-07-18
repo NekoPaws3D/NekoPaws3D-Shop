@@ -32,6 +32,14 @@ function firstImage(product) {
   return product.images?.[0] || product.image;
 }
 
+function productPriceLabel(product) {
+  return product.priceOnRequest ? "Preis auf Anfrage" : `${Number(product.price || 0).toFixed(2)} €`;
+}
+
+function openProductInquiry(id) {
+  window.location.href = `kontakt.html?product=${encodeURIComponent(id)}`;
+}
+
 function saveCart() {
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
   renderCart();
@@ -438,8 +446,10 @@ function renderProducts(list) {
       <span class="badge">${escapeHtml(product.category)}</span>
       ${product.customizable ? '<span class="badge">Personalisierbar</span>' : ""}
       <p>${escapeHtml(product.description)}</p>
-      <strong>${product.price.toFixed(2)} €</strong>
-      <button type="button" onclick="addToCart(${product.id})">In den Warenkorb</button>
+      <strong>${productPriceLabel(product)}</strong>
+      ${product.priceOnRequest
+        ? `<button type="button" onclick="openProductInquiry(${product.id})">Bestellung anfragen</button>`
+        : `<button type="button" onclick="addToCart(${product.id})">In den Warenkorb</button>`}
     </article>`).join("");
 }
 
