@@ -27,15 +27,36 @@ async function githubFetch(path, options={}) {
 }
 
 async function login(){
-  token=$("#github-token").value.trim();
-  if(!token){setStatus("#login-status","Bitte GitHub-Token eingeben.","error");return;}
-  setStatus("#login-status","Verbindung wird geprüft …");
+  const input=$("#github-token");
+  const button=$("#login-btn");
+  token=(input?.value||"").trim();
+
+  if(!token){
+    setStatus("#login-status","Bitte GitHub-Token eingeben.","error");
+    input?.focus();
+    return;
+  }
+
+  button.disabled=true;
+  button.textContent="Verbindung wird geprüft …";
+  setStatus("#login-status","Shopdaten werden von GitHub geladen …");
+
   try{
-    await githubFetch("");
-    sessionStorage.setItem("nekopaws_admin_token",token);
+    // Direkt die Shopdatei laden. Dadurch ist nur „Contents: Read and write“ nötig.
     await loadStore();
-    $("#login-panel").classList.add("hidden");$("#admin-panel").classList.remove("hidden");$("#logout-btn").classList.remove("hidden");
-  }catch(error){setStatus("#login-status",`Anmeldung fehlgeschlagen: ${error.message}`,"error");}
+    sessionStorage.setItem("nekopaws_admin_token",token);
+    $("#login-panel").classList.add("hidden");
+    $("#admin-panel").classList.remove("hidden");
+    $("#logout-btn").classList.remove("hidden");
+    setStatus("#login-status","");
+  }catch(error){
+    sessionStorage.removeItem("nekopaws_admin_token");
+    const message=error?.message||String(error);
+    setStatus("#login-status",`Anmeldung fehlgeschlagen: ${message}`,"error");
+  }finally{
+    button.disabled=false;
+    button.textContent="Mit GitHub verbinden";
+  }
 }
 
 async function loadStore(){
@@ -56,8 +77,13 @@ function renderProducts(){
 function createProductEditor(product){
   const fragment=$("#product-template").content.cloneNode(true);const card=fragment.querySelector(".product-editor-card");card.dataset.id=product.id;
   const set=(sel,val)=>{const el=card.querySelector(sel);if(el.type==="checkbox")el.checked=Boolean(val);else el.value=val??"";};
-  set(".p-id",product.id);set(".p-sort",product.sort);set(".p-name",product.name);set(".p-category",product.category);set(".p-price",product.price);set(".p-stock",product.stock);set(".p-sku",product.sku);set(".p-description",product.description);set(".p-visible",product.visible!==false);set(".p-customizable",product.customizable);set(".p-featured",product.featured);
+  set(".p-id",product.id);set(".p-sort",product.sort);set(".p-name",product.name);set(".p-category",product.category);set(".p-price",product.priceOnRequest?"":product.price);set(".p-price-on-request",product.priceOnRequest);set(".p-stock",product.stock);set(".p-sku",product.sku);set(".p-description",product.description);set(".p-visible",product.visible!==false);set(".p-customizable",product.customizable);set(".p-featured",product.featured);
   card.querySelector(".product-heading").textContent=product.name||"Neues Produkt";
+  const requestBox=card.querySelector(".p-price-on-request");
+  const priceInput=card.querySelector(".p-price");
+  const syncPriceMode=()=>{priceInput.disabled=requestBox.checked;if(requestBox.checked)priceInput.value="";};
+  requestBox.onchange=syncPriceMode;
+  syncPriceMode();
   renderImageList(card,product);
   card.querySelector(".delete-product").onclick=()=>{if(confirm(`Produkt „${product.name}“ löschen?`)){storeData.products=storeData.products.filter(p=>p!==product);renderProducts();}};
   card.querySelector(".duplicate-product").onclick=()=>{readEditors();const copy=structuredClone(product);copy.id=nextProductId();copy.name=`${copy.name} (Kopie)`;copy.sku=`${copy.sku||"NEKO"}-KOPIE`;copy.sort=(storeData.products.length+1);storeData.products.push(copy);renderProducts();};
@@ -76,10 +102,10 @@ async function uploadImages(event,product,card){
 }
 
 function readEditors(){
-  $$(".product-editor-card").forEach(card=>{const product=storeData.products.find(p=>String(p.id)===String(card.dataset.id));if(!product)return;const val=sel=>card.querySelector(sel).value.trim();product.id=Number(val(".p-id"));product.sort=Number(val(".p-sort"))||999;product.name=val(".p-name");product.category=val(".p-category");product.price=Number(val(".p-price"))||0;product.stock=Number(val(".p-stock"))||0;product.sku=val(".p-sku");product.description=val(".p-description");product.visible=card.querySelector(".p-visible").checked;product.customizable=card.querySelector(".p-customizable").checked;product.featured=card.querySelector(".p-featured").checked;product.image=product.images?.[0]||product.image||"";});
+  $$(".product-editor-card").forEach(card=>{const product=storeData.products.find(p=>String(p.id)===String(card.dataset.id));if(!product)return;const val=sel=>card.querySelector(sel).value.trim();product.id=Number(val(".p-id"));product.sort=Number(val(".p-sort"))||999;product.name=val(".p-name");product.category=val(".p-category");product.priceOnRequest=card.querySelector(".p-price-on-request").checked;product.price=product.priceOnRequest?0:(Number(val(".p-price"))||0);product.stock=Number(val(".p-stock"))||0;product.sku=val(".p-sku");product.description=val(".p-description");product.visible=card.querySelector(".p-visible").checked;product.customizable=card.querySelector(".p-customizable").checked;product.featured=card.querySelector(".p-featured").checked;product.image=product.images?.[0]||product.image||"";});
 }
 
-function addProduct(){readEditors();const id=nextProductId();storeData.products.push({id,name:"Neues Produkt",category:"3D Druck",price:0,image:"",images:[],description:"",customizable:false,visible:false,stock:0,sku:`NEKO-${String(id).padStart(3,"0")}`,featured:false,sort:storeData.products.length+1});renderProducts();window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});}
+function addProduct(){readEditors();const id=nextProductId();storeData.products.push({id,name:"Neues Produkt",category:"3D Druck",price:0,priceOnRequest:false,image:"",images:[],description:"",customizable:false,visible:false,stock:0,sku:`NEKO-${String(id).padStart(3,"0")}`,featured:false,sort:storeData.products.length+1});renderProducts();window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});}
 
 function renderCoupons(){const box=$("#coupons-editor");box.innerHTML="";(storeData.couponCodes||[]).forEach((coupon,index)=>{const row=document.createElement("div");row.className="coupon-row-admin";row.innerHTML=`<label>Code<input class="c-code" value="${coupon.code||""}"></label><label>Art<select class="c-type"><option value="percent">Prozent</option><option value="fixed">Euro</option><option value="shipping">Gratis Versand</option></select></label><label>Wert<input class="c-value" type="number" step="0.01" value="${coupon.value||0}"></label><label>Bezeichnung<input class="c-label" value="${coupon.label||""}"></label><label class="check"><input class="c-active" type="checkbox" ${coupon.active!==false?"checked":""}> Aktiv</label><button class="outline-btn danger" type="button">Löschen</button>`;row.querySelector(".c-type").value=coupon.type;row.querySelector("button").onclick=()=>{storeData.couponCodes.splice(index,1);renderCoupons();};box.appendChild(row);});}
 function readCoupons(){storeData.couponCodes=$$(".coupon-row-admin").map(row=>({code:row.querySelector(".c-code").value.trim().toUpperCase(),type:row.querySelector(".c-type").value,value:Number(row.querySelector(".c-value").value)||0,label:row.querySelector(".c-label").value.trim(),active:row.querySelector(".c-active").checked})).filter(c=>c.code);}
@@ -102,8 +128,36 @@ async function saveAll(){
 function switchTab(name){$$('.admin-tab').forEach(tab=>tab.classList.add('hidden'));$(`#tab-${name}`).classList.remove('hidden');$$('.admin-tabs button').forEach(btn=>btn.classList.toggle('active',btn.dataset.tab===name));}
 function logout(){sessionStorage.removeItem("nekopaws_admin_token");location.reload();}
 
-document.addEventListener("DOMContentLoaded",()=>{
-  $("#login-btn").onclick=login;$("#save-btn").onclick=saveAll;$("#reload-btn").onclick=loadStore;$("#logout-btn").onclick=logout;$("#add-product-btn").onclick=addProduct;$("#add-coupon-btn").onclick=addCoupon;
-  $$(".admin-tabs button").forEach(btn=>btn.onclick=()=>switchTab(btn.dataset.tab));
-  if(token){$("#github-token").value=token;login();}
+function initAdmin(){
+  const loginButton=$("#login-btn");
+  if(!loginButton){
+    console.error("Admin-Loginbutton wurde nicht gefunden.");
+    return;
+  }
+
+  loginButton.addEventListener("click",login);
+  $("#github-token").addEventListener("keydown",event=>{
+    if(event.key==="Enter") login();
+  });
+  $("#save-btn").addEventListener("click",saveAll);
+  $("#reload-btn").addEventListener("click",loadStore);
+  $("#logout-btn").addEventListener("click",logout);
+  $("#add-product-btn").addEventListener("click",addProduct);
+  $("#add-coupon-btn").addEventListener("click",addCoupon);
+  $$(".admin-tabs button").forEach(btn=>btn.addEventListener("click",()=>switchTab(btn.dataset.tab)));
+
+  setStatus("#login-status","Adminbereich bereit.");
+  if(token){
+    $("#github-token").value=token;
+  }
+}
+
+window.addEventListener("unhandledrejection",event=>{
+  setStatus("#login-status",`Fehler: ${event.reason?.message||event.reason||"Unbekannter Fehler"}`,"error");
 });
+
+if(document.readyState==="loading"){
+  document.addEventListener("DOMContentLoaded",initAdmin,{once:true});
+}else{
+  initAdmin();
+}
