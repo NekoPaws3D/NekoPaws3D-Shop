@@ -43,6 +43,7 @@
       <button class="active" data-tab="products" type="button">Produkte</button>
       <button data-tab="coupons" type="button">Gutscheine</button>
       <button data-tab="shipping" type="button">Versand</button>
+      <button data-tab="guestbook" type="button">Gästebuch</button>
       <button data-tab="settings" type="button">Shop & E-Mail</button>
     </nav>
 
@@ -59,6 +60,17 @@
     <section id="tab-shipping" class="admin-tab page hidden">
       <h2>Versandarten</h2>
       <div id="shipping-editor"></div>
+    </section>
+
+    <section id="tab-guestbook" class="admin-tab page hidden">
+      <div class="section-row">
+        <div>
+          <h2>Gästebuch</h2>
+          <p class="muted">Neue Einträge kommen per EmailJS an. Prüfe sie und trage sie hier zur Veröffentlichung ein.</p>
+        </div>
+        <button id="add-guestbook-btn" class="main-btn" type="button">+ Neuer Eintrag</button>
+      </div>
+      <div id="guestbook-editor"></div>
     </section>
 
     <section id="tab-settings" class="admin-tab page hidden">
@@ -104,6 +116,30 @@
   </article>
 </template>
 
+<template id="guestbook-template">
+  <article class="admin-card guestbook-editor-card">
+    <div class="section-row">
+      <h3 class="guestbook-heading">Gästebucheintrag</h3>
+      <button class="outline-btn danger delete-guestbook" type="button">Löschen</button>
+    </div>
+    <div class="admin-grid">
+      <label>Name<input class="g-name" maxlength="60"></label>
+      <label>Datum<input class="g-date" placeholder="z. B. 18.07.2026"></label>
+      <label>Bewertung
+        <select class="g-rating">
+          <option value="5">★★★★★ – 5 Sterne</option>
+          <option value="4">★★★★☆ – 4 Sterne</option>
+          <option value="3">★★★☆☆ – 3 Sterne</option>
+          <option value="2">★★☆☆☆ – 2 Sterne</option>
+          <option value="1">★☆☆☆☆ – 1 Stern</option>
+        </select>
+      </label>
+      <label class="check"><input class="g-visible" type="checkbox"> Öffentlich sichtbar</label>
+      <label class="wide">Nachricht<textarea class="g-message" rows="5" maxlength="1000"></textarea></label>
+    </div>
+  </article>
+</template>
+
 <script>
 window.addEventListener("error", function () {
   const status = document.getElementById("login-status");
@@ -113,6 +149,6 @@ window.addEventListener("error", function () {
   }
 });
 </script>
-<script src="./admin.js?v=5" defer></script>
+<script src="./admin.js?v=6" defer></script>
 </body>
 </html>

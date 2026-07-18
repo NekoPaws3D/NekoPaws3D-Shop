@@ -66,7 +66,7 @@ async function loadStore(){
   renderAll();setStatus("#save-status","Shopdaten geladen.","success");
 }
 
-function renderAll(){renderProducts();renderCoupons();renderShipping();renderSettings();}
+function renderAll(){renderProducts();renderCoupons();renderShipping();renderGuestbook();renderSettings();}
 function nextProductId(){return Math.max(0,...(storeData.products||[]).map(p=>Number(p.id)||0))+1;}
 
 function renderProducts(){
@@ -114,11 +114,62 @@ function addCoupon(){readCoupons();storeData.couponCodes.push({code:"NEU",type:"
 function renderShipping(){const box=$("#shipping-editor");box.innerHTML="";(storeData.shippingMethods||[]).forEach(item=>{const row=document.createElement("div");row.className="shipping-row-admin";row.innerHTML=`<label>Schlüssel<input class="s-key" value="${item.key||""}"></label><label>Name<input class="s-label" value="${item.label||""}"></label><label>Preis €<input class="s-price" type="number" step="0.01" value="${item.price||0}"></label><label>Kostenlos ab €<input class="s-free" type="number" step="0.01" value="${item.freeFrom||0}"></label>`;box.appendChild(row);});}
 function readShipping(){storeData.shippingMethods=$$(".shipping-row-admin").map(row=>({key:row.querySelector(".s-key").value.trim(),label:row.querySelector(".s-label").value.trim(),price:Number(row.querySelector(".s-price").value)||0,freeFrom:Number(row.querySelector(".s-free").value)||0})).filter(s=>s.key);}
 
+
+function renderGuestbook(){
+  const box=$("#guestbook-editor");
+  if(!box)return;
+  box.innerHTML="";
+  const entries=Array.isArray(storeData.guestbookEntries)?storeData.guestbookEntries:[];
+  entries.forEach((entry,index)=>{
+    const fragment=$("#guestbook-template").content.cloneNode(true);
+    const card=fragment.querySelector(".guestbook-editor-card");
+    card.dataset.index=index;
+    card.querySelector(".g-name").value=entry.name||"";
+    card.querySelector(".g-date").value=entry.date||"";
+    card.querySelector(".g-rating").value=String(entry.rating||5);
+    card.querySelector(".g-visible").checked=entry.visible!==false;
+    card.querySelector(".g-message").value=entry.message||"";
+    card.querySelector(".guestbook-heading").textContent=entry.name?`Eintrag von ${entry.name}`:"Neuer Gästebucheintrag";
+    card.querySelector(".delete-guestbook").onclick=()=>{
+      if(confirm("Diesen Gästebucheintrag löschen?")){
+        readGuestbook();
+        storeData.guestbookEntries.splice(index,1);
+        renderGuestbook();
+      }
+    };
+    box.appendChild(fragment);
+  });
+}
+
+function readGuestbook(){
+  storeData.guestbookEntries=$$(".guestbook-editor-card").map(card=>({
+    name:card.querySelector(".g-name").value.trim(),
+    date:card.querySelector(".g-date").value.trim(),
+    rating:Number(card.querySelector(".g-rating").value)||5,
+    message:card.querySelector(".g-message").value.trim(),
+    visible:card.querySelector(".g-visible").checked
+  })).filter(entry=>entry.name||entry.message);
+}
+
+function addGuestbookEntry(){
+  readGuestbook();
+  storeData.guestbookEntries=Array.isArray(storeData.guestbookEntries)?storeData.guestbookEntries:[];
+  storeData.guestbookEntries.unshift({
+    name:"",
+    date:new Date().toLocaleDateString("de-DE"),
+    rating:5,
+    message:"",
+    visible:false
+  });
+  renderGuestbook();
+  switchTab("guestbook");
+}
+
 function renderSettings(){const site=storeData.site||{};$("#setting-shopname").value=site.shopName||"";$("#setting-tagline").value=site.tagline||"";$("#setting-email").value=site.contactEmail||"Neko.paws3d@gmail.com";$("#setting-hero-title").value=site.heroTitle||"";$("#setting-hero-text").value=site.heroText||"";}
 function readSettings(){storeData.site={...(storeData.site||{}),shopName:$("#setting-shopname").value.trim(),tagline:$("#setting-tagline").value.trim(),contactEmail:$("#setting-email").value.trim(),heroTitle:$("#setting-hero-title").value.trim(),heroText:$("#setting-hero-text").value.trim()};}
 
 async function saveAll(){
-  readEditors();readCoupons();readShipping();readSettings();
+  readEditors();readCoupons();readShipping();readGuestbook();readSettings();
   const button=$("#save-btn");button.disabled=true;setStatus("#save-status","Änderungen werden veröffentlicht …");
   try{const content=utf8ToBase64(JSON.stringify(storeData,null,2)+"\n");const result=await githubFetch(`/contents/${STORE_PATH}`,{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:"Shop über Adminbereich aktualisiert",content,sha:storeSha,branch:BRANCH})});storeSha=result.content.sha;setStatus("#save-status","Erfolgreich veröffentlicht. GitHub Pages aktualisiert den Shop meist innerhalb weniger Minuten.","success");}
   catch(error){setStatus("#save-status",`Veröffentlichen fehlgeschlagen: ${error.message}`,"error");}
@@ -144,6 +195,7 @@ function initAdmin(){
   $("#logout-btn").addEventListener("click",logout);
   $("#add-product-btn").addEventListener("click",addProduct);
   $("#add-coupon-btn").addEventListener("click",addCoupon);
+  $("#add-guestbook-btn").addEventListener("click",addGuestbookEntry);
   $$(".admin-tabs button").forEach(btn=>btn.addEventListener("click",()=>switchTab(btn.dataset.tab)));
 
   setStatus("#login-status","Adminbereich bereit.");
