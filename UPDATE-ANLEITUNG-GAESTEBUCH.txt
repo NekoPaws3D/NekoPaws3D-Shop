@@ -1,0 +1,41 @@
+NekoPaws3D – Update „Funktionstüchtiges Gästebuch ohne zusätzliche Datenbank“
+
+WICHTIG
+GitHub Pages kann Besuchereinträge nicht selbst dauerhaft speichern.
+Dieses Update verwendet deshalb:
+- dein bereits eingerichtetes EmailJS zum Einsenden
+- deinen vorhandenen Adminbereich zum Prüfen und Veröffentlichen
+- data/store.json für die öffentlich sichtbaren Einträge
+
+Es wird KEIN neuer Cloud-, Datenbank- oder Gästebuchdienst benötigt.
+
+DATEIEN IM UPDATE
+- gaestebuch.html
+- js/guestbook.js
+- admin/index.html
+- admin/admin.js
+- admin/admin.css
+
+NICHT ENTHALTEN / BLEIBT ERHALTEN
+- data/store.json
+- js/email-config.js
+- Produkte
+- Produktbilder
+- Gutscheine
+- Versanddaten
+
+ABLAUF
+1. Besucher trägt Name, E-Mail, Sterne und Nachricht ein.
+2. Der Eintrag wird über dein Kontakt-Template von EmailJS an dich geschickt.
+3. E-Mail-Adresse wird nicht veröffentlicht.
+4. Du öffnest den Adminbereich und den Tab „Gästebuch“.
+5. „Neuer Eintrag“ anklicken, Name/Bewertung/Nachricht aus der E-Mail übernehmen.
+6. „Öffentlich sichtbar“ aktivieren.
+7. „Alles veröffentlichen“ anklicken.
+8. Der Eintrag erscheint im öffentlichen Gästebuch.
+
+INSTALLATION
+1. ZIP entpacken.
+2. Nur die enthaltenen Dateien an denselben Stellen in GitHub ersetzen.
+3. Committen.
+4. Kurz warten und mit Strg+F5 neu laden.

@@ -8,13 +8,49 @@
 </head>
 <body>
 <header class="header simple"><a href="index.html" class="back-link">⬅ Zurück zum Shop</a></header>
+
 <main class="page">
   <h2>Gästebuch</h2>
-  <input id="guest-name" placeholder="Dein Name">
-  <textarea id="guest-message" placeholder="Deine Nachricht"></textarea>
-  <button class="main-btn" onclick="addGuestEntry()">Eintragen</button>
+  <p>Schreibe uns einen lieben Eintrag. Dein Beitrag wird zunächst per E-Mail übermittelt und nach Prüfung von uns veröffentlicht.</p>
+
+  <form id="guestbook-form" onsubmit="submitGuestEntry(event)">
+    <label for="guest-name">Dein Name</label>
+    <input id="guest-name" name="name" maxlength="60" required placeholder="Dein Name">
+
+    <label for="guest-email">E-Mail-Adresse</label>
+    <input id="guest-email" name="email" type="email" maxlength="120" required placeholder="deine@email.de">
+    <small class="muted">Die E-Mail-Adresse wird nicht öffentlich angezeigt.</small>
+
+    <label for="guest-rating">Bewertung</label>
+    <select id="guest-rating" name="rating" required>
+      <option value="5">★★★★★ – 5 Sterne</option>
+      <option value="4">★★★★☆ – 4 Sterne</option>
+      <option value="3">★★★☆☆ – 3 Sterne</option>
+      <option value="2">★★☆☆☆ – 2 Sterne</option>
+      <option value="1">★☆☆☆☆ – 1 Stern</option>
+    </select>
+
+    <label for="guest-message">Deine Nachricht</label>
+    <textarea id="guest-message" name="message" maxlength="1000" rows="6" required placeholder="Deine Nachricht"></textarea>
+
+    <label class="guest-consent">
+      <input id="guest-consent" type="checkbox" required>
+      Ich bin damit einverstanden, dass mein Name, meine Bewertung und meine Nachricht nach Prüfung im Gästebuch veröffentlicht werden.
+    </label>
+
+    <button class="main-btn" type="submit">Eintrag zur Prüfung senden</button>
+    <p id="guest-status" class="form-status" role="status"></p>
+  </form>
+
+  <hr class="guest-divider">
+  <h3>Veröffentlichte Einträge</h3>
   <div id="guestbook-list"></div>
 </main>
-<script src="js/guestbook.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/email-config.js"></script>
+<script src="js/email-service.js"></script>
+<script src="js/products.js"></script>
+<script src="js/guestbook.js?v=2"></script>
 </body>
 </html>
