@@ -1,32 +1,36 @@
-NekoPaws3D – Update für die aktuelle Website
+NekoPaws3D – Update: Versandklassen mit Hermes und DHL
 
-Änderungen:
-- Das Katzen-Emoji im oberen Hero-Bereich wird durch ein richtiges Katzenbild ersetzt.
-- Ein neuer FSK-18-Banner wird auf der Startseite ergänzt.
-- Der Banner zeigt ausschließlich neutrale, jugendfreie Motive.
-- Der vorhandene Altersprüfungs-Button und die bestehende Altersprüfung werden weiterverwendet.
-- Produkte und Produktdaten werden nicht verändert.
+NEU:
+- Versandklasse pro Produkt: Brief, klein, mittel, groß, XL, XXL/31,5 kg oder Sperrgut.
+- Hermes- und DHL-Tarife für kleine bis sehr große Pakete.
+- Bei mehreren Artikeln zählt automatisch die größte benötigte Paketklasse.
+- Kunden sehen nur passende Versandarten.
+- Preise und Aktivierung sind im Admin unter „Versand“ bearbeitbar.
 
-Zu ersetzen/hochzuladen:
+WICHTIG:
+Die Preise sind Startwerte und müssen vor Nutzung anhand deiner aktuellen Hermes-/DHL-Konditionen geprüft werden.
+
+Enthalten:
 - index.html
-- css/styles.css
-- assets/hero-cat.png
-- assets/fsk-banner-safe.png
+- admin/index.html
+- js/shipping-classes.js
+- admin/shipping-admin-update.js
 
-Nicht enthalten und daher unverändert:
+Unverändert:
 - data/store.json
-- js/email-config.js
-- EmailJS-Einstellungen
-- Produkte
-- Produktbilder
+- vorhandene Produkte und Bilder
+- EmailJS
+- GitHub-Einstellungen
 - Gutscheine
-- Versand
 - Gästebuch
-- Adminbereich
 
 Installation:
-1. ZIP entpacken.
-2. Die enthaltenen Ordner und Dateien in das Hauptverzeichnis des GitHub-Repositories hochladen.
-3. Vorhandene index.html und css/styles.css ersetzen.
-4. Commit erstellen.
-5. GitHub Pages abwarten und die Seite mit Strg+F5 neu laden.
+1. ZIP entpacken und Dateien ins Repository hochladen.
+2. index.html und admin/index.html ersetzen.
+3. Die zwei neuen JS-Dateien hochladen.
+4. Commit erstellen und Seiten mit Strg+F5 neu laden.
+5. Admin → Produkte: Versandklasse je Produkt auswählen.
+6. Admin → Versand: Preise kontrollieren.
+7. „Alles veröffentlichen“ klicken.
+
+Bestehende Produkte ohne Auswahl werden zunächst als Kleinpaket/Päckchen behandelt.
