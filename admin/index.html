@@ -59,6 +59,7 @@
 
     <section id="tab-shipping" class="admin-tab page hidden">
       <h2>Versandarten</h2>
+      <p class="muted">Preise für Hermes, DHL, Brief, große Pakete und Sperrgut. Beim Produkt wird nur die benötigte Versandklasse ausgewählt.</p>
       <div id="shipping-editor"></div>
     </section>
 
@@ -102,6 +103,17 @@
       <label class="check"><input class="p-price-on-request" type="checkbox"> Preis auf Anfrage / Kontaktformular</label>
       <label>Bestand<input class="p-stock" type="number" min="0"></label>
       <label>Artikelnummer<input class="p-sku"></label>
+      <label>Versandklasse
+        <select class="p-shipping-class">
+          <option value="brief">Brief / Sticker</option>
+          <option value="small">Kleinpaket / Päckchen</option>
+          <option value="medium">Paket mittel</option>
+          <option value="large">Paket groß</option>
+          <option value="xl">Paket XL</option>
+          <option value="xxl">Paket XXL / 31,5 kg</option>
+          <option value="sperrgut">Sperrgut</option>
+        </select>
+      </label>
       <label class="wide">Beschreibung<textarea class="p-description" rows="4"></textarea></label>
       <label class="check"><input class="p-visible" type="checkbox"> Im Shop sichtbar</label>
       <label class="check"><input class="p-customizable" type="checkbox"> Personalisierbar</label>
@@ -150,5 +162,6 @@ window.addEventListener("error", function () {
 });
 </script>
 <script src="./admin.js?v=6" defer></script>
+<script src="./shipping-admin-update.js?v=1" defer></script>
 </body>
 </html>
