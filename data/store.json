@@ -610,7 +610,7 @@
       "label": "DHL Päkcchen 2Kg",
       "carrier": "Dhl",
       "price": 4.19,
-      "freeFrom": 20,
+      "freeFrom": 30,
       "minClass": "brief",
       "maxClass": "sperrgut",
       "active": true
@@ -640,7 +640,7 @@
       "label": "Hermes Päckchen",
       "carrier": "Hermes",
       "price": 5.19,
-      "freeFrom": 10,
+      "freeFrom": 30,
       "minClass": "small",
       "maxClass": "small",
       "active": true
@@ -650,7 +650,7 @@
       "label": "Hermes Paket S",
       "carrier": "Hermes",
       "price": 5.79,
-      "freeFrom": 20,
+      "freeFrom": 30,
       "minClass": "small",
       "maxClass": "medium",
       "active": true
@@ -660,7 +660,7 @@
       "label": "Hermes Paket M",
       "carrier": "Hermes",
       "price": 6.99,
-      "freeFrom": 20,
+      "freeFrom": 30,
       "minClass": "medium",
       "maxClass": "large",
       "active": true
@@ -690,7 +690,7 @@
       "label": "DHL Päckchen",
       "carrier": "DHL",
       "price": 4.19,
-      "freeFrom": 20,
+      "freeFrom": 30,
       "minClass": "small",
       "maxClass": "small",
       "active": true
@@ -700,7 +700,7 @@
       "label": "DHL Paket bis 2 kg",
       "carrier": "DHL",
       "price": 6.19,
-      "freeFrom": 20,
+      "freeFrom": 30,
       "minClass": "small",
       "maxClass": "medium",
       "active": true
@@ -710,7 +710,7 @@
       "label": "DHL Paket bis 5 kg",
       "carrier": "DHL",
       "price": 7.69,
-      "freeFrom": 20,
+      "freeFrom": 30,
       "minClass": "medium",
       "maxClass": "large",
       "active": true
@@ -720,7 +720,7 @@
       "label": "DHL Paket bis 10 kg",
       "carrier": "DHL",
       "price": 10.49,
-      "freeFrom": 20,
+      "freeFrom": 50,
       "minClass": "large",
       "maxClass": "xl",
       "active": true
@@ -730,7 +730,7 @@
       "label": "DHL Paket bis 20 kg",
       "carrier": "DHL",
       "price": 18.99,
-      "freeFrom": 20,
+      "freeFrom": 50,
       "minClass": "xl",
       "maxClass": "xxl",
       "active": true
@@ -753,14 +753,14 @@
       "freeFrom": 0,
       "minClass": "sperrgut",
       "maxClass": "sperrgut",
-      "active": true
+      "active": false
     },
     {
       "key": "brief",
       "label": "Brief / Sticker",
       "carrier": "Post",
       "price": 1.8,
-      "freeFrom": 0,
+      "freeFrom": 5,
       "minClass": "brief",
       "maxClass": "brief",
       "active": true
