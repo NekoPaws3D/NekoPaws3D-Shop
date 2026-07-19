@@ -57,7 +57,7 @@
       "customizable": false,
       "visible": true,
       "stock": 10,
-      "sku": "NEKO-004",
+      "sku": "NEKO-003",
       "featured": false,
       "sort": 4,
       "priceOnRequest": false
@@ -75,7 +75,7 @@
       "customizable": false,
       "visible": true,
       "stock": 10,
-      "sku": "NEKO-005",
+      "sku": "NEKO-004",
       "featured": false,
       "sort": 5,
       "priceOnRequest": false
@@ -95,7 +95,7 @@
       "customizable": true,
       "visible": true,
       "stock": 20,
-      "sku": "NEKO-007",
+      "sku": "NEKO-005",
       "featured": false,
       "sort": 7,
       "priceOnRequest": false
@@ -114,7 +114,7 @@
       "customizable": true,
       "visible": true,
       "stock": 43,
-      "sku": "NEKO-008",
+      "sku": "NEKO-006",
       "featured": false,
       "sort": 8,
       "priceOnRequest": false
@@ -134,7 +134,7 @@
       "customizable": true,
       "visible": true,
       "stock": 1,
-      "sku": "NEKO-011",
+      "sku": "NEKO-07",
       "featured": false,
       "sort": 11,
       "priceOnRequest": false
@@ -152,7 +152,7 @@
       "customizable": false,
       "visible": true,
       "stock": 10,
-      "sku": "NEKO-005-KOPIE",
+      "sku": "NEKO-008",
       "featured": false,
       "sort": 12,
       "priceOnRequest": false
@@ -170,7 +170,7 @@
       "customizable": false,
       "visible": true,
       "stock": 10,
-      "sku": "NEKO-005-KOPIE-KOPIE",
+      "sku": "NEKO-009",
       "featured": false,
       "sort": 13,
       "priceOnRequest": false
@@ -188,7 +188,7 @@
       "customizable": true,
       "visible": true,
       "stock": 20,
-      "sku": "NEKO-011-KOPIE",
+      "sku": "NEKO-010",
       "featured": false,
       "sort": 14,
       "priceOnRequest": false
@@ -230,7 +230,7 @@
       "customizable": true,
       "visible": true,
       "stock": 10,
-      "sku": "NEKO-011",
+      "sku": "NEKO-012",
       "featured": false,
       "sort": 16,
       "priceOnRequest": true
@@ -248,7 +248,7 @@
       "customizable": false,
       "visible": true,
       "stock": 10,
-      "sku": "NEKO-021",
+      "sku": "NEKO-013",
       "featured": false,
       "sort": 16,
       "priceOnRequest": false
@@ -266,7 +266,7 @@
       "customizable": true,
       "visible": true,
       "stock": 10,
-      "sku": "NEKO-017",
+      "sku": "NEKO-014",
       "featured": false,
       "sort": 17,
       "priceOnRequest": false
@@ -309,7 +309,7 @@
       "customizable": false,
       "visible": true,
       "stock": 0,
-      "sku": "NEKO-021a",
+      "sku": "NEKO-015a",
       "featured": false,
       "sort": 17,
       "priceOnRequest": false
@@ -352,7 +352,7 @@
       "customizable": false,
       "visible": true,
       "stock": 0,
-      "sku": "NEKO-021b",
+      "sku": "NEKO-015b",
       "featured": false,
       "sort": 18,
       "priceOnRequest": false
@@ -395,7 +395,7 @@
       "customizable": false,
       "visible": true,
       "stock": 0,
-      "sku": "NEKO-021b",
+      "sku": "NEKO-015c",
       "featured": false,
       "sort": 19,
       "priceOnRequest": false
@@ -413,7 +413,7 @@
       "customizable": true,
       "visible": true,
       "stock": 99,
-      "sku": "NEKO-020",
+      "sku": "NEKO-016",
       "featured": false,
       "sort": 20,
       "priceOnRequest": true
@@ -432,7 +432,7 @@
       "customizable": true,
       "visible": true,
       "stock": 10,
-      "sku": "NEKO-031",
+      "sku": "NEKO-017",
       "featured": false,
       "sort": 20,
       "priceOnRequest": false
@@ -451,7 +451,7 @@
       "customizable": true,
       "visible": true,
       "stock": 99,
-      "sku": "NEKO-021",
+      "sku": "NEKO-018",
       "featured": false,
       "sort": 21,
       "priceOnRequest": true
@@ -469,7 +469,7 @@
       "customizable": false,
       "visible": true,
       "stock": 10,
-      "sku": "NEKO-032",
+      "sku": "NEKO-019",
       "featured": false,
       "sort": 21,
       "priceOnRequest": false
@@ -488,7 +488,7 @@
       "customizable": false,
       "visible": true,
       "stock": 10,
-      "sku": "NEKO-033",
+      "sku": "NEKO-020",
       "featured": false,
       "sort": 22,
       "priceOnRequest": false
