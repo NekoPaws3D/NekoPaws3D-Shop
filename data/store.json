@@ -21,7 +21,7 @@
       "visible": true,
       "stock": 10,
       "sku": "NEKO-001",
-      "featured": true,
+      "featured": false,
       "sort": 1,
       "priceOnRequest": false
     },
@@ -39,7 +39,7 @@
       "visible": true,
       "stock": 10,
       "sku": "NEKO-002",
-      "featured": true,
+      "featured": false,
       "sort": 2,
       "priceOnRequest": false
     },
