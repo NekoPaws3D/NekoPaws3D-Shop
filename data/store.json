@@ -24,7 +24,7 @@
       "featured": false,
       "sort": 1,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "brief"
     },
     {
       "id": 2,
@@ -43,7 +43,7 @@
       "featured": false,
       "sort": 2,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "brief"
     },
     {
       "id": 4,
@@ -63,7 +63,7 @@
       "featured": false,
       "sort": 4,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "brief"
     },
     {
       "id": 5,
@@ -144,7 +144,7 @@
       "featured": false,
       "sort": 11,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "medium"
     },
     {
       "id": 22,
