@@ -23,7 +23,8 @@
       "sku": "NEKO-001",
       "featured": false,
       "sort": 1,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 2,
@@ -41,7 +42,8 @@
       "sku": "NEKO-002",
       "featured": false,
       "sort": 2,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 4,
@@ -60,7 +62,8 @@
       "sku": "NEKO-003",
       "featured": false,
       "sort": 4,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 5,
@@ -78,7 +81,8 @@
       "sku": "NEKO-004",
       "featured": false,
       "sort": 5,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 7,
@@ -98,7 +102,8 @@
       "sku": "NEKO-005",
       "featured": false,
       "sort": 7,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 8,
@@ -117,7 +122,8 @@
       "sku": "NEKO-006",
       "featured": false,
       "sort": 8,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 11,
@@ -137,7 +143,8 @@
       "sku": "NEKO-07",
       "featured": false,
       "sort": 11,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 22,
@@ -155,7 +162,8 @@
       "sku": "NEKO-008",
       "featured": false,
       "sort": 12,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 23,
@@ -173,7 +181,8 @@
       "sku": "NEKO-009",
       "featured": false,
       "sort": 13,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 24,
@@ -191,7 +200,8 @@
       "sku": "NEKO-010",
       "featured": false,
       "sort": 14,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 25,
@@ -212,7 +222,8 @@
       "sku": "NEKO-011",
       "featured": false,
       "sort": 15,
-      "priceOnRequest": true
+      "priceOnRequest": true,
+      "shippingClass": "small"
     },
     {
       "id": 26,
@@ -233,7 +244,8 @@
       "sku": "NEKO-012",
       "featured": false,
       "sort": 16,
-      "priceOnRequest": true
+      "priceOnRequest": true,
+      "shippingClass": "small"
     },
     {
       "id": 27,
@@ -251,7 +263,8 @@
       "sku": "NEKO-013",
       "featured": false,
       "sort": 16,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 17,
@@ -269,7 +282,8 @@
       "sku": "NEKO-014",
       "featured": false,
       "sort": 17,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 28,
@@ -312,7 +326,8 @@
       "sku": "NEKO-015a",
       "featured": false,
       "sort": 17,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 29,
@@ -355,7 +370,8 @@
       "sku": "NEKO-015b",
       "featured": false,
       "sort": 18,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 30,
@@ -398,7 +414,8 @@
       "sku": "NEKO-015c",
       "featured": false,
       "sort": 19,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 20,
@@ -416,7 +433,8 @@
       "sku": "NEKO-016",
       "featured": false,
       "sort": 20,
-      "priceOnRequest": true
+      "priceOnRequest": true,
+      "shippingClass": "small"
     },
     {
       "id": 31,
@@ -435,7 +453,8 @@
       "sku": "NEKO-017",
       "featured": false,
       "sort": 20,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 21,
@@ -454,7 +473,8 @@
       "sku": "NEKO-018",
       "featured": false,
       "sort": 21,
-      "priceOnRequest": true
+      "priceOnRequest": true,
+      "shippingClass": "small"
     },
     {
       "id": 32,
@@ -472,7 +492,8 @@
       "sku": "NEKO-019",
       "featured": false,
       "sort": 21,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     },
     {
       "id": 33,
@@ -491,21 +512,170 @@
       "sku": "NEKO-020",
       "featured": false,
       "sort": 22,
-      "priceOnRequest": false
+      "priceOnRequest": false,
+      "shippingClass": "small"
     }
   ],
   "shippingMethods": [
     {
-      "key": "hermes",
+      "key": "Hermes",
       "label": "Hermes Versand",
-      "price": 4.95,
-      "freeFrom": 50
+      "carrier": "Hermes",
+      "price": 5.19,
+      "freeFrom": 50,
+      "minClass": "small",
+      "maxClass": "sperrgut",
+      "active": false
     },
     {
-      "key": "dhl",
-      "label": "DHL Paket",
-      "price": 5.49,
-      "freeFrom": 70
+      "key": "Dhl",
+      "label": "DHL Päkcchen 2Kg",
+      "carrier": "Dhl",
+      "price": 4.19,
+      "freeFrom": 20,
+      "minClass": "brief",
+      "maxClass": "sperrgut",
+      "active": true
+    },
+    {
+      "key": "Brief",
+      "label": "Brief / Sticker",
+      "carrier": "Post",
+      "price": 1.8,
+      "freeFrom": 5,
+      "minClass": "brief",
+      "maxClass": "brief",
+      "active": true
+    },
+    {
+      "key": "warenpost",
+      "label": "Warenpost",
+      "carrier": "Post",
+      "price": 2.55,
+      "freeFrom": 5,
+      "minClass": "brief",
+      "maxClass": "small",
+      "active": true
+    },
+    {
+      "key": "hermes-paeckchen",
+      "label": "Hermes Päckchen",
+      "carrier": "Hermes",
+      "price": 5.19,
+      "freeFrom": 10,
+      "minClass": "small",
+      "maxClass": "small",
+      "active": true
+    },
+    {
+      "key": "hermes-s",
+      "label": "Hermes Paket S",
+      "carrier": "Hermes",
+      "price": 5.79,
+      "freeFrom": 20,
+      "minClass": "small",
+      "maxClass": "medium",
+      "active": true
+    },
+    {
+      "key": "hermes-m",
+      "label": "Hermes Paket M",
+      "carrier": "Hermes",
+      "price": 6.99,
+      "freeFrom": 20,
+      "minClass": "medium",
+      "maxClass": "large",
+      "active": true
+    },
+    {
+      "key": "hermes-l",
+      "label": "Hermes Paket L",
+      "carrier": "Hermes",
+      "price": 10.99,
+      "freeFrom": 50,
+      "minClass": "large",
+      "maxClass": "xl",
+      "active": true
+    },
+    {
+      "key": "hermes-xl",
+      "label": "Hermes Paket XL",
+      "carrier": "Hermes",
+      "price": 28.99,
+      "freeFrom": 50,
+      "minClass": "xl",
+      "maxClass": "xxl",
+      "active": true
+    },
+    {
+      "key": "dhl-paeckchen",
+      "label": "DHL Päckchen",
+      "carrier": "DHL",
+      "price": 4.19,
+      "freeFrom": 20,
+      "minClass": "small",
+      "maxClass": "small",
+      "active": true
+    },
+    {
+      "key": "dhl-2kg",
+      "label": "DHL Paket bis 2 kg",
+      "carrier": "DHL",
+      "price": 6.19,
+      "freeFrom": 20,
+      "minClass": "small",
+      "maxClass": "medium",
+      "active": true
+    },
+    {
+      "key": "dhl-5kg",
+      "label": "DHL Paket bis 5 kg",
+      "carrier": "DHL",
+      "price": 7.69,
+      "freeFrom": 20,
+      "minClass": "medium",
+      "maxClass": "large",
+      "active": true
+    },
+    {
+      "key": "dhl-10kg",
+      "label": "DHL Paket bis 10 kg",
+      "carrier": "DHL",
+      "price": 10.49,
+      "freeFrom": 20,
+      "minClass": "large",
+      "maxClass": "xl",
+      "active": true
+    },
+    {
+      "key": "dhl-20kg",
+      "label": "DHL Paket bis 20 kg",
+      "carrier": "DHL",
+      "price": 18.99,
+      "freeFrom": 20,
+      "minClass": "xl",
+      "maxClass": "xxl",
+      "active": true
+    },
+    {
+      "key": "dhl-315kg",
+      "label": "DHL Paket bis 31,5 kg",
+      "carrier": "DHL",
+      "price": 23.99,
+      "freeFrom": 0,
+      "minClass": "xxl",
+      "maxClass": "xxl",
+      "active": false
+    },
+    {
+      "key": "sperrgut",
+      "label": "Sperrgut / sehr großes Paket",
+      "carrier": "DHL/Hermes",
+      "price": 39.99,
+      "freeFrom": 0,
+      "minClass": "sperrgut",
+      "maxClass": "sperrgut",
+      "active": true
     }
   ],
   "couponCodes": [
