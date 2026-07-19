@@ -514,6 +514,84 @@
       "sort": 22,
       "priceOnRequest": false,
       "shippingClass": "small"
+    },
+    {
+      "id": 34,
+      "name": "Filament 3D-Druck Onigiri",
+      "category": "3D Druck",
+      "price": 2.99,
+      "image": "assets/products/1784478387570-onigiri.png",
+      "images": [
+        "assets/products/1784478387570-onigiri.png",
+        "assets/products/1784478389711-whatsapp-image-2026-07-19-at-17-57-53.jpg"
+      ],
+      "description": "Dieser kleiner Onigiri für die Tasche oder zum Verschenken.\nin Verschiedenen Größen, Farben erhältlich.\nDekorativer Onigiri aus dem 3D-Drucker.",
+      "customizable": true,
+      "visible": true,
+      "stock": 10,
+      "sku": "NEKO-0021",
+      "featured": false,
+      "sort": 23,
+      "priceOnRequest": false,
+      "shippingClass": "small"
+    },
+    {
+      "id": 35,
+      "name": "Resin 3D-Druck Onigiri",
+      "category": "Epoxidharz",
+      "price": 3.99,
+      "image": "assets/products/1784478387570-onigiri.png",
+      "images": [
+        "assets/products/1784478387570-onigiri.png",
+        "assets/products/1784478390655-whatsapp-image-2026-07-19-at-18-24-33.jpeg"
+      ],
+      "description": "Dieser kleiner Onigiri für die Tasche oder zum Verschenken.\nin Verschiedenen Größen, Farben erhältlich.\nDekorativer Onigiri aus dem 3D-Drucker.",
+      "customizable": true,
+      "visible": true,
+      "stock": 5,
+      "sku": "NEKO-0022",
+      "featured": false,
+      "sort": 24,
+      "priceOnRequest": false,
+      "shippingClass": "small"
+    },
+    {
+      "id": 36,
+      "name": "Fillament 3D-Druck Kawaii Eis Köri",
+      "category": "3D Druck",
+      "price": 2.99,
+      "image": "assets/products/1784478517707-jetzt-deine-figur.png",
+      "images": [
+        "assets/products/1784478517707-jetzt-deine-figur.png"
+      ],
+      "description": "Dieses kleines Eis für die Tasche oder zum Verschenken.\nin Verschiedenen Größen, Farben erhältlich.\nDekorativer Kawaii Eis Köri aus dem 3D-Drucker.",
+      "customizable": true,
+      "visible": true,
+      "stock": 5,
+      "sku": "NEKO-0023",
+      "featured": false,
+      "sort": 25,
+      "priceOnRequest": false,
+      "shippingClass": "small"
+    },
+    {
+      "id": 37,
+      "name": "Resin 3D-Druck Kawaii Eis Köri",
+      "category": "3D Druck",
+      "price": 3.99,
+      "image": "assets/products/1784478517707-jetzt-deine-figur.png",
+      "images": [
+        "assets/products/1784478517707-jetzt-deine-figur.png"
+      ],
+      "description": "Dieses kleines Eis Köri für die Tasche oder zum Verschenken.\nin Verschiedenen Größen, Farben erhältlich.\nDekorativer Kawaii Eis Köri aus dem 3D-Drucker.",
+      "customizable": true,
+      "visible": true,
+      "stock": 5,
+      "sku": "NEKO-0024",
+      "featured": false,
+      "sort": 26,
+      "priceOnRequest": false,
+      "shippingClass": "small"
     }
   ],
   "shippingMethods": [
@@ -675,6 +753,16 @@
       "freeFrom": 0,
       "minClass": "sperrgut",
       "maxClass": "sperrgut",
+      "active": true
+    },
+    {
+      "key": "brief",
+      "label": "Brief / Sticker",
+      "carrier": "Post",
+      "price": 1.8,
+      "freeFrom": 0,
+      "minClass": "brief",
+      "maxClass": "brief",
       "active": true
     }
   ],
