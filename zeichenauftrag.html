@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Zeichenauftrag – NekoPaws3D</title><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/enhancements.css"></head>
+<body><header class="header simple"><a class="brand" href="index.html"><img src="assets/logo.png" class="logo" alt="Logo"><div><h1>Neko<span>Paws</span>3D</h1><p>Zeichenauftrag</p></div></a><a class="outline-btn" href="index.html">Zurück zum Shop</a></header>
+<main class="page commission-page"><h2>🎨 Zeichenauftrag anfragen</h2><p>Die Anfrage ist unverbindlich. Preis und Termin werden persönlich bestätigt.</p>
+<form id="commission-form" class="commission-form"><div class="order-grid">
+<div><label>Vorname *<input name="first_name" required></label></div><div><label>Nachname *<input name="last_name" required></label></div>
+<div class="wide"><label>E-Mail *<input type="email" name="reply_to" required></label></div>
+<div><label>Zeichenstil *<select name="drawing_style" required><option value="">Bitte wählen</option><option>Chibi</option><option>Anime / Manga</option><option>Cartoon</option><option>Fantasy</option><option>Realistisch</option><option>Anderer Stil</option></select></label></div>
+<div><label>Anzahl Figuren *<input name="character_count" type="number" min="1" value="1" required></label></div>
+<div><label>Hintergrund *<select name="background" required><option>Kein Hintergrund</option><option>Einfacher Hintergrund</option><option>Detaillierter Hintergrund</option></select></label></div>
+<div><label>Nutzung *<select name="usage_rights" required><option>Privat</option><option>Social Media</option><option>Gewerblich / kommerziell</option></select></label></div>
+<div><label>Dateiformat<select name="file_format"><option>PNG</option><option>JPG</option><option>PDF</option><option>Nach Absprache</option></select></label></div>
+<div><label>Budget (€)<input name="budget" type="number" min="0"></label></div><div><label>Wunschtermin<input name="desired_date" type="date"></label></div>
+<div class="wide"><label>Motivbeschreibung *<textarea name="motif_description" rows="7" required maxlength="3000"></textarea></label></div>
+<div class="wide"><label>Zusätzliche Wünsche<textarea name="extra_wishes" rows="4"></textarea></label></div>
+<div class="wide"><label>Referenzbilder<input id="reference-images" type="file" accept="image/*" multiple></label><small class="muted">Die Dateinamen werden übermittelt. Bilder bitte anschließend per E-Mail senden oder einen Freigabelink in die Beschreibung setzen.</small></div>
+</div>
+<label class="consent-check"><input type="checkbox" required> Ich darf die Referenzbilder für diese Anfrage verwenden.</label>
+<label class="consent-check"><input type="checkbox" required> Ich stimme der Datenverarbeitung gemäß Datenschutzerklärung zu.</label>
+<label class="consent-check"><input type="checkbox" required> Mir ist bekannt, dass dies zunächst eine unverbindliche Anfrage ist.</label>
+<input type="hidden" name="request_type" value="Zeichenauftrag"><input type="hidden" name="reference_file_names" id="reference-file-names">
+<button id="commission-submit" class="main-btn" type="submit">Anfrage per E-Mail senden</button><p id="commission-status" class="form-status"></p></form></main>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script src="js/email-config.js"></script><script src="js/email-service.js"></script><script src="js/commission.js"></script></body></html>

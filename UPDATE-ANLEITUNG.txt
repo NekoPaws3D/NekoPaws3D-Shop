@@ -1,36 +1,42 @@
-NekoPaws3D – Update: Versandklassen mit Hermes und DHL
+NekoPaws3D – Update Versand, Lager, Recht & Zeichenauftrag
 
-NEU:
-- Versandklasse pro Produkt: Brief, klein, mittel, groß, XL, XXL/31,5 kg oder Sperrgut.
-- Hermes- und DHL-Tarife für kleine bis sehr große Pakete.
-- Bei mehreren Artikeln zählt automatisch die größte benötigte Paketklasse.
-- Kunden sehen nur passende Versandarten.
-- Preise und Aktivierung sind im Admin unter „Versand“ bearbeitbar.
-
-WICHTIG:
-Die Preise sind Startwerte und müssen vor Nutzung anhand deiner aktuellen Hermes-/DHL-Konditionen geprüft werden.
-
-Enthalten:
-- index.html
-- admin/index.html
-- js/shipping-classes.js
-- admin/shipping-admin-update.js
-
-Unverändert:
-- data/store.json
-- vorhandene Produkte und Bilder
-- EmailJS
-- GitHub-Einstellungen
-- Gutscheine
-- Gästebuch
+Neu:
+- Gewicht und maximale Stückzahl je Paket pro Produkt
+- automatische Hochstufung der Paketklasse
+- mehrere Pakete bei großen Bestellungen
+- kostenlose Abholung
+- Bestandswarnungen und Sperre bei Ausverkauf
+- Warnschwelle pro Produkt
+- Zeichenauftrag-Formular über EmailJS
+- AGB-, Datenschutz- und Personalisierungs-Hinweise
+- Backup-Download im Admin
 
 Installation:
-1. ZIP entpacken und Dateien ins Repository hochladen.
-2. index.html und admin/index.html ersetzen.
-3. Die zwei neuen JS-Dateien hochladen.
-4. Commit erstellen und Seiten mit Strg+F5 neu laden.
-5. Admin → Produkte: Versandklasse je Produkt auswählen.
-6. Admin → Versand: Preise kontrollieren.
-7. „Alles veröffentlichen“ klicken.
+1. ZIP entpacken.
+2. Alle Dateien ins Repository kopieren und vorhandene ersetzen.
+3. data/store.json NICHT löschen oder ersetzen.
+4. Commit erstellen und Website mit Strg+F5 neu laden.
+5. Im Admin Gewicht, Stückzahl je Paket und Warnschwellen kontrollieren.
+6. Versandpreise prüfen.
 
-Bestehende Produkte ohne Auswahl werden zunächst als Kleinpaket/Päckchen behandelt.
+EmailJS Zeichenauftrag:
+Es wird kein drittes Template benötigt.
+
+Der Zeichenauftrag verwendet automatisch dein vorhandenes contactTemplateId.
+Alle Angaben werden als formatierte Nachricht an das Kontakt-Template übergeben.
+
+Verwendete Standardfelder:
+- from_name
+- name
+- reply_to
+- email
+- subject
+- message
+- customer_message
+- request_type
+- to_email
+
+Mindestens eines der Felder message oder customer_message sollte in deinem Kontakt-Template angezeigt werden.
+
+Wichtig:
+Die rechtlichen Hinweise sind technische Vorlagen und keine Rechtsberatung.
