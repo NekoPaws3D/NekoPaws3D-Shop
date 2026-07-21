@@ -6,6 +6,7 @@
   <title>Admin – NekoPaws3D</title>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="../css/enhancements.css">
 </head>
 <body>
 <header class="header simple admin-header">
@@ -33,6 +34,7 @@
         <p class="muted">Produkte, Bilder, Preise, Gutscheine, Versand und Weiterleitungsadresse direkt bearbeiten.</p>
       </div>
       <div class="toolbar-actions">
+        <button id="backup-btn" class="outline-btn" type="button">Backup herunterladen</button>
         <button id="reload-btn" class="outline-btn" type="button">Neu laden</button>
         <button id="save-btn" class="main-btn" type="button">Alles veröffentlichen</button>
       </div>
@@ -114,6 +116,10 @@
           <option value="sperrgut">Sperrgut</option>
         </select>
       </label>
+      <label>Gewicht pro Stück (g)<input class="p-weight" type="number" min="0" step="1"></label>
+      <label>Max. Stück je Paket<input class="p-max-per-package" type="number" min="1" step="1"></label>
+      <label>Bestands-Warnschwelle<input class="p-low-stock" type="number" min="0" step="1"></label>
+      <label class="check"><input class="p-show-stock-warning" type="checkbox"> Bestandshinweis im Shop anzeigen</label>
       <label class="wide">Beschreibung<textarea class="p-description" rows="4"></textarea></label>
       <label class="check"><input class="p-visible" type="checkbox"> Im Shop sichtbar</label>
       <label class="check"><input class="p-customizable" type="checkbox"> Personalisierbar</label>
@@ -163,5 +169,6 @@ window.addEventListener("error", function () {
 </script>
 <script src="./admin.js?v=6" defer></script>
 <script src="./shipping-admin-update.js?v=1" defer></script>
+<script src="./admin-enhancements.js?v=1" defer></script>
 </body>
 </html>

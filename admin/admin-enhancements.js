@@ -1,0 +1,9 @@
+"use strict";
+(function(){
+ function backup(){if(!storeData)return;readEditors();readCoupons();readShipping();readGuestbook();readSettings();const b=new Blob([JSON.stringify(storeData,null,2)+"\n"],{type:"application/json"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download=`NekoPaws3D-store-backup-${new Date().toISOString().slice(0,10)}.json`;a.click();URL.revokeObjectURL(u);setStatus("#save-status","Backup wurde heruntergeladen.","success");}
+ const create=createProductEditor;createProductEditor=function(p){const f=create(p),set=(s,v)=>{const e=f.querySelector?.(s);if(!e)return;if(e.type==="checkbox")e.checked=Boolean(v);else e.value=v??"";};set(".p-weight",p.weightGrams||0);set(".p-max-per-package",p.maxPerPackage||1);set(".p-low-stock",p.lowStockThreshold??3);set(".p-show-stock-warning",p.showStockWarning!==false);return f;};
+ const read=readEditors;readEditors=function(){read();$$(".product-editor-card").forEach(c=>{const p=storeData.products.find(x=>String(x.id)===String(c.dataset.id));if(!p)return;p.weightGrams=Math.max(0,Number(c.querySelector(".p-weight")?.value)||0);p.maxPerPackage=Math.max(1,Number(c.querySelector(".p-max-per-package")?.value)||1);p.lowStockThreshold=Math.max(0,Number(c.querySelector(".p-low-stock")?.value)||0);p.showStockWarning=c.querySelector(".p-show-stock-warning")?.checked!==false;});};
+ const render=renderProducts;renderProducts=function(){render();$$(".product-editor-card").forEach(c=>{const p=storeData.products.find(x=>String(x.id)===String(c.dataset.id));if(!p)return;const s=Number(p.stock)||0,t=Number(p.lowStockThreshold)||3;c.classList.remove("stock-ok","stock-low","stock-empty");c.classList.add(s<=0?"stock-empty":s<=t?"stock-low":"stock-ok");});};
+ function init(){document.getElementById("backup-btn")?.addEventListener("click",backup);}
+ document.readyState==="loading"?document.addEventListener("DOMContentLoaded",init,{once:true}):init();
+})();
