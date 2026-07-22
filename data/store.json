@@ -116,7 +116,7 @@
         "assets/products/1784308286705-chatgpt-image-29-apr-2026-09-03-21.png"
       ],
       "description": "Blind Box Waldgeister\n- 8 Figuren von Common bis Secret\n- 40 Common\n- 3 Rare\n- 4 Rare\n- 2 Super Rare\n- 1 Secret\n- Sammelkarte und Magnet\n\nSammle sie und lass dich überraschen welcher Waldgeist bei dir Einzieht",
-      "customizable": true,
+      "customizable": false,
       "visible": true,
       "stock": 43,
       "sku": "NEKO-006",
@@ -137,7 +137,7 @@
         "assets/products/1784307784249-d.jpeg"
       ],
       "description": "Albedo im wunderschönen Hochzeitskleid\n- Figur wird erst nach Bestellung Hergestellt\n- Höhe 30cm ohne Base \n- Kompletter Resin Druck\n- Stoff Akzente am Kleid\n- Handbemalt und mit UV Lack versiegelt",
-      "customizable": true,
+      "customizable": false,
       "visible": true,
       "stock": 1,
       "sku": "NEKO-07",
@@ -194,7 +194,7 @@
         "assets/products/1784308019056-whatsapp-image-2026-07-17-at-18-27-36g.jpeg"
       ],
       "description": "Sung Woo Solo Leveling\n- Figur wird erst nach Bestellung Hergestellt\n- Höhe 25 cm ohne Base \n- Kompletter Resin Druck\n- Handbemalt und mit UV Lack versiegelt",
-      "customizable": true,
+      "customizable": false,
       "visible": true,
       "stock": 5,
       "sku": "NEKO-010",
@@ -256,8 +256,8 @@
       "images": [
         "assets/products/1784315144421-chatgpt-image-17-juli-2026-20-56-52.png"
       ],
-      "description": "Miniatur Ohngesicht mit kleiner Blüte\nin einer kleinen Glaskuppel\n\nfür alle Ghibli Liebhaber und die wenig Platz haben",
-      "customizable": false,
+      "description": "Miniatur Ohngesicht mit kleiner Blüte\nin einer kleinen Glaskuppel\n- Blüte in der Hand Farbe personalisierbar\n\nfür alle Ghibli Liebhaber und die wenig Platz haben",
+      "customizable": true,
       "visible": true,
       "stock": 10,
       "sku": "NEKO-013",
