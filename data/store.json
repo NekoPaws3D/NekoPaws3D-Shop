@@ -603,7 +603,7 @@
       "freeFrom": 50,
       "minClass": "small",
       "maxClass": "sperrgut",
-      "active": false
+      "active": true
     },
     {
       "key": "Dhl",
@@ -743,7 +743,7 @@
       "freeFrom": 0,
       "minClass": "xxl",
       "maxClass": "xxl",
-      "active": false
+      "active": true
     },
     {
       "key": "sperrgut",
