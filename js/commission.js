@@ -7,6 +7,17 @@
   const status = document.getElementById("commission-status");
   const button = document.getElementById("commission-submit");
 
+
+  const referenceParams = new URLSearchParams(location.search);
+  const referenceTitle = referenceParams.get("reference");
+  const referenceCategory = referenceParams.get("category");
+  if (referenceTitle) {
+    const extra = form?.querySelector('[name="extra_wishes"]');
+    if (extra) {
+      extra.value = `Referenz aus der Auftragsgalerie: ${referenceTitle}${referenceCategory ? ` (${referenceCategory})` : ""}\n\nIch wünsche mir etwas in einer ähnlichen Richtung:`;
+    }
+  }
+
   files?.addEventListener("change", () => {
     names.value = [...files.files].map(file => file.name).join(", ");
   });
