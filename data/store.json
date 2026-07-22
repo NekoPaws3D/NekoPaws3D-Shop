@@ -592,6 +592,25 @@
       "sort": 26,
       "priceOnRequest": false,
       "shippingClass": "small"
+    },
+    {
+      "id": 38,
+      "name": "Logo NekoPaws3D",
+      "category": "Textildruck",
+      "price": 30,
+      "priceOnRequest": false,
+      "image": "assets/products/1784703704888-kein-titel-foto-collage.png",
+      "images": [
+        "assets/products/1784703704888-kein-titel-foto-collage.png"
+      ],
+      "description": "NekoPaws3D Exklusives T-Shirt\n- in Verschieden Größen möglich\n- von T-Shirt bis zum Tanktop\n- auch in Kindergrößen möglich",
+      "customizable": true,
+      "visible": true,
+      "stock": 0,
+      "sku": "NEKO-038",
+      "featured": false,
+      "sort": 27,
+      "shippingClass": "small"
     }
   ],
   "shippingMethods": [
