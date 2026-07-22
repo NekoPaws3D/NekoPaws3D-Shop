@@ -654,6 +654,48 @@
       "featured": true,
       "sort": 28,
       "shippingClass": "medium"
+    },
+    {
+      "id": 40,
+      "name": "Drachen Geist",
+      "category": "3D Druck",
+      "price": 30,
+      "priceOnRequest": false,
+      "image": "assets/products/1784710548916-20260319-072936.jpg",
+      "images": [
+        "assets/products/1784710548916-20260319-072936.jpg",
+        "assets/products/1784710551381-20260319-072930.jpg",
+        "assets/products/1784710554209-20260319-072924.jpg",
+        "assets/products/1784710556957-20251019-121229.jpg"
+      ],
+      "description": "Drache im Geist kostüm\n- 25cm groß \n- Druck wird bei Bestellung angefertigt\nMehrfarbigen Druck möglich/ Handbemalt",
+      "customizable": true,
+      "visible": true,
+      "stock": 5,
+      "sku": "NEKO-040",
+      "featured": false,
+      "sort": 29,
+      "shippingClass": "medium"
+    },
+    {
+      "id": 41,
+      "name": "Zeichnung",
+      "category": "Zeichenaufträge",
+      "price": 0,
+      "priceOnRequest": true,
+      "image": "assets/products/1784710672839-20250803-225301.jpg",
+      "images": [
+        "assets/products/1784710672839-20250803-225301.jpg",
+        "assets/products/1784710675418-20250827-142950.jpg"
+      ],
+      "description": "Zeichenaufträge möglich \n- Personalisiert\n- Unikat nur für dich",
+      "customizable": true,
+      "visible": true,
+      "stock": 5,
+      "sku": "NEKO-040-KOPIE",
+      "featured": false,
+      "sort": 30,
+      "shippingClass": "medium"
     }
   ],
   "shippingMethods": [
