@@ -10,3 +10,15 @@
 .admin-card.stock-ok{border-left:6px solid #43a047}
 .admin-card.stock-low{border-left:6px solid #fb8c00}
 .admin-card.stock-empty{border-left:6px solid #e53935}
+
+.product-delivery-info{display:grid;gap:.25rem;margin:.65rem 0;padding:.7rem .8rem;border-radius:12px;background:rgba(255,255,255,.07);font-size:.86rem}
+.product-delivery-info span{display:block}
+.cart-delivery-info{display:block;margin:.45rem 0;white-space:normal;opacity:.82}
+.legal-order-note{margin:1rem 0;padding:1rem;border-radius:14px;background:rgba(255,255,255,.07);font-size:.9rem}
+.legal-order-note p{margin:.4rem 0}
+.legal-page{max-width:940px;margin:0 auto;padding:2rem 1.2rem 4rem;line-height:1.65}
+.legal-page h1,.legal-page h2,.legal-page h3{line-height:1.2}
+.legal-page section{margin:2rem 0}
+.legal-box{padding:1rem 1.2rem;border-radius:14px;background:rgba(255,255,255,.07)}
+.legal-nav{display:flex;gap:.65rem;flex-wrap:wrap;margin:1rem 0 2rem}
+.legal-nav a{padding:.45rem .75rem;border:1px solid currentColor;border-radius:999px}
