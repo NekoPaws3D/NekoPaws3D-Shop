@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="admin.css">
   <link rel="stylesheet" href="../css/enhancements.css">
+  <link rel="stylesheet" href="./management.css">
 </head>
 <body>
 <header class="header simple admin-header">
@@ -46,6 +47,8 @@
       <button data-tab="coupons" type="button">Gutscheine</button>
       <button data-tab="shipping" type="button">Versand</button>
       <button data-tab="guestbook" type="button">Gästebuch</button>
+      <button data-tab="gallery" type="button">Auftragsgalerie</button>
+      <button data-tab="management" type="button">Shop-Management</button>
       <button data-tab="settings" type="button">Shop & E-Mail</button>
     </nav>
 
@@ -74,6 +77,76 @@
         <button id="add-guestbook-btn" class="main-btn" type="button">+ Neuer Eintrag</button>
       </div>
       <div id="guestbook-editor"></div>
+    </section>
+
+
+    <section id="tab-gallery" class="admin-tab page hidden">
+      <div class="section-row">
+        <div>
+          <h2>Auftragsgalerie</h2>
+          <p class="muted">Veröffentlichte Referenzaufträge verwalten. Bitte nur mit Zustimmung der jeweiligen Kundschaft veröffentlichen.</p>
+        </div>
+        <button id="add-gallery-btn" class="main-btn" type="button">+ Referenzauftrag</button>
+      </div>
+      <div id="gallery-editor"></div>
+    </section>
+
+
+    <section id="tab-management" class="admin-tab page hidden">
+      <div class="management-head">
+        <div>
+          <h2>Shop-Management</h2>
+          <p class="muted">Bestellungen, Produktion, Versand, Rechnungen und Kunden verwalten.</p>
+        </div>
+        <div class="toolbar-actions">
+          <button id="mgmt-export-btn" class="outline-btn" type="button">Management-Backup</button>
+          <label class="outline-btn file-button">Backup importieren<input id="mgmt-import-input" type="file" accept="application/json"></label>
+          <button id="mgmt-add-order-btn" class="main-btn" type="button">+ Bestellung</button>
+        </div>
+      </div>
+
+      <div id="mgmt-dashboard" class="mgmt-dashboard"></div>
+
+      <div class="mgmt-subtabs">
+        <button class="active" data-mgmt-view="orders" type="button">Bestellungen</button>
+        <button data-mgmt-view="production" type="button">Produktion</button>
+        <button data-mgmt-view="customers" type="button">Kunden</button>
+        <button data-mgmt-view="invoices" type="button">Rechnungen</button>
+      </div>
+
+      <section id="mgmt-view-orders" class="mgmt-view">
+        <div class="mgmt-filters">
+          <input id="mgmt-search" placeholder="Suche nach Kunde, Nummer, Produkt oder Tracking">
+          <select id="mgmt-status-filter">
+            <option value="">Alle Status</option>
+            <option value="new">Neu</option>
+            <option value="processing">In Bearbeitung</option>
+            <option value="production">Produktion</option>
+            <option value="ready">Versandbereit</option>
+            <option value="shipped">Verschickt</option>
+            <option value="completed">Abgeschlossen</option>
+            <option value="cancelled">Storniert</option>
+          </select>
+        </div>
+        <div id="mgmt-orders-list"></div>
+      </section>
+
+      <section id="mgmt-view-production" class="mgmt-view hidden">
+        <div id="mgmt-kanban" class="mgmt-kanban"></div>
+      </section>
+
+      <section id="mgmt-view-customers" class="mgmt-view hidden">
+        <div id="mgmt-customers-list"></div>
+      </section>
+
+      <section id="mgmt-view-invoices" class="mgmt-view hidden">
+        <div class="legal-box">
+          <b>Rechnungsablage:</b> Rechnungen werden aus den Bestelldaten erzeugt. Der PDF-Export erfolgt über den Druckdialog des Browsers („Als PDF speichern“).
+        </div>
+        <div id="mgmt-invoices-list"></div>
+      </section>
+
+      <p id="mgmt-status" class="form-status" role="status"></p>
     </section>
 
     <section id="tab-settings" class="admin-tab page hidden">
@@ -120,6 +193,17 @@
       <label>Max. Stück je Paket<input class="p-max-per-package" type="number" min="1" step="1"></label>
       <label>Bestands-Warnschwelle<input class="p-low-stock" type="number" min="0" step="1"></label>
       <label class="check"><input class="p-show-stock-warning" type="checkbox"> Bestandshinweis im Shop anzeigen</label>
+      <label>Verfügbarkeit
+        <select class="p-availability-type">
+          <option value="stock">Lagerware / sofort versandbereit</option>
+          <option value="made_to_order">Wird nach Bestellung gefertigt</option>
+          <option value="individual">Individuelle Anfertigung / nach Absprache</option>
+          <option value="digital">Digitale Leistung / kein Versand</option>
+        </select>
+      </label>
+      <label>Fertigungszeit<input class="p-production-time" placeholder="z. B. 3–5 Werktage"></label>
+      <label>Versandlaufzeit<input class="p-shipping-time" placeholder="z. B. 1–3 Werktage"></label>
+      <label class="wide">Zusätzlicher Lieferhinweis<input class="p-delivery-note" placeholder="z. B. bei Sonderwünschen nach Absprache"></label>
       <label class="wide">Beschreibung<textarea class="p-description" rows="4"></textarea></label>
       <label class="check"><input class="p-visible" type="checkbox"> Im Shop sichtbar</label>
       <label class="check"><input class="p-customizable" type="checkbox"> Personalisierbar</label>
@@ -129,6 +213,49 @@
         <div class="image-list"></div>
         <label class="upload-box">Bilder hochladen<input class="image-upload" type="file" accept="image/*" multiple></label>
         <small class="muted">Bilder werden beim Hochladen direkt in <code>assets/products/</code> gespeichert. Das erste Bild ist das Vorschaubild.</small>
+      </div>
+    </div>
+  </article>
+</template>
+
+
+<template id="gallery-template">
+  <article class="admin-card gallery-editor-card">
+    <div class="section-row">
+      <h3 class="gallery-heading">Referenzauftrag</h3>
+      <div>
+        <button class="outline-btn duplicate-gallery" type="button">Duplizieren</button>
+        <button class="outline-btn danger delete-gallery" type="button">Löschen</button>
+      </div>
+    </div>
+    <div class="admin-grid">
+      <label>ID<input class="ga-id" type="number" min="1"></label>
+      <label>Sortierung<input class="ga-sort" type="number" min="1"></label>
+      <label class="wide">Titel<input class="ga-title" maxlength="120"></label>
+      <label>Kategorie
+        <select class="ga-category">
+          <option>Zeichnung</option>
+          <option>Textildruck</option>
+          <option>3D-Druck</option>
+          <option>Epoxidharz</option>
+          <option>Sticker</option>
+          <option>Sonstiges</option>
+        </select>
+      </label>
+      <label>Fertiggestellt am<input class="ga-date" type="date"></label>
+      <label>Kundenname / Kürzel<input class="ga-customer" maxlength="80" placeholder="optional oder anonym"></label>
+      <label class="check"><input class="ga-visible" type="checkbox"> Öffentlich sichtbar</label>
+      <label class="check"><input class="ga-featured" type="checkbox"> Highlight</label>
+      <label class="check"><input class="ga-consent" type="checkbox"> Veröffentlichung wurde freigegeben</label>
+      <label class="wide">Beschreibung<textarea class="ga-description" rows="5" maxlength="2000"></textarea></label>
+      <label class="wide">Schlagwörter<input class="ga-tags" placeholder="z. B. Chibi, Katze, Rosa"></label>
+      <div class="wide image-manager">
+        <b>Galeriebilder</b>
+        <div class="gallery-image-list image-list"></div>
+        <label class="upload-box">Bilder hochladen
+          <input class="gallery-image-upload" type="file" accept="image/*" multiple>
+        </label>
+        <small class="muted">Bilder werden direkt in <code>assets/gallery/</code> gespeichert. Das erste Bild ist das Vorschaubild.</small>
       </div>
     </div>
   </article>
@@ -158,6 +285,63 @@
   </article>
 </template>
 
+
+<div id="mgmt-order-modal" class="mgmt-modal hidden" role="dialog" aria-modal="true" aria-labelledby="mgmt-modal-title">
+  <form id="mgmt-order-form" class="mgmt-modal-card">
+    <div class="section-row">
+      <h2 id="mgmt-modal-title">Bestellung bearbeiten</h2>
+      <button id="mgmt-close-modal" class="outline-btn" type="button">Schließen</button>
+    </div>
+    <input id="mgmt-order-id" type="hidden">
+    <div class="admin-grid">
+      <label>Bestellnummer<input id="mgmt-order-number" required></label>
+      <label>Datum<input id="mgmt-order-date" type="date" required></label>
+      <label>Status
+        <select id="mgmt-order-status">
+          <option value="new">Neu</option>
+          <option value="processing">In Bearbeitung</option>
+          <option value="production">Produktion</option>
+          <option value="ready">Versandbereit</option>
+          <option value="shipped">Verschickt</option>
+          <option value="completed">Abgeschlossen</option>
+          <option value="cancelled">Storniert</option>
+        </select>
+      </label>
+      <label>Priorität
+        <select id="mgmt-order-priority">
+          <option value="normal">Normal</option>
+          <option value="high">Hoch</option>
+          <option value="urgent">Dringend</option>
+        </select>
+      </label>
+      <label>Kategorie
+        <select id="mgmt-order-category">
+          <option>3D-Druck</option><option>Zeichenauftrag</option><option>Textildruck</option>
+          <option>Sticker</option><option>Epoxidharz</option><option>Sonstiges</option>
+        </select>
+      </label>
+      <label>Fortschritt %<input id="mgmt-order-progress" type="number" min="0" max="100" step="5"></label>
+      <label>Fällig am<input id="mgmt-order-due" type="date"></label>
+      <label>Gesamtbetrag €<input id="mgmt-order-total" type="number" min="0" step="0.01"></label>
+      <label class="wide">Kundenname<input id="mgmt-customer-name" required></label>
+      <label>E-Mail<input id="mgmt-customer-email" type="email"></label>
+      <label>Telefon<input id="mgmt-customer-phone"></label>
+      <label class="wide">Anschrift<textarea id="mgmt-customer-address" rows="3"></textarea></label>
+      <label class="wide">Artikel / Leistungen<textarea id="mgmt-order-items" rows="5" placeholder="Ein Artikel pro Zeile, z. B. 2x Sticker – 8,00 €"></textarea></label>
+      <label>Versanddienst<select id="mgmt-order-carrier"><option value="">Noch offen</option><option>DHL</option><option>Hermes</option><option>Deutsche Post</option><option>Digital</option><option>Abholung</option></select></label>
+      <label>Trackingnummer<input id="mgmt-order-tracking"></label>
+      <label>Versanddatum<input id="mgmt-order-shipped-date" type="date"></label>
+      <label>Rechnungsnummer<input id="mgmt-order-invoice"></label>
+      <label class="wide">Interne Notizen<textarea id="mgmt-order-notes" rows="4"></textarea></label>
+    </div>
+    <div class="order-actions">
+      <button class="main-btn" type="submit">Bestellung speichern</button>
+      <button id="mgmt-delete-order" class="outline-btn danger" type="button">Bestellung löschen</button>
+    </div>
+  </form>
+</div>
+
+
 <script>
 window.addEventListener("error", function () {
   const status = document.getElementById("login-status");
@@ -170,5 +354,8 @@ window.addEventListener("error", function () {
 <script src="./admin.js?v=6" defer></script>
 <script src="./shipping-admin-update.js?v=1" defer></script>
 <script src="./admin-enhancements.js?v=1" defer></script>
+<script src="./gallery-admin.js?v=1" defer></script>
+<script src="./legal-product-times.js?v=1" defer></script>
+<script src="./management.js?v=1" defer></script>
 </body>
 </html>

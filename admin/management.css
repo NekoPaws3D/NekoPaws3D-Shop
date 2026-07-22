@@ -1,0 +1,27 @@
+
+.management-head,.mgmt-filters,.mgmt-subtabs{display:flex;gap:.75rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.file-button{display:inline-flex;align-items:center;cursor:pointer}.file-button input{display:none}
+.mgmt-dashboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:1.25rem 0}
+.mgmt-stat{padding:1rem;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}
+.mgmt-stat strong{display:block;font-size:1.65rem;margin-top:.25rem}
+.mgmt-subtabs{justify-content:flex-start;margin:1.2rem 0}
+.mgmt-subtabs button{border:1px solid currentColor;border-radius:999px;padding:.55rem .9rem;background:transparent;color:inherit;cursor:pointer}
+.mgmt-subtabs button.active{background:var(--accent,#ff4fb8);color:#111}
+.mgmt-filters input{flex:1;min-width:240px}.mgmt-filters select{min-width:190px}
+.mgmt-order-card,.mgmt-customer-card,.mgmt-invoice-card{margin:1rem 0;padding:1rem;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.mgmt-order-top{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;flex-wrap:wrap}
+.mgmt-order-meta{display:flex;gap:.5rem;flex-wrap:wrap;margin:.5rem 0}
+.mgmt-badge{display:inline-flex;padding:.25rem .55rem;border-radius:999px;background:rgba(255,255,255,.1);font-size:.8rem}
+.mgmt-progress{height:10px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden;margin:.65rem 0}
+.mgmt-progress span{display:block;height:100%;background:currentColor}
+.mgmt-kanban{display:grid;grid-template-columns:repeat(5,minmax(220px,1fr));gap:1rem;overflow-x:auto;padding-bottom:1rem}
+.mgmt-column{min-height:260px;padding:.8rem;border-radius:16px;background:rgba(255,255,255,.04)}
+.mgmt-column h3{position:sticky;top:0;margin-top:0}
+.mgmt-ticket{padding:.75rem;margin:.65rem 0;border-radius:12px;background:rgba(255,255,255,.08);cursor:pointer}
+.mgmt-modal{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.78);padding:1rem;overflow:auto}
+.mgmt-modal-card{max-width:950px;margin:2rem auto;padding:1.25rem;border-radius:20px;background:#17131e;border:1px solid rgba(255,255,255,.15)}
+.mgmt-modal.hidden{display:none}.mgmt-modal-open{overflow:hidden}
+.mgmt-empty{padding:2rem;text-align:center;opacity:.75}
+.mgmt-actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem}
+@media(max-width:700px){.mgmt-kanban{grid-template-columns:repeat(5,85vw)}}
+@media print{body *{visibility:hidden}.invoice-print,.invoice-print *{visibility:visible}.invoice-print{position:absolute;left:0;top:0;width:100%;color:#000;background:#fff;padding:30px}.invoice-print button{display:none}}
