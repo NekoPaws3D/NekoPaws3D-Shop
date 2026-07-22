@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auftragsgalerie – NekoPaws3D</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/enhancements.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+<div class="topbar">
+  <span>♡ Handgemacht mit Herz</span>
+  <span>Referenzen bereits umgesetzter Kundenwünsche</span>
+  <span>🐾 Jedes Projekt ist ein Unikat</span>
+</div>
+
+<header class="header simple">
+  <a class="brand" href="index.html">
+    <img src="assets/logo.png" class="logo" alt="NekoPaws3D Logo">
+    <div><h1>Neko<span>Paws</span>3D</h1><p>Auftragsgalerie</p></div>
+  </a>
+  <nav class="nav">
+    <a href="index.html">Shop</a>
+    <a href="zeichenauftrag.html">Zeichenauftrag</a>
+    <a href="gaestebuch.html">Gästebuch</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main class="gallery-page">
+  <section class="gallery-intro">
+    <p class="gallery-kicker">✨ Ideen, die Wirklichkeit wurden</p>
+    <h2>Auftragsgalerie</h2>
+    <p>Hier findest du eine Auswahl bereits umgesetzter Aufträge als Inspiration und Referenz. Alle veröffentlichten Projekte wurden für die Galerie freigegeben.</p>
+    <a class="main-btn" href="zeichenauftrag.html">Eigenen Auftrag anfragen</a>
+  </section>
+
+  <section class="gallery-controls" aria-label="Galeriefilter">
+    <input id="gallery-search" type="search" placeholder="Titel, Stil oder Schlagwort suchen …">
+    <div id="gallery-filters" class="gallery-filter-row"></div>
+  </section>
+
+  <p id="gallery-status" class="gallery-status">Galerie wird geladen …</p>
+  <section id="gallery-grid" class="gallery-grid" aria-live="polite"></section>
+</main>
+
+<div id="gallery-lightbox" class="gallery-lightbox hidden" role="dialog" aria-modal="true" aria-label="Bildansicht">
+  <button id="gallery-lightbox-close" class="gallery-lightbox-close" type="button" aria-label="Schließen">×</button>
+  <button id="gallery-lightbox-prev" class="gallery-lightbox-nav prev" type="button" aria-label="Vorheriges Bild">‹</button>
+  <figure>
+    <img id="gallery-lightbox-image" alt="">
+    <figcaption id="gallery-lightbox-caption"></figcaption>
+  </figure>
+  <button id="gallery-lightbox-next" class="gallery-lightbox-nav next" type="button" aria-label="Nächstes Bild">›</button>
+</div>
+
+<footer class="footer">
+  <div><img src="assets/logo.png" class="footer-logo" alt="Logo"><h3>NekoPaws3D</h3><p>Liebevoll umgesetzte Unikate und individuelle Aufträge.</p></div>
+  <div><h3>Entdecken</h3><p><a href="index.html">Shop</a><br><a href="zeichenauftrag.html">Zeichenauftrag</a><br><a href="gaestebuch.html">Gästebuch</a></p></div>
+  <div><h3>Informationen</h3><p><a href="kontakt.html">Kontakt</a><br><a href="impressum.html">Impressum</a><br><a href="agb.html">AGB</a><br><a href="widerruf.html">Widerruf</a><br><a href="datenschutz.html">Datenschutz</a><br><a href="versand.html">Versand</a></p></div>
+</footer>
+
+<script src="js/gallery.js?v=1"></script>
+</body>
+</html>

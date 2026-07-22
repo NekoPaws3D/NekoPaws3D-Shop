@@ -40,3 +40,6 @@ Mindestens eines der Felder message oder customer_message sollte in deinem Konta
 
 Wichtig:
 Die rechtlichen Hinweise sind technische Vorlagen und keine Rechtsberatung.
+
+
+Zusätzlich enthalten: Auftragsgalerie mit Admin-Verwaltung. Siehe UPDATE-AUFTRAGSGALERIE.txt.

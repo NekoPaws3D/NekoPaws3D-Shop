@@ -1,0 +1,40 @@
+NekoPaws3D – Update AGB, Kauf auf Rechnung und produktbezogene Zeiten
+
+ENTHALTEN
+- agb.html
+- widerruf.html mit Muster-Widerrufsformular
+- datenschutz.html
+- versand.html
+- Rechtliche Pflichtbestätigung im Bestellformular
+- Zahlung auf Rechnung
+- Kleinunternehmer-Hinweis gemäß § 19 UStG
+- Admin-Felder je Produkt:
+  * Verfügbarkeit
+  * Fertigungszeit
+  * Versandlaufzeit
+  * zusätzlicher Lieferhinweis
+- Anzeige der Zeiten beim Produkt, im Warenkorb und in der Bestell-E-Mail
+- Bestellungen mit mehreren Artikeln berücksichtigen die längste Fertigungszeit
+- Widerrufshinweis für eindeutig personalisierte Waren
+- AGB-/Datenschutz-Bestätigung beim Zeichenauftrag
+
+INSTALLATION
+1. ZIP entpacken.
+2. Alle Dateien in das Repository kopieren.
+3. Vorhandene Dateien ersetzen.
+4. data/store.json NICHT ersetzen oder löschen.
+5. Änderungen committen.
+6. Nach dem GitHub-Pages-Update Shop und Admin mit Strg+F5 neu laden.
+
+DANACH
+1. Im Admin jedes Produkt öffnen.
+2. Verfügbarkeit auswählen.
+3. Fertigungszeit eintragen, z. B. „3–5 Werktage“.
+4. Versandlaufzeit eintragen, z. B. „1–3 Werktage“.
+5. „Alles veröffentlichen“ anklicken.
+
+WICHTIG
+- Die vorhandenen Impressumsdaten wurden als Grundlage verwendet.
+- In deinem Impressum steht derzeit die PLZ „067061“. Bitte prüfe, ob diese Angabe korrekt ist.
+- Rechtstexte sollten vor dauerhafter gewerblicher Nutzung von einer Rechtsberatung oder einem spezialisierten Rechtstexteanbieter geprüft werden.
+- Für Rechnungen benötigst du zusätzlich deine steuerliche Identifikationsangabe/Steuernummer nach den für dich geltenden Rechnungsvorschriften. Diese sollte nicht öffentlich in die Website geschrieben werden.

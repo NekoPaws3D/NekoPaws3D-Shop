@@ -1,0 +1,45 @@
+NekoPaws3D – Update Auftragsgalerie
+
+NEU
+- Öffentliche Seite galerie.html
+- Kategorienfilter und Suche
+- Mehrere Bilder je Referenz
+- Lightbox mit Vor/Zurück
+- Highlights
+- Kundenname optional
+- Fertigstellungsdatum, Beschreibung und Schlagwörter
+- Button „Ähnlichen Auftrag anfragen“
+- Referenz wird automatisch ins Zeichenauftrag-Formular übernommen
+- Vollständige Verwaltung im Admin
+- Bild-Upload direkt nach assets/gallery/
+- Veröffentlichung nur bei gesetzter Freigabe-Checkbox
+
+INSTALLATION
+1. ZIP entpacken.
+2. Alle enthaltenen Dateien in dein Repository kopieren.
+3. Vorhandene Dateien ersetzen.
+4. data/store.json NICHT ersetzen oder löschen.
+5. Commit erstellen.
+6. Etwa 1–2 Minuten warten.
+7. Website und Admin mit Strg+F5 neu laden.
+
+ERSTER EINTRAG
+1. Admin öffnen und anmelden.
+2. Tab „Auftragsgalerie“ öffnen.
+3. „+ Referenzauftrag“ anklicken.
+4. Titel, Kategorie, Beschreibung und Bilder eintragen.
+5. „Veröffentlichung wurde freigegeben“ aktivieren.
+6. „Öffentlich sichtbar“ aktivieren.
+7. „Alles veröffentlichen“ anklicken.
+
+DATENSCHUTZ
+Veröffentliche Kundenname, Bilder und Auftragsdetails nur mit ausdrücklicher Zustimmung.
+Ohne aktivierte Freigabe-Checkbox wird der Eintrag auf galerie.html nicht angezeigt.
+
+ERHALTEN BLEIBEN
+- data/store.json und vorhandene Produkte
+- Produktbilder
+- EmailJS mit Contact- und Order-Template
+- Gutscheine
+- Versanddaten
+- Gästebuch

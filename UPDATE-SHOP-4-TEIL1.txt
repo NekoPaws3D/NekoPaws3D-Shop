@@ -1,0 +1,45 @@
+NekoPaws3D Shop 4.0 – Teil 1: Adminverwaltung
+
+WICHTIGER SCHUTZ
+Dieses Update enthält und verändert NICHT:
+- js/email-config.js
+- EmailJS Service-ID, Template-IDs oder Public Key
+- GitHub Personal Access Token
+- sessionStorage-Schlüssel des GitHub-Tokens
+- data/store.json
+- Produktbilder oder Galeriebilder
+
+INSTALLATION
+1. ZIP entpacken.
+2. Den Inhalt in dein Repository kopieren.
+3. Vorhandene Dateien ersetzen.
+4. data/store.json NICHT löschen oder manuell ersetzen.
+5. Änderungen committen.
+6. Adminseite mit Strg+F5 neu laden.
+
+NEU IM ADMIN
+- Dashboard mit offenen Aufträgen, Produktion, Versand, Kunden und Auftragswert
+- Bestellverwaltung mit Suche und Statusfilter
+- Status: Neu, In Bearbeitung, Produktion, Versandbereit, Verschickt, Abgeschlossen, Storniert
+- Priorität, Kategorie, Fortschritt und Fälligkeit
+- Kundendaten und Bestellhistorie
+- Versanddienst, Trackingnummer und Versanddatum
+- Rechnungsnummern
+- Rechnung drucken beziehungsweise über den Browser als PDF speichern
+- Produktions-Kanban
+- Management-Backup als JSON sowie Import
+
+DATENSPEICHERUNG
+Die Managementdaten werden als neuer Bereich „management“ in data/store.json gespeichert,
+wenn du im Admin „Alles veröffentlichen“ anklickst. Zusätzlich liegt ein lokaler Entwurf im Browser,
+damit Eingaben bei einem versehentlichen Neuladen nicht sofort verloren gehen.
+
+GITHUB-PAGES-GRENZE
+GitHub Pages hat keinen Server. Deshalb können Bestellungen aus EmailJS nicht automatisch im
+Admin erscheinen. Neue Bestellungen werden derzeit manuell aus der Bestell-E-Mail übernommen.
+Eine automatische Übernahme würde einen externen Dienst oder eine serverseitige Funktion benötigen.
+
+RECHNUNGEN
+Der PDF-Export verwendet den Druckdialog des Browsers:
+Rechnung öffnen -> Drucken -> „Als PDF speichern“.
+Vor dem produktiven Einsatz müssen Rechnungsnummer, Anschrift und steuerliche Pflichtangaben geprüft werden.

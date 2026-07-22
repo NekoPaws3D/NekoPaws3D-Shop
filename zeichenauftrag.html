@@ -19,5 +19,12 @@
 <label class="consent-check"><input type="checkbox" required> Ich stimme der Datenverarbeitung gemäß Datenschutzerklärung zu.</label>
 <label class="consent-check"><input type="checkbox" required> Mir ist bekannt, dass dies zunächst eine unverbindliche Anfrage ist.</label>
 <input type="hidden" name="request_type" value="Zeichenauftrag"><input type="hidden" name="reference_file_names" id="reference-file-names">
-<button id="commission-submit" class="main-btn" type="submit">Anfrage per E-Mail senden</button><p id="commission-status" class="form-status"></p></form></main>
+<label class="consent-check commission-legal-consent">
+          <input type="checkbox" required>
+          Ich habe die <a href="agb.html" target="_blank" rel="noopener">AGB</a>,
+          die <a href="widerruf.html" target="_blank" rel="noopener">Widerrufshinweise</a>
+          und die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen.
+          Mir ist bekannt, dass für eindeutig personalisierte Anfertigungen grundsätzlich kein Widerrufsrecht besteht.
+        </label>
+        <button id="commission-submit" class="main-btn" type="submit">Anfrage per E-Mail senden</button><p id="commission-status" class="form-status"></p></form></main>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script src="js/email-config.js"></script><script src="js/email-service.js"></script><script src="js/commission.js"></script></body></html>
