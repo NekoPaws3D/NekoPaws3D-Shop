@@ -55,6 +55,7 @@
       const entries=store?.management?.customerPortals||[];
       const emailHash=await sha256(email);
       const entry=entries.find(item=>item.emailHash===emailHash);
+      if(entry && entry.active === false) throw new Error("Dieser Portalzugang ist derzeit gesperrt.");
       if(!entry) throw new Error("Kein Kundenkonto für diese E-Mail-Adresse gefunden.");
       account=await decryptAccount(entry,code);
       sessionStorage.setItem("nekopaws_customer_session",JSON.stringify(account));
