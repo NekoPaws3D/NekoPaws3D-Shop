@@ -110,7 +110,8 @@
       <div class="mgmt-subtabs">
         <button class="active" data-mgmt-view="orders" type="button">Bestellungen</button>
         <button data-mgmt-view="production" type="button">Produktion</button>
-        <button data-mgmt-view="customers" type="button">Kunden</button>
+        <button data-mgmt-view="customers" type="button">Bestellkunden</button>
+        <button data-mgmt-view="customerportal" type="button">Kundenportal</button>
         <button data-mgmt-view="invoices" type="button">Rechnungen & Lieferscheine</button>
         <button data-mgmt-view="statistics" type="button">Statistik</button>
       </div>
@@ -145,6 +146,35 @@
           Der Zugangscode wird nicht gespeichert und muss bei jeder Aktualisierung erneut eingegeben werden.
         </div>
         <div id="mgmt-customers-list"></div>
+      </section>
+
+
+      <section id="mgmt-view-customerportal" class="mgmt-view hidden">
+        <div class="management-head">
+          <div>
+            <h3>Kundenportal Pro</h3>
+            <p class="muted">Kunden unabhängig von einer Bestellung anlegen, bearbeiten und mit Bestellungen verknüpfen.</p>
+          </div>
+          <button id="cp-add-customer" class="main-btn" type="button">+ Kunde anlegen</button>
+        </div>
+
+        <div class="legal-box">
+          <b>Sicherer GitHub-Pages-Zugang:</b> Kundendaten werden für das Portal verschlüsselt veröffentlicht.
+          Der Zugangscode wird nicht gespeichert. Nach Änderungen muss der Portalzugang mit dem Zugangscode erneut synchronisiert werden.
+        </div>
+
+        <div class="mgmt-filters">
+          <input id="cp-search" placeholder="Suche nach Name, E-Mail oder Kundennummer">
+          <select id="cp-status-filter">
+            <option value="">Alle Portalstatus</option>
+            <option value="active">Portal aktiv</option>
+            <option value="inactive">Portal inaktiv</option>
+            <option value="none">Noch kein Zugang</option>
+          </select>
+        </div>
+
+        <div id="cp-summary" class="mgmt-dashboard"></div>
+        <div id="cp-customer-list"></div>
       </section>
 
       <section id="mgmt-view-invoices" class="mgmt-view hidden">
@@ -375,6 +405,12 @@
       <label>Fortschritt %<input id="mgmt-order-progress" type="number" min="0" max="100" step="5"></label>
       <label>Fällig am<input id="mgmt-order-due" type="date"></label>
       <label>Gesamtbetrag €<input id="mgmt-order-total" type="number" min="0" step="0.01"></label>
+      <label class="wide">Mit Kundenkonto verknüpfen
+        <select id="cp-order-customer">
+          <option value="">Keine Verknüpfung / Daten manuell eingeben</option>
+        </select>
+      </label>
+      <input id="cp-order-customer-id" type="hidden">
       <label class="wide">Kundenname<input id="mgmt-customer-name" required></label>
       <label>E-Mail<input id="mgmt-customer-email" type="email"></label>
       <label>Telefon<input id="mgmt-customer-phone"></label>
@@ -406,6 +442,35 @@
 </div>
 
 
+<div id="cp-customer-modal" class="mgmt-modal hidden" role="dialog" aria-modal="true" aria-labelledby="cp-modal-title">
+  <form id="cp-customer-form" class="mgmt-modal-card">
+    <div class="section-row">
+      <h2 id="cp-modal-title">Kunde anlegen</h2>
+      <button id="cp-close-modal" class="outline-btn" type="button">Schließen</button>
+    </div>
+    <input id="cp-customer-id" type="hidden">
+    <div class="mgmt-form-grid">
+      <label>Kundennummer<input id="cp-number" readonly></label>
+      <label>Status
+        <select id="cp-active">
+          <option value="true">Aktiv</option>
+          <option value="false">Inaktiv</option>
+        </select>
+      </label>
+      <label class="wide">Name<input id="cp-name" required></label>
+      <label>E-Mail<input id="cp-email" type="email" required></label>
+      <label>Telefon<input id="cp-phone"></label>
+      <label class="wide">Rechnungsadresse<textarea id="cp-billing-address" rows="3"></textarea></label>
+      <label class="wide">Lieferadresse<textarea id="cp-shipping-address" rows="3"></textarea></label>
+      <label class="wide">Interne Notizen<textarea id="cp-notes" rows="4"></textarea></label>
+    </div>
+    <div class="order-actions">
+      <button class="main-btn" type="submit">Kunde speichern</button>
+      <button id="cp-delete-customer" class="outline-btn danger hidden" type="button">Kunde löschen</button>
+    </div>
+  </form>
+</div>
+
 <script>
 window.addEventListener("error", function () {
   const status = document.getElementById("login-status");
@@ -421,5 +486,6 @@ window.addEventListener("error", function () {
 <script src="./gallery-admin.js?v=1" defer></script>
 <script src="./legal-product-times.js?v=1" defer></script>
 <script src="./management.js?v=1" defer></script>
+<script src="./customer-portal-admin.js?v=1" defer></script>
 </body>
 </html>
