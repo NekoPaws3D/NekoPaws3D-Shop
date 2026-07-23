@@ -9,7 +9,7 @@
   const todayIso = () => new Date().toISOString();
 
   function mgmt() {
-    if (!window.storeData) return null;
+    if (typeof storeData === "undefined" || !storeData) return null;
     storeData.management ||= {};
     storeData.management.orders ||= [];
     storeData.management.customers ||= [];
@@ -59,6 +59,16 @@
 
   function portalHashSet() {
     return new Set((mgmt()?.customerPortals || []).map(p => p.emailHash));
+  }
+
+  function saveManagementDraft() {
+    const m = mgmt();
+    if (!m) return;
+    try {
+      localStorage.setItem("nekopaws_management_draft_v1", JSON.stringify(m));
+    } catch (error) {
+      console.warn("Management-Entwurf konnte nicht lokal gespeichert werden:", error);
+    }
   }
 
   const bytesToB64 = bytes => btoa(String.fromCharCode(...bytes));
@@ -205,6 +215,7 @@
       updatedAt:todayIso()
     });
     if (!existing) mgmt().customers.unshift(customer);
+    saveManagementDraft();
     closeCustomer();
     render();
     setStatus("Kunde gespeichert. Für die dauerhafte Speicherung „Alles veröffentlichen“ anklicken.","success");
@@ -220,6 +231,7 @@
     }
     mgmt().customers = mgmt().customers.filter(c => String(c.id) !== String(id));
     mgmt().orders.forEach(o => { if (String(o.customerId || "") === String(id)) delete o.customerId; });
+    saveManagementDraft();
     closeCustomer();
     render();
     setStatus("Kunde und Portalzugang gelöscht. Bestellungen wurden nicht gelöscht.","success");
@@ -270,6 +282,7 @@
       const index = mgmt().customerPortals.findIndex(p => p.emailHash === emailHash);
       if (index >= 0) mgmt().customerPortals[index] = entry;
       else mgmt().customerPortals.push(entry);
+      saveManagementDraft();
       render();
       setStatus(`Portal für ${customer.name} synchronisiert. Zugangscode sicher mitteilen und „Alles veröffentlichen“ anklicken.`,"success");
     } catch (error) {
@@ -287,6 +300,7 @@
       const portal = mgmt().customerPortals.find(p => p.emailHash === hash);
       if (portal) portal.active = customer.active;
     }
+    saveManagementDraft();
     render();
     setStatus(customer.active ? "Portal freigegeben." : "Portal gesperrt.","success");
   }
@@ -346,6 +360,7 @@
       if (order) {
         if (customerId) order.customerId = customerId;
         else delete order.customerId;
+        saveManagementDraft();
       }
       render();
     },0);
@@ -389,7 +404,7 @@
       };
     }
 
-    if (window.storeData) render();
+    if (typeof storeData !== "undefined" && storeData) render();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded",install,{once:true});

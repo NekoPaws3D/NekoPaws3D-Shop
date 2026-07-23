@@ -25,7 +25,7 @@
   const uuid = () => crypto.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`;
 
   function management() {
-    if (!window.storeData) return {orders:[], invoiceCounter:1, version:2};
+    if (typeof storeData === "undefined" || !storeData) return {orders:[], invoiceCounter:1, version:2};
     storeData.management ||= {orders:[], invoiceCounter:1, customerPortals:[], version:3};
     storeData.management.orders ||= [];
     storeData.management.customerPortals ||= [];
@@ -88,10 +88,16 @@
   }
 
   function restoreDraftIfUseful() {
-    if (!window.storeData) return;
+    if (typeof storeData === "undefined" || !storeData) return;
     try {
       const draft=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");
-      if (draft?.orders?.length && !storeData.management?.orders?.length) {
+      const remote=storeData.management||{};
+      const hasUsefulDraft=Boolean(draft && (
+        (draft.orders?.length && !remote.orders?.length) ||
+        (draft.customers?.length && !remote.customers?.length) ||
+        (draft.customerPortals?.length && !remote.customerPortals?.length)
+      ));
+      if (hasUsefulDraft) {
         storeData.management=draft;
         migrateOrders();
         setMgmtStatus("Lokaler Management-Entwurf wurde wiederhergestellt. Zum dauerhaften Speichern „Alles veröffentlichen“ anklicken.","success");
@@ -363,7 +369,7 @@
   }
 
   function renderStatistics() {
-    if(!window.storeData)return;
+    if(typeof storeData === "undefined" || !storeData)return;
     const year=selectedYear();
     const orders=management().orders.filter(o=>String(o.date||"").startsWith(year));
     const valid=orders.filter(o=>o.status!=="cancelled"&&o.payment?.status!=="cancelled");
@@ -651,7 +657,7 @@
       if(btn.dataset.mgmtView==="statistics")renderStatistics();
     }));
 
-    if(window.storeData){restoreDraftIfUseful();populateYears();renderAllManagement();}
+    if(typeof storeData !== "undefined" && storeData){restoreDraftIfUseful();populateYears();renderAllManagement();}
   }
 
   function populateYears() {
