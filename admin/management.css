@@ -70,3 +70,6 @@
   #mgmt-invoice-print .print-items{border:1px solid #999}
   @page{size:A4;margin:0}
 }
+
+.mgmt-customer-card .section-row{align-items:flex-start}
+.mgmt-customer-card button:disabled{opacity:.45;cursor:not-allowed}

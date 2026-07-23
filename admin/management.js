@@ -26,10 +26,11 @@
 
   function management() {
     if (!window.storeData) return {orders:[], invoiceCounter:1, version:2};
-    storeData.management ||= {orders:[], invoiceCounter:1, version:2};
+    storeData.management ||= {orders:[], invoiceCounter:1, customerPortals:[], version:3};
     storeData.management.orders ||= [];
+    storeData.management.customerPortals ||= [];
     storeData.management.invoiceCounter ||= 1;
-    storeData.management.version = 2;
+    storeData.management.version = 3;
     migrateOrders();
     return storeData.management;
   }
@@ -193,17 +194,128 @@
     return [...map.values()].sort((a,b)=>b.total-a.total);
   }
 
-  function renderCustomers() {
+  const bytesToB64 = bytes => btoa(String.fromCharCode(...bytes));
+  const b64ToBytes = value => Uint8Array.from(atob(value), c => c.charCodeAt(0));
+  const normalizeEmail = value => String(value || "").trim().toLowerCase();
+
+  async function sha256(value) {
+    const data = new TextEncoder().encode(value);
+    return bytesToB64(new Uint8Array(await crypto.subtle.digest("SHA-256", data)));
+  }
+
+  async function derivePortalKey(code, salt, usages) {
+    const material = await crypto.subtle.importKey(
+      "raw", new TextEncoder().encode(code), "PBKDF2", false, ["deriveKey"]
+    );
+    return crypto.subtle.deriveKey(
+      {name:"PBKDF2", salt, iterations:250000, hash:"SHA-256"},
+      material, {name:"AES-GCM", length:256}, false, usages
+    );
+  }
+
+  function customerPortalPayload(group) {
+    return {
+      version: 1,
+      updatedAt: new Date().toISOString(),
+      customer: {
+        name: group.customer?.name || "",
+        email: group.customer?.email || "",
+        phone: group.customer?.phone || "",
+        address: group.customer?.address || ""
+      },
+      orders: group.orders.map(o => ({
+        id:o.id, number:o.number, date:o.date, status:o.status, category:o.category,
+        progress:Number(o.progress||0), dueDate:o.dueDate, total:Number(o.total||0),
+        items:o.items||"", carrier:o.carrier||"", tracking:o.tracking||"",
+        shippedDate:o.shippedDate||"", invoiceNumber:o.invoiceNumber||"",
+        payment:{
+          invoiceDate:o.payment?.invoiceDate||"", days:Number(o.payment?.days??14),
+          dueDate:o.payment?.dueDate||"", status:o.payment?.status||"open",
+          paidDate:o.payment?.paidDate||"", smallBusiness:o.payment?.smallBusiness!==false
+        }
+      }))
+    };
+  }
+
+  async function createPortalAccess(email) {
+    if (!window.crypto?.subtle) {
+      setMgmtStatus("Dieser Browser unterstützt die sichere Verschlüsselung nicht.", "error");
+      return;
+    }
+    const group = customerGroups().find(g => normalizeEmail(g.customer?.email) === normalizeEmail(email));
+    if (!group?.customer?.email) {
+      setMgmtStatus("Für diesen Kunden ist keine E-Mail-Adresse hinterlegt.", "error");
+      return;
+    }
+    const code = prompt("Persönlichen Zugangscode eingeben (mindestens 8 Zeichen):");
+    if (code === null) return;
+    if (code.length < 8) {
+      setMgmtStatus("Der Zugangscode muss mindestens 8 Zeichen lang sein.", "error");
+      return;
+    }
+    const confirmation = prompt("Zugangscode zur Bestätigung erneut eingeben:");
+    if (confirmation !== code) {
+      setMgmtStatus("Die Zugangscodes stimmen nicht überein.", "error");
+      return;
+    }
+
+    try {
+      setMgmtStatus("Kundenportal wird verschlüsselt …");
+      const salt = crypto.getRandomValues(new Uint8Array(16));
+      const iv = crypto.getRandomValues(new Uint8Array(12));
+      const key = await derivePortalKey(code, salt, ["encrypt"]);
+      const plaintext = new TextEncoder().encode(JSON.stringify(customerPortalPayload(group)));
+      const cipher = new Uint8Array(await crypto.subtle.encrypt({name:"AES-GCM",iv},key,plaintext));
+      const emailHash = await sha256(normalizeEmail(group.customer.email));
+      const entry = {emailHash, salt:bytesToB64(salt), iv:bytesToB64(iv), cipher:bytesToB64(cipher), updatedAt:new Date().toISOString()};
+      const portals = management().customerPortals;
+      const index = portals.findIndex(item => item.emailHash === emailHash);
+      if (index >= 0) portals[index] = entry; else portals.push(entry);
+      saveDraft();
+      await renderCustomers();
+      setMgmtStatus(`Kundenportal für ${group.customer.name || group.customer.email} erstellt. Zugangscode jetzt sicher an den Kunden übermitteln und anschließend „Alles veröffentlichen“ anklicken.`, "success");
+    } catch (error) {
+      setMgmtStatus(`Kundenportal konnte nicht erstellt werden: ${error.message}`, "error");
+    }
+  }
+
+  async function deletePortalAccess(email) {
+    const emailHash = await sha256(normalizeEmail(email));
+    if (!confirm("Diesen Kundenportal-Zugang wirklich löschen?")) return;
+    management().customerPortals = management().customerPortals.filter(item => item.emailHash !== emailHash);
+    saveDraft();
+    await renderCustomers();
+    setMgmtStatus("Kundenportal-Zugang gelöscht. Zum dauerhaften Speichern „Alles veröffentlichen“ anklicken.", "success");
+  }
+
+  async function renderCustomers() {
     const box=q("#mgmt-customers-list");
     if(!box||!window.storeData)return;
     const groups=customerGroups();
-    box.innerHTML=groups.length?groups.map(g=>`
-      <article class="mgmt-customer-card">
-        <h3>${esc(g.customer.name||"Unbekannt")}</h3>
-        <p>${esc(g.customer.email||"")}${g.customer.phone?` · ${esc(g.customer.phone)}`:""}</p>
+    const active = new Set((management().customerPortals||[]).map(p=>p.emailHash));
+    const rows = await Promise.all(groups.map(async g => {
+      const email = normalizeEmail(g.customer?.email);
+      const hash = email ? await sha256(email) : "";
+      return {g, hasPortal:active.has(hash)};
+    }));
+    box.innerHTML=rows.length?rows.map(({g,hasPortal})=>`
+      <article class="mgmt-customer-card" data-customer-email="${esc(g.customer.email||"")}">
+        <div class="section-row">
+          <div>
+            <h3>${esc(g.customer.name||"Unbekannt")}</h3>
+            <p>${esc(g.customer.email||"")}${g.customer.phone?` · ${esc(g.customer.phone)}`:""}</p>
+          </div>
+          <span class="mgmt-badge ${hasPortal?"payment-paid":"payment-open"}">${hasPortal?"Portal aktiv":"Kein Portal"}</span>
+        </div>
         <p><b>${g.orders.length}</b> Bestellung(en) · Gesamtwert <b>${euro(g.total)}</b></p>
         <small>${g.orders.map(o=>esc(o.number)).join(", ")}</small>
+        <div class="mgmt-actions">
+          <button class="outline-btn mgmt-create-portal" type="button" ${g.customer.email?"":"disabled"}>${hasPortal?"Portal aktualisieren":"Portal-Zugang erstellen"}</button>
+          ${hasPortal?'<button class="outline-btn mgmt-delete-portal" type="button">Zugang löschen</button>':""}
+        </div>
       </article>`).join(""):'<div class="mgmt-empty">Noch keine Kundendaten vorhanden.</div>';
+    qa(".mgmt-create-portal").forEach(b=>b.onclick=()=>createPortalAccess(b.closest("[data-customer-email]").dataset.customerEmail));
+    qa(".mgmt-delete-portal").forEach(b=>b.onclick=()=>deletePortalAccess(b.closest("[data-customer-email]").dataset.customerEmail));
   }
 
   function documentOrders() {
