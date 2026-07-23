@@ -111,7 +111,8 @@
         <button class="active" data-mgmt-view="orders" type="button">Bestellungen</button>
         <button data-mgmt-view="production" type="button">Produktion</button>
         <button data-mgmt-view="customers" type="button">Kunden</button>
-        <button data-mgmt-view="invoices" type="button">Rechnungen</button>
+        <button data-mgmt-view="invoices" type="button">Rechnungen & Lieferscheine</button>
+        <button data-mgmt-view="statistics" type="button">Statistik</button>
       </div>
 
       <section id="mgmt-view-orders" class="mgmt-view">
@@ -119,9 +120,11 @@
           <input id="mgmt-search" placeholder="Suche nach Kunde, Nummer, Produkt oder Tracking">
           <select id="mgmt-status-filter">
             <option value="">Alle Status</option>
-            <option value="new">Neu</option>
-            <option value="processing">In Bearbeitung</option>
-            <option value="production">Produktion</option>
+            <option value="payment_pending">Zahlung ausstehend</option>
+            <option value="paid">Zahlung eingegangen</option>
+            <option value="material_ordered">Material bestellt</option>
+            <option value="production">In Produktion</option>
+            <option value="quality_check">Qualitätsprüfung</option>
             <option value="ready">Versandbereit</option>
             <option value="shipped">Verschickt</option>
             <option value="completed">Abgeschlossen</option>
@@ -141,9 +144,51 @@
 
       <section id="mgmt-view-invoices" class="mgmt-view hidden">
         <div class="legal-box">
-          <b>Rechnungsablage:</b> Rechnungen werden aus den Bestelldaten erzeugt. Der PDF-Export erfolgt über den Druckdialog des Browsers („Als PDF speichern“).
+          <b>Dokumentencenter:</b> Rechnungen, Lieferscheine und Packlisten werden aus den Bestelldaten erzeugt. Der PDF-Export erfolgt über den Druckdialog des Browsers („Als PDF speichern“).
+        </div>
+        <div class="mgmt-filters">
+          <input id="mgmt-document-search" placeholder="Suche nach Rechnung, Bestellung oder Kunde">
+          <select id="mgmt-payment-filter">
+            <option value="">Alle Zahlungsstatus</option>
+            <option value="open">Offen</option>
+            <option value="paid">Bezahlt</option>
+            <option value="cancelled">Storniert</option>
+          </select>
         </div>
         <div id="mgmt-invoices-list"></div>
+      </section>
+
+      <section id="mgmt-view-statistics" class="mgmt-view hidden">
+        <div class="management-head">
+          <div>
+            <h3>Shop-Statistik</h3>
+            <p class="muted">Umsatz, Bestellungen, Kunden, Status und Kategorien auf einen Blick.</p>
+          </div>
+          <select id="mgmt-stat-year"></select>
+        </div>
+        <div id="mgmt-stat-dashboard" class="mgmt-dashboard"></div>
+        <div class="stats-grid">
+          <article class="admin-card">
+            <h3>Umsatz pro Monat</h3>
+            <div id="mgmt-revenue-chart" class="bar-chart"></div>
+          </article>
+          <article class="admin-card">
+            <h3>Bestellungen pro Monat</h3>
+            <div id="mgmt-orders-chart" class="bar-chart"></div>
+          </article>
+          <article class="admin-card">
+            <h3>Statusübersicht</h3>
+            <div id="mgmt-status-stats" class="stats-list"></div>
+          </article>
+          <article class="admin-card">
+            <h3>Beliebteste Kategorien</h3>
+            <div id="mgmt-category-stats" class="stats-list"></div>
+          </article>
+          <article class="admin-card wide-stat">
+            <h3>Kundenentwicklung</h3>
+            <div id="mgmt-customer-chart" class="bar-chart"></div>
+          </article>
+        </div>
       </section>
 
       <p id="mgmt-status" class="form-status" role="status"></p>
@@ -298,9 +343,11 @@
       <label>Datum<input id="mgmt-order-date" type="date" required></label>
       <label>Status
         <select id="mgmt-order-status">
-          <option value="new">Neu</option>
-          <option value="processing">In Bearbeitung</option>
-          <option value="production">Produktion</option>
+          <option value="payment_pending">Zahlung ausstehend</option>
+          <option value="paid">Zahlung eingegangen</option>
+          <option value="material_ordered">Material bestellt</option>
+          <option value="production">In Produktion</option>
+          <option value="quality_check">Qualitätsprüfung</option>
           <option value="ready">Versandbereit</option>
           <option value="shipped">Verschickt</option>
           <option value="completed">Abgeschlossen</option>
@@ -332,6 +379,18 @@
       <label>Trackingnummer<input id="mgmt-order-tracking"></label>
       <label>Versanddatum<input id="mgmt-order-shipped-date" type="date"></label>
       <label>Rechnungsnummer<input id="mgmt-order-invoice"></label>
+      <label>Rechnungsdatum<input id="mgmt-invoice-date" type="date"></label>
+      <label>Zahlungsziel (Tage)<input id="mgmt-payment-days" type="number" min="0" step="1" value="14"></label>
+      <label>Fällig am<input id="mgmt-payment-due" type="date"></label>
+      <label>Zahlungsstatus
+        <select id="mgmt-payment-status">
+          <option value="open">Offen</option>
+          <option value="paid">Bezahlt</option>
+          <option value="cancelled">Storniert</option>
+        </select>
+      </label>
+      <label>Bezahlt am<input id="mgmt-paid-date" type="date"></label>
+      <label class="check"><input id="mgmt-small-business" type="checkbox" checked> Kleinunternehmer-Hinweis (§ 19 UStG)</label>
       <label class="wide">Interne Notizen<textarea id="mgmt-order-notes" rows="4"></textarea></label>
     </div>
     <div class="order-actions">
