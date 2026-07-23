@@ -61,16 +61,6 @@
     return new Set((mgmt()?.customerPortals || []).map(p => p.emailHash));
   }
 
-  function saveManagementDraft() {
-    const m = mgmt();
-    if (!m) return;
-    try {
-      localStorage.setItem("nekopaws_management_draft_v1", JSON.stringify(m));
-    } catch (error) {
-      console.warn("Management-Entwurf konnte nicht lokal gespeichert werden:", error);
-    }
-  }
-
   const bytesToB64 = bytes => btoa(String.fromCharCode(...bytes));
   async function sha256(value) {
     const data = new TextEncoder().encode(value);
@@ -372,6 +362,17 @@
     el.textContent = message;
     el.className = `form-status ${type}`;
   }
+
+  function saveManagementDraft() {
+    const data = mgmt();
+    if (!data) return;
+    try {
+      localStorage.setItem("nekopaws_management_draft_v1", JSON.stringify(data));
+    } catch (error) {
+      console.warn("Kunden-Entwurf konnte nicht lokal gespeichert werden:", error);
+    }
+  }
+
 
   function install() {
     q("#cp-add-customer")?.addEventListener("click",() => openCustomer());
