@@ -24,7 +24,15 @@
       "featured": false,
       "sort": 1,
       "priceOnRequest": false,
-      "shippingClass": "brief"
+      "shippingClass": "brief",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 2,
@@ -43,7 +51,15 @@
       "featured": false,
       "sort": 2,
       "priceOnRequest": false,
-      "shippingClass": "brief"
+      "shippingClass": "brief",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 4,
@@ -63,7 +79,15 @@
       "featured": false,
       "sort": 4,
       "priceOnRequest": false,
-      "shippingClass": "brief"
+      "shippingClass": "brief",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 5,
@@ -82,7 +106,15 @@
       "featured": false,
       "sort": 5,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 7,
@@ -103,7 +135,15 @@
       "featured": false,
       "sort": 7,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 8,
@@ -126,7 +166,15 @@
       "featured": false,
       "sort": 8,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 11,
@@ -154,7 +202,15 @@
       "featured": false,
       "sort": 11,
       "priceOnRequest": false,
-      "shippingClass": "large"
+      "shippingClass": "large",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 22,
@@ -173,7 +229,15 @@
       "featured": false,
       "sort": 12,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 23,
@@ -192,7 +256,15 @@
       "featured": false,
       "sort": 13,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 24,
@@ -211,7 +283,15 @@
       "featured": false,
       "sort": 14,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 25,
@@ -236,7 +316,15 @@
       "featured": false,
       "sort": 15,
       "priceOnRequest": true,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 26,
@@ -261,7 +349,15 @@
       "featured": false,
       "sort": 16,
       "priceOnRequest": true,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 27,
@@ -280,7 +376,15 @@
       "featured": false,
       "sort": 16,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 17,
@@ -299,7 +403,15 @@
       "featured": false,
       "sort": 17,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 28,
@@ -343,7 +455,15 @@
       "featured": false,
       "sort": 17,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 29,
@@ -387,7 +507,15 @@
       "featured": false,
       "sort": 18,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 30,
@@ -431,7 +559,15 @@
       "featured": false,
       "sort": 19,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 20,
@@ -451,7 +587,15 @@
       "featured": false,
       "sort": 20,
       "priceOnRequest": true,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 31,
@@ -471,7 +615,15 @@
       "featured": false,
       "sort": 20,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 21,
@@ -492,7 +644,15 @@
       "featured": false,
       "sort": 21,
       "priceOnRequest": true,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 32,
@@ -515,7 +675,15 @@
       "featured": false,
       "sort": 21,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 33,
@@ -535,7 +703,15 @@
       "featured": false,
       "sort": 22,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 34,
@@ -555,7 +731,15 @@
       "featured": false,
       "sort": 23,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 35,
@@ -575,7 +759,15 @@
       "featured": false,
       "sort": 24,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 36,
@@ -594,7 +786,15 @@
       "featured": false,
       "sort": 25,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 37,
@@ -613,7 +813,15 @@
       "featured": false,
       "sort": 26,
       "priceOnRequest": false,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 38,
@@ -632,7 +840,15 @@
       "sku": "NEKO-038",
       "featured": false,
       "sort": 27,
-      "shippingClass": "small"
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 39,
@@ -653,7 +869,15 @@
       "sku": "NEKO-039",
       "featured": true,
       "sort": 28,
-      "shippingClass": "medium"
+      "shippingClass": "medium",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 40,
@@ -675,7 +899,15 @@
       "sku": "NEKO-040",
       "featured": false,
       "sort": 29,
-      "shippingClass": "medium"
+      "shippingClass": "medium",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     },
     {
       "id": 41,
@@ -695,7 +927,15 @@
       "sku": "NEKO-040-KOPIE",
       "featured": false,
       "sort": 30,
-      "shippingClass": "medium"
+      "shippingClass": "medium",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     }
   ],
   "shippingMethods": [
@@ -901,5 +1141,36 @@
       "message": "Eine wahnsinns Künstlerin mit Blick auch für die kleinsten Details.",
       "visible": true
     }
-  ]
+  ],
+  "orderGallery": [],
+  "management": {
+    "orders": [],
+    "invoiceCounter": 1,
+    "customerPortals": [
+      {
+        "emailHash": "DCn0TAjiiVgYanCbl6TpXIyvK9RauXXNIC7WFCcmAeA=",
+        "salt": "WRP3+GoVXH5Yft1cyvHqYg==",
+        "iv": "gJbQKeuChvErwiQf",
+        "cipher": "osrwtREWJKYrSODd+xwY+qKhnZMahlRmaoi3cfd7cogKPxFSHENC50Js0F5M49rC6E0HUkEff0vDDCePquus52N+9NhA6ka7/eTeQjOl3FsAG3cqHJXO7fGr2wA76Vn/46BiECrQdV1o0Jg8Lm5w2xXTOeNn/b9Wn558cHudYxGRpuwzXgPzqwn1VjE3fRRqbXinKf8JNV2Vzgnx6dpZM6gwAEQaSge4n47kElA3zFq0INHs5C4cAUui9T2dvVfSllbkq6SpdmvdGNaAjKtrsMv3cQoXY5n0SiyTIbwkE+D1TEvVJBuadVlGO3mcwCdrm2ZCAnFOEPjgmNQO/zDOwtXI9CElDC+AKPsbCU8ctsIFdjNaTi+KED4O7zU6YnUwBoQeSDmY7vq6ubWLJshQzOHSZsutTynfl0OvQuWQgwvxNu6w4GoyaVP8LYHHU43anHFGigRWWE8OfNK/aAtQhxyVRGFfYRWt7P7O1bOqDmr5VdYfKmHLfY0tzzHpV+QqX2uT",
+        "updatedAt": "2026-07-23T10:49:19.262Z",
+        "active": true
+      }
+    ],
+    "version": 3,
+    "customers": [
+      {
+        "id": "1209a8b0-ea74-4bd6-b26f-12d1bf660f49",
+        "createdAt": "2026-07-23T10:48:28.031Z",
+        "number": "KD-2026-0001",
+        "active": true,
+        "name": "David Dornheim",
+        "email": "dornheim-david@web.de",
+        "phone": "034321299800",
+        "billingAddress": "Schloßberg 77\n\n04703 Leisnig",
+        "shippingAddress": "Schloßberg 77\n\n04703 Leisnig",
+        "notes": "Shop Admin",
+        "updatedAt": "2026-07-23T10:48:28.032Z"
+      }
+    ]
+  }
 }
