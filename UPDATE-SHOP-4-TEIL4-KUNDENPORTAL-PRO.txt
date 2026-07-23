@@ -1,0 +1,69 @@
+NekoPaws3D Shop 4.0 – Teil 4
+Kundenportal Pro – sichtbare Kundenverwaltung und Kundenanlage
+
+DIESES UPDATE BEHEBT
+- Der Portalzugang war nur bei bereits erkannten Bestellkunden sichtbar.
+- Kunden konnten nicht unabhängig von einer Bestellung angelegt werden.
+- Es fehlte ein eigener, deutlich sichtbarer Verwaltungsbereich.
+
+NEU IM ADMINBEREICH
+Unter Shop-Management gibt es jetzt den eigenen Reiter „Kundenportal“.
+
+Dort kannst du:
+- Kunden ohne vorhandene Bestellung anlegen
+- Kundennummern automatisch vergeben
+- Name, E-Mail, Telefon, Rechnungsadresse und Lieferadresse speichern
+- interne Notizen hinterlegen
+- Kunden bearbeiten und löschen
+- Kunden aktiv oder inaktiv setzen
+- nach Name, E-Mail oder Kundennummer suchen
+- Portalzugänge erstellen und erneut synchronisieren
+- Portalzugänge sperren und freigeben
+- eine Portalvorschau öffnen
+- Bestellanzahl, Umsatz und letzte Bestellung sehen
+
+BESTELLUNGEN VERKNÜPFEN
+Im Bestellformular gibt es jetzt das Feld „Mit Kundenkonto verknüpfen“.
+Bei Auswahl eines Kunden werden Name, E-Mail, Telefon und Anschrift übernommen.
+Bestehende Bestellkunden werden beim Laden automatisch in die neue Kundenverwaltung übernommen.
+
+PORTALZUGANG ERSTELLEN
+1. Admin > Shop-Management > Kundenportal öffnen.
+2. „Kunde anlegen“ anklicken und Kundendaten speichern.
+3. Beim Kunden „Zugang erstellen“ anklicken.
+4. Zugangscode mit mindestens 8 Zeichen zweimal eingeben.
+5. „Alles veröffentlichen“ anklicken.
+6. Kunde öffnet konto.html und meldet sich mit E-Mail und Zugangscode an.
+
+NACH BESTELLÄNDERUNGEN
+Der Zugangscode wird aus Sicherheitsgründen nicht gespeichert.
+Nach einer Bestelländerung:
+1. Kundenportal öffnen.
+2. Beim Kunden „Portal synchronisieren“ anklicken.
+3. Zugangscode erneut eingeben.
+4. „Alles veröffentlichen“ anklicken.
+
+INSTALLATION
+Dieses Update baut auf Teil 3 auf.
+Alle enthaltenen Dateien in das Repository kopieren und vorhandene Dateien ersetzen.
+Danach committen und die Adminseite mit Strg + F5 neu laden.
+
+NEUE DATEI
+- admin/customer-portal-admin.js
+
+GEÄNDERTE DATEIEN
+- admin/index.html
+- admin/management.css
+- js/customer-portal.js
+
+WEITERHIN UNVERÄNDERT / NICHT ENTHALTEN
+- GitHub Personal Access Token
+- GitHub-Benutzername und GitHub-API-Konfiguration
+- admin/admin.js
+- js/email-config.js
+- EmailJS Service-ID, Template-IDs und Public Key
+- data/store.json
+- Produkte und Bilder
+- Gutscheine und Versanddaten
+- Gästebuch
+- Impressum und Rechtstexte
