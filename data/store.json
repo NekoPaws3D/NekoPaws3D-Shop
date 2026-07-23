@@ -161,14 +161,14 @@
       "description": "Blind Box Waldgeister\n- 8 Figuren von Common bis Secret\n- 40 Common\n- 3 Rare\n- 4 Rare\n- 2 Super Rare\n- 1 Secret\n- Sammelkarte und Magnet\n\nSammle sie und lass dich überraschen welcher Waldgeist bei dir Einzieht",
       "customizable": false,
       "visible": true,
-      "stock": 43,
+      "stock": 42,
       "sku": "NEKO-006",
       "featured": false,
       "sort": 8,
       "priceOnRequest": false,
       "shippingClass": "small",
       "weightGrams": 0,
-      "maxPerPackage": 1,
+      "maxPerPackage": 2,
       "lowStockThreshold": 3,
       "showStockWarning": true,
       "availabilityType": "stock",
@@ -1144,7 +1144,40 @@
   ],
   "orderGallery": [],
   "management": {
-    "orders": [],
+    "orders": [
+      {
+        "id": "c1fbb948-d5b7-4921-b288-38550c9b238a",
+        "number": "NP-2026-0001",
+        "date": "2026-07-23",
+        "status": "payment_pending",
+        "priority": "normal",
+        "category": "Epoxidharz",
+        "progress": 100,
+        "dueDate": "",
+        "total": 25,
+        "customer": {
+          "name": "Phillip Schulz",
+          "email": "philippschulze94@gmail.com",
+          "phone": "+49 174 2808920",
+          "address": "Friedensring 1\n29410 Salzwedel"
+        },
+        "items": "1x Blindbox Waldgeister",
+        "carrier": "Abholung",
+        "tracking": "",
+        "shippedDate": "",
+        "invoiceNumber": "RE-0025",
+        "notes": "",
+        "updatedAt": "2026-07-23T18:00:33.623Z",
+        "payment": {
+          "status": "open",
+          "days": 14,
+          "invoiceDate": "2026-07-23",
+          "dueDate": "2026-08-06",
+          "smallBusiness": true
+        },
+        "customerId": "4e421ac0-6e40-4c2f-87a5-0f95d8fe0153"
+      }
+    ],
     "invoiceCounter": 1,
     "customerPortals": [
       {
@@ -1170,6 +1203,19 @@
         "shippingAddress": "Schloßberg 77\n\n04703 Leisnig",
         "notes": "Shop Admin",
         "updatedAt": "2026-07-23T10:48:28.032Z"
+      },
+      {
+        "id": "4e421ac0-6e40-4c2f-87a5-0f95d8fe0153",
+        "number": "KD-2026-0002",
+        "active": true,
+        "name": "Phillip Schulz",
+        "email": "philippschulze94@gmail.com",
+        "phone": "+49 174 2808920",
+        "billingAddress": "Friedensring 1\n29410 Salzwedel",
+        "shippingAddress": "Friedensring 1\n29410 Salzwedel",
+        "notes": "",
+        "createdAt": "2026-07-23T18:01:51.962Z",
+        "updatedAt": "2026-07-23T18:01:51.962Z"
       }
     ]
   }
