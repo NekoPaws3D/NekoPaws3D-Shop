@@ -1,0 +1,68 @@
+NekoPaws3D Shop 4.0 – Teil 3
+Verschlüsseltes Kundenportal für GitHub Pages
+
+WICHTIG
+GitHub Pages besitzt keinen eigenen Server und keine echte serverseitige Benutzerverwaltung.
+Darum verwendet dieses Update keine unsichere Schein-Anmeldung, sondern verschlüsselte Kundendaten:
+- Die Kundendaten und Bestellungen werden mit AES-256-GCM verschlüsselt.
+- Der Schlüssel wird aus dem persönlichen Zugangscode mit PBKDF2/SHA-256 und 250.000 Durchläufen abgeleitet.
+- In data/store.json stehen für das Portal nur E-Mail-Hash und verschlüsselte Daten.
+- Der Zugangscode selbst wird nicht gespeichert.
+- Das GitHub-PAT und EmailJS werden nicht verändert.
+
+INSTALLATION
+1. Dieses Update baut auf Shop 4.0 Teil 2 auf.
+2. ZIP entpacken und die enthaltenen Dateien/Ordner in dein Repository kopieren.
+3. Bestehende Dateien ersetzen:
+   - index.html
+   - admin/index.html
+   - admin/management.js
+   - admin/management.css
+4. Neue Dateien hinzufügen:
+   - konto.html
+   - css/customer-portal.css
+   - js/customer-portal.js
+5. Committen und GitHub Pages neu laden.
+
+KUNDENPORTAL EINRICHTEN
+1. Adminbereich öffnen.
+2. Adminverwaltung > Kunden öffnen.
+3. Beim Kunden „Portal-Zugang erstellen“ anklicken.
+4. Einen persönlichen Zugangscode mit mindestens 8 Zeichen eingeben und bestätigen.
+5. Den Zugangscode dem Kunden über einen sicheren Weg mitteilen.
+6. „Alles veröffentlichen“ anklicken.
+7. Der Kunde meldet sich auf konto.html mit seiner Bestell-E-Mail und dem Zugangscode an.
+
+BEI ÄNDERUNGEN AN BESTELLUNGEN
+Da der Zugangscode nicht gespeichert wird, muss das Kundenportal nach Änderungen erneut aktualisiert werden:
+1. Bestellung ändern.
+2. Kundenbereich öffnen.
+3. „Portal aktualisieren“ anklicken.
+4. Den gleichen oder einen neuen Zugangscode eingeben.
+5. „Alles veröffentlichen“ anklicken.
+
+FUNKTIONEN FÜR KUNDEN
+- Anmeldung mit E-Mail und Zugangscode
+- Bestellübersicht
+- aktueller Bestell- und Zahlungsstatus
+- Fortschrittsanzeige
+- Rechnungsübersicht und A4-Druck
+- Trackingnummer und direkter DHL-/Hermes-Aufruf
+- Filter für offene, verschickte und abgeschlossene Bestellungen
+- automatische Abmeldung beim Schließen des Browser-Tabs
+
+NICHT ENTHALTEN / NICHT VERÄNDERT
+- GitHub Personal Access Token
+- GitHub-Benutzername oder API-Konfiguration
+- admin/admin.js
+- js/email-config.js
+- EmailJS Service-ID, Template-IDs und Public Key
+- data/store.json
+- Produkte, Bilder, Gutscheine, Versanddaten
+- Gästebuch, Impressum und Rechtstexte
+
+SICHERHEITSHINWEISE
+- Verwende pro Kunde einen zufälligen Zugangscode mit mindestens 12 Zeichen.
+- Sende Zugangscodes nicht öffentlich.
+- Bei Verlust wird ein neuer Zugangscode erstellt; der alte kann nicht ausgelesen werden.
+- Dieses Portal erlaubt bewusst keine öffentliche Selbstregistrierung oder Profiländerung, weil GitHub Pages keine sichere Schreib-Schnittstelle für Käufer bietet.

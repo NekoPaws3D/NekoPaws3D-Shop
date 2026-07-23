@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mein Konto – NekoPaws3D</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/enhancements.css">
+  <link rel="stylesheet" href="css/customer-portal.css?v=1">
+</head>
+<body>
+<div class="topbar">
+  <span>♡ Handgemacht mit Herz</span>
+  <span>Sicherer Kundenbereich</span>
+  <span>🇩🇪 Versand aus Deutschland</span>
+</div>
+
+<header class="header">
+  <a class="brand" href="index.html">
+    <img src="assets/logo.png" class="logo" alt="NekoPaws3D Logo">
+    <div><h1>Neko<span>Paws</span>3D</h1><p>Mein Konto ♡</p></div>
+  </a>
+  <nav class="nav">
+    <a href="index.html">Startseite</a>
+    <a href="zeichenauftrag.html">Zeichenauftrag</a>
+    <a href="galerie.html">Auftragsgalerie</a>
+    <a class="active" href="konto.html">Mein Konto</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main class="portal-page">
+  <section id="portal-login" class="portal-card login-card">
+    <div class="portal-icon">🐾</div>
+    <h2>Mein Kundenkonto</h2>
+    <p>Melde dich mit der E-Mail-Adresse deiner Bestellung und deinem persönlichen Zugangscode an.</p>
+    <form id="portal-login-form">
+      <label>E-Mail-Adresse
+        <input id="portal-email" type="email" autocomplete="email" required>
+      </label>
+      <label>Zugangscode
+        <input id="portal-code" type="password" autocomplete="current-password" minlength="8" required>
+      </label>
+      <button class="main-btn full" type="submit">Einloggen</button>
+    </form>
+    <div id="portal-login-status" class="portal-status" aria-live="polite"></div>
+    <details class="portal-help">
+      <summary>Zugangscode vergessen?</summary>
+      <p>Bitte kontaktiere NekoPaws3D. Aus Sicherheitsgründen kann nur ein neuer Zugangscode eingerichtet werden.</p>
+    </details>
+  </section>
+
+  <section id="portal-account" class="portal-account hidden">
+    <div class="portal-welcome portal-card">
+      <div>
+        <small>Kundenbereich</small>
+        <h2>Hallo <span id="portal-customer-name"></span> ♡</h2>
+        <p id="portal-updated"></p>
+      </div>
+      <button id="portal-logout" class="outline-btn" type="button">Abmelden</button>
+    </div>
+
+    <div id="portal-summary" class="portal-summary"></div>
+
+    <section class="portal-card">
+      <div class="portal-section-head">
+        <div><h2>Meine Bestellungen</h2><p>Status, Zahlung, Versand und Dokumente.</p></div>
+        <select id="portal-status-filter">
+          <option value="">Alle Bestellungen</option>
+          <option value="open">Offen</option>
+          <option value="shipped">Verschickt</option>
+          <option value="completed">Abgeschlossen</option>
+        </select>
+      </div>
+      <div id="portal-orders"></div>
+    </section>
+  </section>
+</main>
+
+<section id="portal-print" class="portal-print"></section>
+
+<footer class="footer">
+  <div><img src="assets/logo.png" class="footer-logo" alt="Logo"><h3>NekoPaws3D</h3><p>Liebevoll handgemachte Unikate.</p></div>
+  <div><h3>Kundenservice</h3><p><a href="kontakt.html">Kontakt</a><br><a href="versand.html">Versand & Lieferzeiten</a><br><a href="widerruf.html">Widerruf</a></p></div>
+  <div><h3>Rechtliches</h3><p><a href="impressum.html">Impressum</a><br><a href="agb.html">AGB</a><br><a href="datenschutz.html">Datenschutz</a></p></div>
+</footer>
+
+<script src="js/customer-portal.js?v=1"></script>
+</body>
+</html>
