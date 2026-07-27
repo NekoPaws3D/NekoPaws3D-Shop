@@ -1163,20 +1163,20 @@
           "address": "Oberstrasse, 43\n56341 Filsen"
         },
         "items": "Medi Scoop Mix 15 - 20 mini Tier Figuren",
-        "carrier": "",
+        "carrier": "DHL",
         "tracking": "",
-        "shippedDate": "",
+        "shippedDate": "2026-07-27",
         "invoiceNumber": "",
         "payment": {
           "invoiceDate": "2026-07-24",
           "days": 14,
           "dueDate": "2026-08-07",
-          "status": "open",
-          "paidDate": "",
+          "status": "paid",
+          "paidDate": "2026-07-27",
           "smallBusiness": true
         },
         "notes": "",
-        "updatedAt": "2026-07-24T08:56:23.372Z",
+        "updatedAt": "2026-07-27T15:06:14.562Z",
         "customerId": "d2fe4213-7418-472d-82eb-fca42aa9fe8f"
       },
       {
