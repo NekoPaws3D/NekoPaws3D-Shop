@@ -25,7 +25,7 @@
   const uuid = () => crypto.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`;
 
   function management() {
-    if (typeof storeData === "undefined" || !storeData) return {orders:[], invoiceCounter:1, version:2};
+    if (!(typeof storeData !== "undefined" && storeData)) return {orders:[], invoiceCounter:1, version:2};
     storeData.management ||= {orders:[], invoiceCounter:1, customerPortals:[], version:3};
     storeData.management.orders ||= [];
     storeData.management.customerPortals ||= [];
@@ -88,22 +88,11 @@
   }
 
   function restoreDraftIfUseful() {
-    if (typeof storeData === "undefined" || !storeData) return;
+    if (!(typeof storeData !== "undefined" && storeData)) return;
     try {
       const draft=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");
-      const stored = storeData.management || {};
-      const hasDraftOrders = Array.isArray(draft?.orders) && draft.orders.length > 0;
-      const hasDraftCustomers = Array.isArray(draft?.customers) && draft.customers.length > 0;
-      const shouldRestoreOrders = hasDraftOrders && !(stored.orders || []).length;
-      const shouldRestoreCustomers = hasDraftCustomers && !(stored.customers || []).length;
-      if (shouldRestoreOrders || shouldRestoreCustomers) {
-        storeData.management = {
-          ...stored,
-          ...draft,
-          orders: shouldRestoreOrders ? draft.orders : (stored.orders || []),
-          customers: shouldRestoreCustomers ? draft.customers : (stored.customers || []),
-          customerPortals: (draft.customerPortals || stored.customerPortals || [])
-        };
+      if (draft?.orders?.length && !storeData.management?.orders?.length) {
+        storeData.management=draft;
         migrateOrders();
         setMgmtStatus("Lokaler Management-Entwurf wurde wiederhergestellt. Zum dauerhaften Speichern „Alles veröffentlichen“ anklicken.","success");
       }
@@ -116,7 +105,7 @@
 
   function renderDashboard() {
     const box=q("#mgmt-dashboard");
-    if(!box||typeof storeData === "undefined"||!storeData)return;
+    if(!box||!(typeof storeData !== "undefined" && storeData))return;
     const orders=management().orders;
     const open=orders.filter(o=>!["completed","cancelled"].includes(o.status)).length;
     const production=orders.filter(o=>["material_ordered","production","quality_check","ready"].includes(o.status)).length;
@@ -144,7 +133,7 @@
 
   function renderOrders() {
     const box=q("#mgmt-orders-list");
-    if(!box||typeof storeData === "undefined"||!storeData)return;
+    if(!box||!(typeof storeData !== "undefined" && storeData))return;
     const orders=filteredOrders();
     if(!orders.length){box.innerHTML='<div class="mgmt-empty">Noch keine passenden Bestellungen vorhanden.</div>';return;}
     box.innerHTML=orders.map(o=>`
@@ -180,7 +169,7 @@
 
   function renderKanban() {
     const box=q("#mgmt-kanban");
-    if(!box||typeof storeData === "undefined"||!storeData)return;
+    if(!box||!(typeof storeData !== "undefined" && storeData))return;
     const columns=["payment_pending","paid","material_ordered","production","quality_check","ready","shipped"];
     box.innerHTML=columns.map(status=>`
       <section class="mgmt-column">
@@ -301,7 +290,7 @@
 
   async function renderCustomers() {
     const box=q("#mgmt-customers-list");
-    if(!box||typeof storeData === "undefined"||!storeData)return;
+    if(!box||!(typeof storeData !== "undefined" && storeData))return;
     const groups=customerGroups();
     const active = new Set((management().customerPortals||[]).map(p=>p.emailHash));
     const rows = await Promise.all(groups.map(async g => {
@@ -340,7 +329,7 @@
 
   function renderInvoices() {
     const box=q("#mgmt-invoices-list");
-    if(!box||typeof storeData === "undefined"||!storeData)return;
+    if(!box||!(typeof storeData !== "undefined" && storeData))return;
     const orders=documentOrders();
     box.innerHTML=orders.length?orders.map(o=>`
       <article class="mgmt-invoice-card" data-order-id="${esc(o.id)}">
@@ -374,7 +363,7 @@
   }
 
   function renderStatistics() {
-    if(typeof storeData === "undefined"||!storeData)return;
+    if(!(typeof storeData !== "undefined" && storeData))return;
     const year=selectedYear();
     const orders=management().orders.filter(o=>String(o.date||"").startsWith(year));
     const valid=orders.filter(o=>o.status!=="cancelled"&&o.payment?.status!=="cancelled");
@@ -662,11 +651,11 @@
       if(btn.dataset.mgmtView==="statistics")renderStatistics();
     }));
 
-    if(typeof storeData !== "undefined" && storeData){restoreDraftIfUseful();populateYears();renderAllManagement();}
+    if((typeof storeData !== "undefined" && storeData)){restoreDraftIfUseful();populateYears();renderAllManagement();}
   }
 
   function populateYears() {
-    const select=q("#mgmt-stat-year");if(!select||typeof storeData === "undefined"||!storeData)return;
+    const select=q("#mgmt-stat-year");if(!select||!(typeof storeData !== "undefined" && storeData))return;
     const current=select.value;
     select.innerHTML=yearsAvailable().map(y=>`<option value="${esc(y)}">${esc(y)}</option>`).join("");
     if(current&&yearsAvailable().includes(current))select.value=current;

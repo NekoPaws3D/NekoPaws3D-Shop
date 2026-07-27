@@ -112,6 +112,7 @@
         <button data-mgmt-view="production" type="button">Produktion</button>
         <button data-mgmt-view="customers" type="button">Bestellkunden</button>
         <button data-mgmt-view="customerportal" type="button">Kundenportal</button>
+        <button data-mgmt-view="crm" type="button">CRM</button>
         <button data-mgmt-view="invoices" type="button">Rechnungen & Lieferscheine</button>
         <button data-mgmt-view="statistics" type="button">Statistik</button>
       </div>
@@ -175,6 +176,38 @@
 
         <div id="cp-summary" class="mgmt-dashboard"></div>
         <div id="cp-customer-list"></div>
+      </section>
+
+
+      <section id="mgmt-view-crm" class="mgmt-view hidden">
+        <div class="management-head">
+          <div>
+            <h3>CRM & Kundenakten</h3>
+            <p class="muted">Kunden priorisieren, Notizen dokumentieren und Bestellhistorie auswerten.</p>
+          </div>
+          <button id="crm-add-customer" class="main-btn" type="button">+ CRM-Kunde</button>
+        </div>
+
+        <div id="crm-dashboard" class="mgmt-dashboard"></div>
+
+        <div class="mgmt-filters crm-filters">
+          <input id="crm-search" placeholder="Suche nach Kunde, E-Mail, Firma, Tag oder Notiz">
+          <select id="crm-tag-filter">
+            <option value="">Alle Tags</option>
+            <option value="VIP">VIP</option>
+            <option value="Stammkunde">Stammkunde</option>
+            <option value="Händler">Händler</option>
+            <option value="Interessent">Interessent</option>
+          </select>
+          <select id="crm-sort">
+            <option value="name">Nach Name</option>
+            <option value="revenue">Nach Umsatz</option>
+            <option value="recent">Letzte Bestellung</option>
+            <option value="orders">Meiste Bestellungen</option>
+          </select>
+        </div>
+
+        <div id="crm-customer-list" class="crm-customer-list"></div>
       </section>
 
       <section id="mgmt-view-invoices" class="mgmt-view hidden">
@@ -471,6 +504,35 @@
   </form>
 </div>
 
+
+<div id="crm-customer-modal" class="mgmt-modal hidden" role="dialog" aria-modal="true" aria-labelledby="crm-modal-title">
+  <form id="crm-customer-form" class="mgmt-modal-card crm-modal-card">
+    <div class="section-row">
+      <h2 id="crm-modal-title">CRM-Kundenakte</h2>
+      <button id="crm-close-modal" class="outline-btn" type="button">Schließen</button>
+    </div>
+    <input id="crm-customer-id" type="hidden">
+    <div class="mgmt-form-grid">
+      <label>Kundennummer<input id="crm-number" readonly></label>
+      <label>Status<select id="crm-active"><option value="true">Aktiv</option><option value="false">Inaktiv</option></select></label>
+      <label class="wide">Name<input id="crm-name" required></label>
+      <label>Firma<input id="crm-company"></label>
+      <label>E-Mail<input id="crm-email" type="email"></label>
+      <label>Telefon<input id="crm-phone"></label>
+      <label class="wide">Tags<input id="crm-tags" placeholder="z. B. VIP, Stammkunde, Händler"></label>
+      <label class="wide">Rechnungsadresse<textarea id="crm-billing-address" rows="3"></textarea></label>
+      <label class="wide">Lieferadresse<textarea id="crm-shipping-address" rows="3"></textarea></label>
+      <label class="wide">Interne Notizen<textarea id="crm-notes" rows="5" placeholder="Absprachen, Vorlieben, Besonderheiten …"></textarea></label>
+      <label class="wide">Nächster Kontakt<input id="crm-follow-up" type="date"></label>
+    </div>
+    <div id="crm-history" class="crm-history"></div>
+    <div class="order-actions">
+      <button class="main-btn" type="submit">Kundenakte speichern</button>
+      <button id="crm-delete-customer" class="outline-btn danger hidden" type="button">Kunde löschen</button>
+    </div>
+  </form>
+</div>
+
 <script>
 window.addEventListener("error", function () {
   const status = document.getElementById("login-status");
@@ -485,7 +547,8 @@ window.addEventListener("error", function () {
 <script src="./admin-enhancements.js?v=1" defer></script>
 <script src="./gallery-admin.js?v=1" defer></script>
 <script src="./legal-product-times.js?v=1" defer></script>
-<script src="./management.js?v=4.2" defer></script>
-<script src="./customer-portal-admin.js?v=4.2" defer></script>
+<script src="./management.js?v=5" defer></script>
+<script src="./customer-portal-admin.js?v=5" defer></script>
+<script src="./crm-admin.js?v=1" defer></script>
 </body>
 </html>
