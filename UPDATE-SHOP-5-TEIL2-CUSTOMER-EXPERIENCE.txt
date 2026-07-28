@@ -1,0 +1,57 @@
+NekoPaws3D – Shop 5.1 Customer Experience
+===========================================
+
+Enthaltene Neuerungen (ohne Änderung des Grunddesigns):
+
+2. Wunschliste
+- Merken-Schaltfläche auf Produktkarten und Produktseiten
+- Wunschliste im Kundenkonto
+- Speicherung im jeweiligen Browser
+
+3. Bewertungen
+- 1 bis 5 Sterne, Name und Bewertungstext
+- freiwillige Angabe „Produkt gekauft“
+- lokale Speicherung im Browser
+
+4. Kunden-Galerie
+- neue Seite kunden-galerie.html
+- Foto, Produkt, Text, Kategorien und Likes
+- lokale Vorschau; für öffentliche Veröffentlichung weiterhin Kontaktaufnahme nötig
+
+5. Bonuspunkte
+- Punkte für Merken, Bewertungen und Galeriebeiträge
+- Punkteübersicht im Kundenkonto
+- Einlösung muss vom Shop persönlich bestätigt werden
+
+6. Design-Assistent
+- neue Seite design-assistent.html
+- fünf Schritte für Projektart, Stil, Farben, Budget und Kontakt
+- übernimmt die Zusammenfassung in das bestehende Zeichenauftragsformular
+
+8. Bestseller, Neuheiten und Trends
+- zusätzliche Bereiche unter dem Shop
+- Trends werden aus lokalen Aufrufen und Wunschlisten berechnet
+
+9. Live-Lagerbestand
+- sofort verfügbar, wenige verfügbar oder nicht verfügbar
+- auf Produktkarten und Produktseiten
+
+10. Überraschungsbox
+- Zufallsvorschlag nach Kategorie und Budget
+
+WICHTIG
+- Das bestehende Grunddesign wurde nicht ersetzt.
+- admin/admin.js wurde nicht verändert.
+- js/email-config.js wurde nicht verändert.
+- data/store.json wurde nicht verändert.
+- GitHub-Login, GitHub-PAT und EmailJS wurden nicht verändert.
+
+Installation
+1. Inhalt des ZIPs in das Hauptverzeichnis des Shops kopieren.
+2. Vorhandene Dateien ersetzen.
+3. Bei GitHub committen und veröffentlichen.
+4. Browser mit Strg+F5 neu laden.
+
+Hinweis zur GitHub-Pages-Technik
+Wunschlisten, Bewertungen, Galeriebeiträge und Bonuspunkte werden lokal im Browser gespeichert.
+Damit diese Daten zwischen verschiedenen Geräten öffentlich synchronisiert werden, wäre später ein Backend oder eine Veröffentlichung über die bestehende Admin-/store.json-Verwaltung nötig.
