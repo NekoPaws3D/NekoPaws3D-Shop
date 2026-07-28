@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Creator Studio – NekoPaws3D</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/enhancements.css">
+  <link rel="stylesheet" href="css/creator-studio.css?v=1">
+</head>
+<body>
+<header class="header simple">
+  <a class="brand" href="index.html"><img src="assets/logo.png" class="logo" alt="NekoPaws3D Logo"><div><h1>Neko<span>Paws</span>3D</h1><p>Creator Studio</p></div></a>
+  <a class="outline-btn" href="index.html">Zurück zum Shop</a>
+</header>
+
+<main class="page creator-page">
+  <div class="creator-intro">
+    <div>
+      <span class="badge">NEU</span>
+      <h2>🎨 Dein Wunschprojekt Schritt für Schritt</h2>
+      <p>Konfiguriere eine unverbindliche Anfrage für Zeichenauftrag, 3D-Druck, personalisierten Artikel oder Sonderanfertigung. Zwischenspeichern erfolgt automatisch in deinem Browser.</p>
+    </div>
+    <div class="creator-draft-state" id="creator-draft-state">Noch nicht gespeichert</div>
+  </div>
+
+  <ol class="creator-progress" id="creator-progress" aria-label="Fortschritt">
+    <li class="active"><span>1</span>Projekt</li><li><span>2</span>Details</li><li><span>3</span>Referenzen</li><li><span>4</span>Extras</li><li><span>5</span>Prüfen</li>
+  </ol>
+
+  <form id="creator-form" class="creator-form" novalidate>
+    <section class="creator-step active" data-step="1">
+      <h3>1. Welche Art von Projekt möchtest du umsetzen?</h3>
+      <div class="creator-choice-grid">
+        <label class="creator-choice"><input type="radio" name="project_type" value="Zeichenauftrag" required><span>✏️</span><b>Zeichenauftrag</b><small>Illustration, Charakter oder Motiv</small></label>
+        <label class="creator-choice"><input type="radio" name="project_type" value="3D-Druck" required><span>🖨️</span><b>3D-Druck</b><small>Modell, Figur oder Ersatzteil</small></label>
+        <label class="creator-choice"><input type="radio" name="project_type" value="Personalisierter Artikel" required><span>🎁</span><b>Personalisierter Artikel</b><small>Name, Text, Motiv oder Geschenk</small></label>
+        <label class="creator-choice"><input type="radio" name="project_type" value="Sonderanfertigung" required><span>✨</span><b>Sonderanfertigung</b><small>Individuelles Komplettprojekt</small></label>
+      </div>
+      <div class="order-grid creator-contact">
+        <label>Vorname *<input name="first_name" autocomplete="given-name" required></label>
+        <label>Nachname *<input name="last_name" autocomplete="family-name" required></label>
+        <label class="wide">E-Mail *<input name="reply_to" type="email" autocomplete="email" required></label>
+      </div>
+    </section>
+
+    <section class="creator-step" data-step="2">
+      <h3>2. Projektdetails</h3>
+      <div id="creator-dynamic-fields" class="order-grid"></div>
+      <div class="order-grid">
+        <label>Budget (€)<input name="budget" type="number" min="0" step="1" placeholder="optional"></label>
+        <label>Wunschtermin<input name="desired_date" type="date"></label>
+        <label class="wide">Projektbeschreibung *<textarea name="description" rows="7" maxlength="4000" required placeholder="Beschreibe dein Wunschprojekt möglichst genau."></textarea></label>
+        <label class="wide">Besondere Hinweise<textarea name="notes" rows="4" maxlength="2000" placeholder="Farben, Maße, Einsatzbereich, wichtige Details …"></textarea></label>
+      </div>
+      <div class="creator-estimate" id="creator-estimate"><span>Unverbindliche Preisorientierung</span><strong>Nach Auswahl der Details</strong><small>Der endgültige Preis wird persönlich bestätigt.</small></div>
+    </section>
+
+    <section class="creator-step" data-step="3">
+      <h3>3. Referenzen und Dateien</h3>
+      <div class="creator-upload-box">
+        <label for="creator-files"><b>Dateien auswählen</b><br><small>Bilder, PDF, SVG oder STL · maximal 8 Dateien · je Datei maximal 10 MB</small></label>
+        <input id="creator-files" type="file" multiple accept="image/*,.pdf,.svg,.stl">
+      </div>
+      <div id="creator-file-list" class="creator-file-list"></div>
+      <p class="muted">Aus technischen Gründen werden die Dateien nicht direkt per EmailJS übertragen. Dateinamen und Beschreibungen werden mitgesendet; die Originaldateien kannst du anschließend per E-Mail oder Freigabelink senden.</p>
+      <label>Freigabelink zu großen Dateien<input name="file_link" type="url" placeholder="https://…"></label>
+    </section>
+
+    <section class="creator-step" data-step="4">
+      <h3>4. Extras</h3>
+      <div class="creator-extra-grid">
+        <label><input type="checkbox" name="extras" value="Expressbearbeitung" data-price="20"><span><b>⚡ Expressbearbeitung</b><small>Priorisierte Prüfung · ab +20 €</small></span></label>
+        <label><input type="checkbox" name="extras" value="Zusätzliche Entwurfsrunde" data-price="12"><span><b>✏️ Zusätzliche Entwurfsrunde</b><small>Eine weitere Korrekturrunde · ab +12 €</small></span></label>
+        <label><input type="checkbox" name="extras" value="Geschenkverpackung" data-price="5"><span><b>🎁 Geschenkverpackung</b><small>Passend verpackt · ab +5 €</small></span></label>
+        <label><input type="checkbox" name="extras" value="Kommerzielle Nutzung" data-price="30"><span><b>💼 Kommerzielle Nutzung</b><small>Nutzungsumfang nach Absprache · ab +30 €</small></span></label>
+      </div>
+      <label class="consent-check"><input type="checkbox" name="reference_permission" required> Ich darf die angegebenen Referenzen für diese Anfrage verwenden.</label>
+      <label class="consent-check"><input type="checkbox" name="privacy" required> Ich stimme der Datenverarbeitung gemäß <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> zu.</label>
+      <label class="consent-check"><input type="checkbox" name="nonbinding" required> Mir ist bekannt, dass dies zunächst eine unverbindliche Anfrage ist.</label>
+    </section>
+
+    <section class="creator-step" data-step="5">
+      <h3>5. Zusammenfassung prüfen</h3>
+      <div id="creator-summary" class="creator-summary"></div>
+      <label class="consent-check commission-legal-consent"><input type="checkbox" name="legal" required> Ich habe die <a href="agb.html" target="_blank" rel="noopener">AGB</a>, die <a href="widerruf.html" target="_blank" rel="noopener">Widerrufshinweise</a> und die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen. Mir ist bekannt, dass für eindeutig personalisierte Anfertigungen grundsätzlich kein Widerrufsrecht besteht.</label>
+      <button id="creator-submit" class="main-btn full" type="submit">Unverbindliche Projektanfrage senden</button>
+      <p id="creator-status" class="form-status" role="status"></p>
+    </section>
+
+    <div class="creator-actions">
+      <button id="creator-prev" class="outline-btn" type="button" disabled>← Zurück</button>
+      <button id="creator-clear" class="outline-btn danger" type="button">Entwurf löschen</button>
+      <button id="creator-next" class="main-btn" type="button">Weiter →</button>
+    </div>
+  </form>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/email-config.js"></script>
+<script src="js/email-service.js"></script>
+<script src="js/creator-studio.js?v=1"></script>
+</body>
+</html>
