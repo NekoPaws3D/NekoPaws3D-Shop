@@ -260,6 +260,280 @@ This project is licensed under the **MIT License**.
 
 ## 🐾 Made with ❤️ for creators and anime fans.
 
+
+# 🐾 NekoPaws3D
+
+<div align="center">
+
+# Willkommen bei NekoPaws3D
+
+**Ein moderner Online-Shop für 3D-Druck, Zeichenaufträge und personalisierte Produkte.**
+
+Von der Idee bis zum fertigen Produkt – alles auf einer Plattform.
+
+![Version](https://img.shields.io/badge/Version-5.x-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Aktiv-success?style=for-the-badge)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Bereit-orange?style=for-the-badge)
+![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green?style=for-the-badge)
+
+</div>
+
+---
+
+# 📖 Über das Projekt
+
+**NekoPaws3D** ist ein vollständig auf **GitHub Pages** basierender Online-Shop für kreative und individuelle Produkte.
+
+Der Shop verbindet moderne Webtechnologien mit einem leistungsstarken Verwaltungssystem und bietet Kunden die Möglichkeit, eigene Projekte direkt über die Website zu erstellen und zu verfolgen.
+
+Egal ob:
+
+- 🎨 individuelle Zeichenaufträge
+- 🖨️ 3D-Drucke
+- 🎁 personalisierte Produkte
+- 💡 Sonderanfertigungen
+
+NekoPaws3D begleitet den Kunden von der ersten Idee bis zum fertigen Produkt.
+
+---
+
+# ✨ Funktionen
+
+## 🛒 Shop
+
+- Moderner Produktkatalog
+- Kategorien
+- Produktsuche
+- Filterfunktionen
+- Warenkorb
+- Gutscheinsystem
+- Versandkostenberechnung
+- Gastbestellung
+- Kundenkonto
+- Wunschliste
+- Produktbewertungen
+- Kunden-Galerie
+- Bonuspunkte-System
+- Produktempfehlungen
+
+---
+
+## 🎨 Creator Studio
+
+Das Creator Studio ermöglicht es Kunden, individuelle Projekte direkt über die Website zu erstellen.
+
+Unterstützt werden:
+
+- Zeichenaufträge
+- 3D-Druckaufträge
+- Personalisierte Produkte
+- Sonderanfertigungen
+
+Funktionen:
+
+- Schritt-für-Schritt-Assistent
+- Referenzbilder hochladen
+- Dateianhänge
+- Live-Preisorientierung
+- Projektzusammenfassung
+
+---
+
+## 👤 Kundenportal
+
+Im Kundenkonto können Kunden:
+
+- Bestellungen verwalten
+- Projektstatus verfolgen
+- Rechnungen herunterladen
+- Wunschliste verwalten
+- Bonuspunkte einsehen
+- Profildaten bearbeiten
+
+---
+
+## 🐈 NekoBuddy
+
+Der kleine Begleiter von NekoPaws3D.
+
+NekoBuddy begleitet Besucher während ihres Einkaufs.
+
+Eigenschaften:
+
+- Niedliche schwarze Anime-Katze
+- Dezente Animationen
+- Hilfreiche Hinweise
+- Kontextabhängige Nachrichten
+- Optional abschaltbar
+- Mobile Optimierung
+
+---
+
+## ⚙️ Adminbereich
+
+Der integrierte Adminbereich ermöglicht die komplette Verwaltung des Shops.
+
+Verwaltet werden:
+
+- Produkte
+- Kategorien
+- Bestellungen
+- Kunden
+- Gutscheine
+- Versand
+- Statistiken
+- Creator-Studio-Anfragen
+- Kundenportal
+
+---
+
+# 📱 Responsives Design
+
+Die Website ist vollständig optimiert für:
+
+- Desktop-PC
+- Laptop
+- Tablet
+- Smartphone
+
+---
+
+# ⚡ Technische Eigenschaften
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- GitHub Pages
+- GitHub API
+- EmailJS
+- Kein eigener Server erforderlich
+
+---
+
+# 🚀 Installation
+
+Repository klonen
+
+```bash
+git clone https://github.com/DEIN-BENUTZERNAME/NekoPaws3D.git
+```
+
+Anschließend die Website über GitHub Pages veröffentlichen oder lokal über die `index.html` starten.
+
+---
+
+# ⚙️ Konfiguration
+
+Vor dem produktiven Einsatz sollten folgende Einstellungen vorgenommen werden:
+
+- GitHub Repository
+- GitHub Personal Access Token
+- EmailJS
+- Versandkosten
+- Gutscheine
+- Rechtstexte
+
+---
+
+# 📂 Projektstruktur
+
+```
+admin/
+css/
+data/
+images/
+js/
+legal/
+products/
+uploads/
+```
+
+---
+
+# 🌟 Highlights
+
+✔ Creator Studio
+
+✔ Kundenportal
+
+✔ Wunschliste
+
+✔ Produktbewertungen
+
+✔ Kunden-Galerie
+
+✔ Bonuspunkte-System
+
+✔ NekoBuddy
+
+✔ Moderner Adminbereich
+
+✔ Responsive Design
+
+✔ GitHub Pages kompatibel
+
+---
+
+# 🛣 Entwicklungsplan
+
+## Version 5
+
+- Creator Studio
+- Kundenportal
+- Wunschliste
+- Bewertungen
+- Bonuspunkte
+- Kunden-Galerie
+- NekoBuddy
+
+## Geplante Funktionen
+
+- Creator Studio 2.0
+- Live-Projektstatus
+- Projektchat
+- Entwurfsfreigaben
+- Achievement-System
+- Saisonale Events
+- Community-Bereich
+
+---
+
+# ❤️ Warum NekoPaws3D?
+
+NekoPaws3D verbindet Kreativität, Individualität und moderne Webtechnologien.
+
+Anstatt lediglich Produkte zu verkaufen, bietet der Shop seinen Kunden die Möglichkeit, aktiv am Entstehungsprozess ihrer Projekte teilzunehmen.
+
+Durch Funktionen wie das Creator Studio, das Kundenportal und den virtuellen Begleiter NekoBuddy entsteht ein persönliches und interaktives Einkaufserlebnis.
+
+---
+
+# 🤝 Mitwirken
+
+Verbesserungsvorschläge, Fehlerberichte oder neue Ideen sind jederzeit willkommen.
+
+Nutze dafür einfach die GitHub-Issues oder erstelle einen Pull Request.
+
+---
+
+# 📄 Lizenz
+
+Dieses Projekt steht unter der **MIT-Lizenz**.
+
+Weitere Informationen findest du in der Datei **LICENSE**.
+
+---
+
+<div align="center">
+
+## 🐾 Vielen Dank für deinen Besuch!
+
+**NekoPaws3D** – Kreativität ohne Grenzen.
+
+⭐ Wenn dir das Projekt gefällt, freue ich mich über einen Stern auf GitHub.
+
+</div>
+
 ### Thank you for visiting NekoPaws3D!
 
 ⭐ If you like this project, consider giving it a star on GitHub.
