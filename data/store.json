@@ -1216,10 +1216,10 @@
     "customerPortals": [
       {
         "emailHash": "DCn0TAjiiVgYanCbl6TpXIyvK9RauXXNIC7WFCcmAeA=",
-        "salt": "WRP3+GoVXH5Yft1cyvHqYg==",
-        "iv": "gJbQKeuChvErwiQf",
-        "cipher": "osrwtREWJKYrSODd+xwY+qKhnZMahlRmaoi3cfd7cogKPxFSHENC50Js0F5M49rC6E0HUkEff0vDDCePquus52N+9NhA6ka7/eTeQjOl3FsAG3cqHJXO7fGr2wA76Vn/46BiECrQdV1o0Jg8Lm5w2xXTOeNn/b9Wn558cHudYxGRpuwzXgPzqwn1VjE3fRRqbXinKf8JNV2Vzgnx6dpZM6gwAEQaSge4n47kElA3zFq0INHs5C4cAUui9T2dvVfSllbkq6SpdmvdGNaAjKtrsMv3cQoXY5n0SiyTIbwkE+D1TEvVJBuadVlGO3mcwCdrm2ZCAnFOEPjgmNQO/zDOwtXI9CElDC+AKPsbCU8ctsIFdjNaTi+KED4O7zU6YnUwBoQeSDmY7vq6ubWLJshQzOHSZsutTynfl0OvQuWQgwvxNu6w4GoyaVP8LYHHU43anHFGigRWWE8OfNK/aAtQhxyVRGFfYRWt7P7O1bOqDmr5VdYfKmHLfY0tzzHpV+QqX2uT",
-        "updatedAt": "2026-07-23T10:49:19.262Z",
+        "salt": "xpDXF4VNUosi/wvwHrM0tQ==",
+        "iv": "ReGXT1uspbZqVvsA",
+        "cipher": "u+tj6HBGX4iWdxCa5u3u+FG5LCs3hqcqEpULPzWG5pE0vAc2MMj6eu3iNflxMXYkvevC8AM8e9zlSlMj1MBujztMu+CZDIa7xEZcLws54aKs6IN6ii8GJ04JTjT7DXUCQ331HMSD3efpwKrOOGavexbjYBO0hwKTwKXZ3qNJ+SyRmqFAwAvT2qpRHLE8hjUxXOqNJm+/w5dzDa8f8M9zekba9iEWo1Yc2hFaltiD/S15O6Avznz/6Qr2boTVBiLq9Ai/CPrObdDSDBlUpwD3kKu8qFTEYbDcJ11FtdJmxLDgUIEk8x9OM1yuSlfo88gyznf6zEd+AKTCn7jsSpn25IjsVq1cdT2qM6vWwE2uPHbVMRvbcV3kbfs1PfXLJodxxPeyHLkd/dVKhKySfR4WDj7IDLRNg3liln1uCpKXNXzh9maFR4VjkLQPjzM6NogR0mcbOcBRNJQxWeZ7MQVgaIx4erOhtKikgtNqMx9Xt/GUFPI8O0jghCUmjSif0kgnGhsQ",
+        "updatedAt": "2026-07-29T11:16:43.505Z",
         "active": true
       }
     ],
@@ -1235,8 +1235,11 @@
         "phone": "034321299800",
         "billingAddress": "Schloßberg 77\n\n04703 Leisnig",
         "shippingAddress": "Schloßberg 77\n\n04703 Leisnig",
-        "notes": "Shop Admin",
-        "updatedAt": "2026-07-23T10:48:28.032Z"
+        "notes": "",
+        "updatedAt": "2026-07-29T11:15:27.654Z",
+        "tags": [],
+        "company": "",
+        "followUp": ""
       },
       {
         "id": "4e421ac0-6e40-4c2f-87a5-0f95d8fe0153",
@@ -1249,7 +1252,10 @@
         "shippingAddress": "Friedensring 1\n29410 Salzwedel",
         "notes": "",
         "createdAt": "2026-07-23T18:01:51.962Z",
-        "updatedAt": "2026-07-23T18:01:51.962Z"
+        "updatedAt": "2026-07-23T18:01:51.962Z",
+        "tags": [],
+        "company": "",
+        "followUp": ""
       },
       {
         "id": "d2fe4213-7418-472d-82eb-fca42aa9fe8f",
@@ -1262,7 +1268,10 @@
         "shippingAddress": "Oberstrasse, 43\n56341 Filsen",
         "notes": "",
         "createdAt": "2026-07-24T08:56:23.372Z",
-        "updatedAt": "2026-07-24T08:56:23.378Z"
+        "updatedAt": "2026-07-24T08:56:23.378Z",
+        "tags": [],
+        "company": "",
+        "followUp": ""
       }
     ]
   }
