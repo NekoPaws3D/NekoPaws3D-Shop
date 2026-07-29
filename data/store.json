@@ -964,7 +964,7 @@
       "label": "Brief / Sticker",
       "carrier": "Post",
       "price": 1.8,
-      "freeFrom": 5,
+      "freeFrom": 10,
       "minClass": "brief",
       "maxClass": "brief",
       "active": true
@@ -974,7 +974,7 @@
       "label": "Warenpost",
       "carrier": "Post",
       "price": 2.55,
-      "freeFrom": 5,
+      "freeFrom": 10,
       "minClass": "brief",
       "maxClass": "small",
       "active": true
@@ -1014,7 +1014,7 @@
       "label": "Hermes Paket L",
       "carrier": "Hermes",
       "price": 10.99,
-      "freeFrom": 50,
+      "freeFrom": 80,
       "minClass": "large",
       "maxClass": "xl",
       "active": true
@@ -1024,7 +1024,7 @@
       "label": "Hermes Paket XL",
       "carrier": "Hermes",
       "price": 28.99,
-      "freeFrom": 50,
+      "freeFrom": 150,
       "minClass": "xl",
       "maxClass": "xxl",
       "active": true
@@ -1064,7 +1064,7 @@
       "label": "DHL Paket bis 10 kg",
       "carrier": "DHL",
       "price": 10.49,
-      "freeFrom": 50,
+      "freeFrom": 80,
       "minClass": "large",
       "maxClass": "xl",
       "active": true
@@ -1074,7 +1074,7 @@
       "label": "DHL Paket bis 20 kg",
       "carrier": "DHL",
       "price": 18.99,
-      "freeFrom": 50,
+      "freeFrom": 100,
       "minClass": "xl",
       "maxClass": "xxl",
       "active": true
@@ -1084,7 +1084,7 @@
       "label": "DHL Paket bis 31,5 kg",
       "carrier": "DHL",
       "price": 23.99,
-      "freeFrom": 0,
+      "freeFrom": 200,
       "minClass": "xxl",
       "maxClass": "xxl",
       "active": true
@@ -1104,7 +1104,7 @@
       "label": "Brief / Sticker",
       "carrier": "Post",
       "price": 1.8,
-      "freeFrom": 5,
+      "freeFrom": 10,
       "minClass": "brief",
       "maxClass": "brief",
       "active": true
@@ -1183,11 +1183,11 @@
         "id": "c1fbb948-d5b7-4921-b288-38550c9b238a",
         "number": "NP-2026-0001",
         "date": "2026-07-23",
-        "status": "payment_pending",
+        "status": "ready",
         "priority": "normal",
         "category": "Epoxidharz",
         "progress": 100,
-        "dueDate": "",
+        "dueDate": "2026-08-15",
         "total": 25,
         "customer": {
           "name": "Phillip Schulz",
@@ -1201,12 +1201,13 @@
         "shippedDate": "",
         "invoiceNumber": "RE-0025",
         "notes": "",
-        "updatedAt": "2026-07-23T18:00:33.623Z",
+        "updatedAt": "2026-07-29T18:21:29.460Z",
         "payment": {
-          "status": "open",
-          "days": 14,
           "invoiceDate": "2026-07-23",
+          "days": 14,
           "dueDate": "2026-08-06",
+          "status": "open",
+          "paidDate": "",
           "smallBusiness": true
         },
         "customerId": "4e421ac0-6e40-4c2f-87a5-0f95d8fe0153"
