@@ -77,6 +77,7 @@
     q("#portal-customer-name").textContent=account.customer?.name||"";
     q("#portal-updated").textContent=`Zuletzt aktualisiert: ${new Date(account.updatedAt||Date.now()).toLocaleString("de-DE")}`;
     renderSummary();renderOrders();
+    window.dispatchEvent(new CustomEvent("nekopaws:portal-ready",{detail:{account}}));
   }
 
   function renderSummary() {
