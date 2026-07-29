@@ -6,8 +6,8 @@
   <title>Mein Konto – NekoPaws3D</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/enhancements.css">
-  <link rel="stylesheet" href="css/customer-portal.css?v=1">
-  <link rel="stylesheet" href="css/neko-buddy.css?v=1.0">
+  <link rel="stylesheet" href="css/customer-portal.css?v=6">
+  <link rel="stylesheet" href="css/collector.css?v=1">
 </head>
 <body>
 <div class="topbar">
@@ -25,6 +25,7 @@
     <a href="index.html">Startseite</a>
     <a href="zeichenauftrag.html">Zeichenauftrag</a>
     <a href="galerie.html">Auftragsgalerie</a>
+    <a href="hall-of-fame.html">Hall of Fame</a>
     <a class="active" href="konto.html">Mein Konto</a>
     <a href="kontakt.html">Kontakt</a>
   </nav>
@@ -63,6 +64,34 @@
 
     <div id="portal-summary" class="portal-summary"></div>
 
+    <section class="collector-hero portal-card" aria-labelledby="collector-title">
+      <div>
+        <small>Collector Edition</small>
+        <h2 id="collector-title">Mein Sammlerprofil</h2>
+        <p>Deine Sammlung, Erfolge und persönlichen Meilensteine auf einen Blick.</p>
+      </div>
+      <div class="collector-level" id="collector-level"></div>
+    </section>
+
+    <div class="collector-grid">
+      <section class="portal-card">
+        <div class="portal-section-head"><div><h2>🏆 Meine Abzeichen</h2><p>Neue Erfolge werden automatisch freigeschaltet.</p></div></div>
+        <div id="collector-badges" class="badge-grid"></div>
+      </section>
+      <section class="portal-card">
+        <div class="portal-section-head"><div><h2>🎁 Überraschungsbonus</h2><p>Abgeschlossene Bestellungen können eine Belohnung enthalten.</p></div></div>
+        <div id="collector-bonus"></div>
+      </section>
+    </div>
+
+    <section class="portal-card">
+      <div class="portal-section-head">
+        <div><h2>🖼️ Mein virtuelles Regal</h2><p>Deine gekauften und abgeschlossenen Unikate als digitale Sammlung.</p></div>
+        <select id="shelf-filter"><option value="all">Alle Stücke</option><option value="favorite">Favoriten</option><option value="completed">Abgeschlossen</option></select>
+      </div>
+      <div id="virtual-shelf" class="virtual-shelf"></div>
+    </section>
+
     <section class="portal-card">
       <div class="portal-section-head">
         <div><h2>Meine Bestellungen</h2><p>Status, Zahlung, Versand und Dokumente.</p></div>
@@ -86,7 +115,7 @@
   <div><h3>Rechtliches</h3><p><a href="impressum.html">Impressum</a><br><a href="agb.html">AGB</a><br><a href="datenschutz.html">Datenschutz</a></p></div>
 </footer>
 
-<script src="js/customer-portal.js?v=1"></script>
-<script src="js/neko-buddy.js?v=1.0" defer></script>
+<script src="js/customer-portal.js?v=6"></script>
+<script src="js/collector-profile.js?v=1"></script>
 </body>
 </html>

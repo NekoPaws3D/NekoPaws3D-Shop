@@ -1,0 +1,23 @@
+# NekoPaws3D – Shop 6.0 Collector Edition
+
+Dieses Update ergänzt den bestehenden Shop, ohne das Grunddesign zu ersetzen.
+
+## Neue Funktionen
+- Sammlerprofil mit Level, XP und automatisch freigeschalteten Abzeichen
+- Überraschungsbonus nach abgeschlossenen Bestellungen
+- Virtuelles Regal aus den Bestellungen des Kunden
+- Favoriten und Teilen-Funktion im virtuellen Regal
+- Öffentliche Hall of Fame mit Filtern und lokalen Community-Likes
+
+## Installation
+Den Inhalt dieses ZIP-Archivs in das Hauptverzeichnis des Repositories kopieren und vorhandene Dateien ersetzen. Danach committen und die Website mit Strg+F5 neu laden.
+
+## Bewusst nicht verändert
+- admin/admin.js
+- js/email-config.js
+- data/store.json
+- GitHub-Login und GitHub-PAT
+- EmailJS-Schlüssel und Template-IDs
+
+## Technischer Hinweis
+Favoriten, Hall-of-Fame-Likes und bereits geöffnete Überraschungsboni werden lokal im Browser gespeichert. Sammlerprofil und Regal werden aus den im Kundenportal vorhandenen Bestelldaten erzeugt. Bonuscodes sind Belohnungshinweise und müssen vor einer tatsächlichen Einlösung anhand der Shopbedingungen geprüft werden.
