@@ -1,0 +1,39 @@
+NekoPaws3D – NekoBuddy 1.0
+============================
+
+Enthalten:
+- css/neko-buddy.css
+- js/neko-buddy.js
+- aktualisierte öffentliche HTML-Seiten mit den beiden Einbindungen
+
+Funktionen:
+- niedliche schwarze Anime-Katze unten rechts
+- Blinzeln, Ohren-, Schwanz- und Atembewegung
+- Schlafmodus nach 45 Sekunden Inaktivität
+- kontextbezogene Hinweise je Seite
+- Klickreaktionen mit Herzchen und kleinem Hüpfer
+- optionale Sounds (standardmäßig aus)
+- Größe und Position einstellbar
+- vollständig ausblendbar
+- Einstellungen lokal im Browser gespeichert
+- mobil optimiert und barrierearm bedienbar
+- berücksichtigt "Bewegung reduzieren" des Betriebssystems
+
+Installation:
+1. Ordnerstruktur des ZIPs in das Hauptverzeichnis der Website kopieren.
+2. Vorhandene HTML-Dateien ersetzen.
+3. css/neko-buddy.css und js/neko-buddy.js hochladen.
+4. GitHub-Änderungen committen.
+5. Website mit Strg + F5 neu laden.
+
+Nicht verändert / nicht enthalten:
+- admin/admin.js
+- js/email-config.js
+- data/store.json
+- GitHub-Login oder GitHub-PAT
+- EmailJS-Schlüssel oder Template-IDs
+
+Programmierschnittstelle für spätere Ereignisse:
+- NekoBuddy.say('Nachricht')
+- NekoBuddy.celebrate('Bestellung erfolgreich!')
+- NekoBuddy.reset()
