@@ -1150,7 +1150,7 @@
         "createdAt": "2026-07-24T08:56:23.372Z",
         "number": "NP-2026-0002",
         "date": "2026-07-24",
-        "status": "payment_pending",
+        "status": "completed",
         "priority": "normal",
         "category": "3D-Druck",
         "progress": 100,
@@ -1166,7 +1166,7 @@
         "carrier": "DHL",
         "tracking": "",
         "shippedDate": "2026-07-27",
-        "invoiceNumber": "",
+        "invoiceNumber": "RE-2026-0001",
         "payment": {
           "invoiceDate": "2026-07-24",
           "days": 14,
@@ -1176,7 +1176,7 @@
           "smallBusiness": true
         },
         "notes": "",
-        "updatedAt": "2026-07-27T15:06:55.884Z",
+        "updatedAt": "2026-07-29T18:20:36.267Z",
         "customerId": "d2fe4213-7418-472d-82eb-fca42aa9fe8f"
       },
       {
@@ -1212,7 +1212,7 @@
         "customerId": "4e421ac0-6e40-4c2f-87a5-0f95d8fe0153"
       }
     ],
-    "invoiceCounter": 1,
+    "invoiceCounter": 2,
     "customerPortals": [
       {
         "emailHash": "DCn0TAjiiVgYanCbl6TpXIyvK9RauXXNIC7WFCcmAeA=",
