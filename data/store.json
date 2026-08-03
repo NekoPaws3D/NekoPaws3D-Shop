@@ -1112,10 +1112,10 @@
   ],
   "couponCodes": [
     {
-      "code": "NEKO10",
+      "code": "PAWS20",
       "type": "percent",
-      "value": 10,
-      "label": "10 % Rabatt",
+      "value": 20,
+      "label": "20 % Rabatt",
       "active": true
     },
     {
