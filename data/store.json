@@ -1146,6 +1146,40 @@
   "management": {
     "orders": [
       {
+        "id": "666db451-214c-41fa-b03f-76478c9d4978",
+        "createdAt": "2026-08-05T20:20:40.379Z",
+        "number": "NP-2026-0003",
+        "date": "2026-08-05",
+        "status": "payment_pending",
+        "priority": "normal",
+        "category": "3D-Druck",
+        "progress": 80,
+        "dueDate": "2026-08-15",
+        "total": 50,
+        "customer": {
+          "name": "Sonja Glomb",
+          "email": "glomb5@hotmail.com",
+          "phone": "017647549140",
+          "address": "Friedrich-Hüttemann-Str 4\n59457 Werl"
+        },
+        "items": "2x Blindbox Waldgeister",
+        "carrier": "Abholung",
+        "tracking": "",
+        "shippedDate": "2026-08-15",
+        "invoiceNumber": "",
+        "payment": {
+          "invoiceDate": "2026-08-06",
+          "days": 14,
+          "dueDate": "2026-08-20",
+          "status": "open",
+          "paidDate": "",
+          "smallBusiness": true
+        },
+        "notes": "",
+        "updatedAt": "2026-08-05T20:20:40.379Z",
+        "customerId": "52f51ee8-b261-49b6-9574-5b5a9ae6afb7"
+      },
+      {
         "id": "0363837f-9d3c-42f0-b946-044e92d36ca9",
         "createdAt": "2026-07-24T08:56:23.372Z",
         "number": "NP-2026-0002",
@@ -1273,6 +1307,19 @@
         "tags": [],
         "company": "",
         "followUp": ""
+      },
+      {
+        "id": "52f51ee8-b261-49b6-9574-5b5a9ae6afb7",
+        "number": "KD-2026-0004",
+        "active": true,
+        "name": "Sonja Glomb",
+        "email": "glomb5@hotmail.com",
+        "phone": "017647549140",
+        "billingAddress": "Friedrich-Hüttemann-Str 4\n59457 Werl",
+        "shippingAddress": "Friedrich-Hüttemann-Str 4\n59457 Werl",
+        "notes": "",
+        "createdAt": "2026-08-05T20:20:40.379Z",
+        "updatedAt": "2026-08-05T20:20:40.397Z"
       }
     ]
   }
