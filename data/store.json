@@ -11,7 +11,7 @@
       "id": 1,
       "name": "A6 Sticker Sheet – Baking Time",
       "category": "Sticker",
-      "price": 2.99,
+      "price": 1.99,
       "image": "assets/products/1784306423549-erwew.jpeg",
       "images": [
         "assets/products/1784306423549-erwew.jpeg"
@@ -38,7 +38,7 @@
       "id": 2,
       "name": "A6 Holo Sticker Sheet Black Kitty",
       "category": "Sticker",
-      "price": 3.99,
+      "price": 2.99,
       "image": "assets/products/1784306344291-zhurt.jpeg",
       "images": [
         "assets/products/1784306344291-zhurt.jpeg"
@@ -93,7 +93,7 @@
       "id": 5,
       "name": "Standard 3D-Anhänger Wald - Zuckerkatze",
       "category": "3D Druck",
-      "price": 4.99,
+      "price": 3.99,
       "image": "assets/products/1784307539305-whatsapp-image-2026-07-17-at-18-25-03.jpeg",
       "images": [
         "assets/products/1784307539305-whatsapp-image-2026-07-17-at-18-25-03.jpeg"
@@ -120,7 +120,7 @@
       "id": 7,
       "name": "Filament 3D-Druck Zucker Katzen",
       "category": "3D Druck",
-      "price": 6.99,
+      "price": 4.99,
       "image": "assets/products/1784307443343-trgeztr.jpeg",
       "images": [
         "assets/products/1784307443343-trgeztr.jpeg",
@@ -216,7 +216,7 @@
       "id": 22,
       "name": "Standard 3D-Anhänger Spiegelei - Zuckerkatze",
       "category": "3D Druck",
-      "price": 4.99,
+      "price": 3.99,
       "image": "assets/products/1784307622607-grdegr.jpeg",
       "images": [
         "assets/products/1784307622607-grdegr.jpeg"
@@ -243,7 +243,7 @@
       "id": 23,
       "name": "Standard 3D-Anhänger Gaming - Zuckerkatze",
       "category": "3D Druck",
-      "price": 4.99,
+      "price": 3.99,
       "image": "assets/products/1784307668842-gfdfsd.jpeg",
       "images": [
         "assets/products/1784307668842-gfdfsd.jpeg"
@@ -883,7 +883,7 @@
       "id": 40,
       "name": "Drachen Geist",
       "category": "3D Druck",
-      "price": 49.99,
+      "price": 39.99,
       "priceOnRequest": false,
       "image": "assets/products/1785349827485-20260319-072924.jpg",
       "images": [
