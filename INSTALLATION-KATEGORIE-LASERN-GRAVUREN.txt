@@ -1,0 +1,30 @@
+NekoPaws3D – Neue Kategorie „Lasern und Gravuren“
+
+NEU
+- Kategorie „Lasern & Gravuren“ in der Hauptnavigation
+- Kategorie im Produktfilter auf der Startseite
+- Eintrag im Shop-Footer
+- Auswahl „Lasern und Gravuren“ im Produkteditor des Adminbereichs
+
+INSTALLATION
+1. ZIP entpacken.
+2. index.html im Hauptordner ersetzen.
+3. admin/index.html ersetzen.
+4. Änderungen bei GitHub committen.
+5. Website und Adminbereich mit Strg + F5 neu laden.
+
+ARTIKEL ANLEGEN
+1. Adminbereich öffnen.
+2. Neues Produkt anlegen oder vorhandenes Produkt bearbeiten.
+3. Als Kategorie „Lasern und Gravuren“ auswählen.
+4. Produkt veröffentlichen.
+5. Der Artikel erscheint anschließend unter dem Filter „Lasern & Gravuren“.
+
+GESCHÜTZT / NICHT VERÄNDERT
+- GitHub Personal Access Token
+- GitHub-Login
+- admin/admin.js
+- js/email-config.js
+- EmailJS Service-ID, Template-IDs und Public Key
+- data/store.json
+- vorhandene Produkte und Bilder

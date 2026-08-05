@@ -1,0 +1,60 @@
+NekoPaws3D – Dynamische Kategorien im Adminbereich
+
+NEU
+- Eigener Admin-Tab „Kategorien“
+- Neue Kategorien direkt im Admin anlegen
+- Kategorien umbenennen
+- Separate Anzeige-Bezeichnung für den Shop
+- Kategorien sortieren
+- Kategorien ein- oder ausblenden
+- Eigene Kategorien erscheinen automatisch:
+  * im Produkteditor
+  * im Produktfilter auf der Startseite
+  * in der Hauptnavigation
+- Beim Umbenennen werden zugeordnete Produkte automatisch aktualisiert
+- Kategorien mit zugeordneten Produkten können nicht versehentlich gelöscht werden
+
+INSTALLATION
+1. ZIP entpacken.
+2. Alle enthaltenen Dateien in das Repository kopieren.
+3. index.html und admin/index.html ersetzen.
+4. Die neuen Dateien hinzufügen:
+   - admin/category-manager.js
+   - admin/category-manager.css
+   - js/custom-categories.js
+5. Änderungen bei GitHub committen.
+6. Website und Adminbereich mit Strg + F5 neu laden.
+
+KATEGORIE ANLEGEN
+1. Adminbereich öffnen.
+2. Den Tab „Kategorien“ auswählen.
+3. „+ Neue Kategorie“ anklicken.
+4. Internen Namen und Anzeige im Shop eintragen.
+5. „Übernehmen“ anklicken.
+6. Oben „Alles veröffentlichen“ anklicken.
+7. Danach kann die Kategorie bei jedem Produkt ausgewählt werden.
+
+KATEGORIE UMBENENNEN
+- Namen im Kategorien-Tab ändern.
+- „Übernehmen“ anklicken.
+- Zugeordnete Produkte werden automatisch auf den neuen Namen umgestellt.
+- Anschließend „Alles veröffentlichen“ anklicken.
+
+KATEGORIE LÖSCHEN
+- Eine Kategorie kann nur gelöscht werden, wenn ihr kein Produkt mehr zugeordnet ist.
+- Produkte vorher einer anderen Kategorie zuordnen und veröffentlichen.
+
+DATENSPEICHERUNG
+Die Kategorien werden als neuer Bereich „categories“ in data/store.json gespeichert,
+sobald „Alles veröffentlichen“ angeklickt wird.
+Die Datei data/store.json ist NICHT im Update enthalten und wird nicht überschrieben.
+
+GESCHÜTZT / NICHT VERÄNDERT
+- GitHub Personal Access Token
+- GitHub-Login und Repository-Einstellungen
+- admin/admin.js
+- js/email-config.js
+- EmailJS Service-ID, Template-IDs und Public Key
+- data/store.json
+- vorhandene Produkte und Bilder
+- Gutscheine, Bestellungen und Kundendaten
