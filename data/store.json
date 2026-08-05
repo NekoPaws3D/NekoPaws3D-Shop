@@ -936,6 +936,35 @@
       "productionTime": "",
       "shippingTime": "",
       "deliveryNote": ""
+    },
+    {
+      "id": 42,
+      "name": "Holz Zuckerkatze Erdbeer-Katzendrache",
+      "category": "Lasern und Gravuren",
+      "price": 5.99,
+      "priceOnRequest": false,
+      "image": "assets/products/1785962700071-1000069978.png",
+      "images": [
+        "assets/products/1785962700071-1000069978.png",
+        "assets/products/1785962701906-1000069979.png",
+        "assets/products/1785962704255-1000069977.png"
+      ],
+      "description": "Kleine Süße Erdbeer-Drachenkatzen Anhänger \nzum Verschenken geeignet \n- Aus Holz Gewchnitten \n- Auf Holz bedruckt\n- 3mm Dicke\n- Klarlack versiegelt",
+      "customizable": false,
+      "visible": true,
+      "stock": 15,
+      "sku": "NEKO-042",
+      "featured": false,
+      "sort": 31,
+      "shippingClass": "brief",
+      "weightGrams": 0,
+      "maxPerPackage": 10,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "stock",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     }
   ],
   "shippingMethods": [
@@ -1322,5 +1351,71 @@
         "updatedAt": "2026-08-05T20:20:40.397Z"
       }
     ]
-  }
+  },
+  "categories": [
+    {
+      "id": "sticker",
+      "name": "Sticker",
+      "label": "Sticker",
+      "sort": 1,
+      "active": true,
+      "system": true
+    },
+    {
+      "id": "epoxidharz",
+      "name": "Epoxidharz",
+      "label": "Epoxidharz",
+      "sort": 2,
+      "active": true,
+      "system": true
+    },
+    {
+      "id": "3d-druck",
+      "name": "3D Druck",
+      "label": "3D Druck",
+      "sort": 3,
+      "active": true,
+      "system": true
+    },
+    {
+      "id": "zeichenauftrage",
+      "name": "Zeichenaufträge",
+      "label": "Zeichenaufträge",
+      "sort": 4,
+      "active": true,
+      "system": true
+    },
+    {
+      "id": "textildruck",
+      "name": "Textildruck",
+      "label": "Textildruck",
+      "sort": 5,
+      "active": true,
+      "system": true
+    },
+    {
+      "id": "lasern-und-gravuren",
+      "name": "Lasern und Gravuren",
+      "label": "Lasern & Gravuren",
+      "sort": 6,
+      "active": true,
+      "system": true
+    },
+    {
+      "id": "bundles",
+      "name": "Bundles",
+      "label": "Bundles",
+      "sort": 7,
+      "active": true,
+      "system": true
+    },
+    {
+      "id": "fsk-18",
+      "name": "FSK 18",
+      "label": "FSK 18",
+      "sort": 8,
+      "active": true,
+      "system": true
+    }
+  ]
 }
