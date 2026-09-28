@@ -1366,7 +1366,7 @@
         "createdAt": "2026-08-05T20:20:40.379Z",
         "number": "NP-2026-0003",
         "date": "2026-08-05",
-        "status": "payment_pending",
+        "status": "completed",
         "priority": "normal",
         "category": "3D-Druck",
         "progress": 80,
@@ -1392,7 +1392,7 @@
           "smallBusiness": true
         },
         "notes": "",
-        "updatedAt": "2026-08-05T20:20:40.379Z",
+        "updatedAt": "2026-09-28T10:20:25.577Z",
         "customerId": "52f51ee8-b261-49b6-9574-5b5a9ae6afb7"
       },
       {
@@ -1426,14 +1426,14 @@
           "smallBusiness": true
         },
         "notes": "",
-        "updatedAt": "2026-07-29T18:20:36.267Z",
+        "updatedAt": "2026-09-28T10:20:30.807Z",
         "customerId": "d2fe4213-7418-472d-82eb-fca42aa9fe8f"
       },
       {
         "id": "c1fbb948-d5b7-4921-b288-38550c9b238a",
         "number": "NP-2026-0001",
         "date": "2026-07-23",
-        "status": "paid",
+        "status": "completed",
         "priority": "normal",
         "category": "Epoxidharz",
         "progress": 100,
@@ -1451,7 +1451,7 @@
         "shippedDate": "",
         "invoiceNumber": "RE-0025",
         "notes": "",
-        "updatedAt": "2026-09-28T10:20:03.193Z",
+        "updatedAt": "2026-09-28T10:20:36.219Z",
         "payment": {
           "invoiceDate": "2026-07-23",
           "days": 14,
