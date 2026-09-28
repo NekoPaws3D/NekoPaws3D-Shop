@@ -1026,6 +1026,31 @@
       "productionTime": "",
       "shippingTime": "",
       "deliveryNote": ""
+    },
+    {
+      "id": 45,
+      "name": "Sublimationsdruck- Becher",
+      "category": "Bine´s Kreativwerkstatt & Sublimation",
+      "price": 0,
+      "priceOnRequest": false,
+      "image": "",
+      "images": [],
+      "description": "",
+      "customizable": false,
+      "visible": false,
+      "stock": 0,
+      "sku": "NEKO-045",
+      "featured": false,
+      "sort": 34,
+      "shippingClass": "small",
+      "weightGrams": 0,
+      "maxPerPackage": 1,
+      "lowStockThreshold": 3,
+      "showStockWarning": true,
+      "availabilityType": "made_to_order",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     }
   ],
   "shippingMethods": [
