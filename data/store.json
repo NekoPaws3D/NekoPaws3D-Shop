@@ -1498,6 +1498,14 @@
       "sort": 8,
       "active": true,
       "system": true
+    },
+    {
+      "id": "neue-kategorie-1790585840711",
+      "name": "Bine´s Kreativwerkstatt & Sublimation",
+      "label": "Neue Kategorie",
+      "sort": 9,
+      "active": true,
+      "system": false
     }
   ]
 }
