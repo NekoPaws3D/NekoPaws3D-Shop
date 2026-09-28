@@ -1358,7 +1358,27 @@
       "visible": true
     }
   ],
-  "orderGallery": [],
+  "orderGallery": [
+    {
+      "id": 1,
+      "sort": 1,
+      "title": "Neuer Referenzauftrag",
+      "category": "Zeichnung",
+      "date": "2026-09-28",
+      "customer": "",
+      "description": "",
+      "tags": [],
+      "images": [
+        "assets/gallery/1790595679552-1000078202.jpg",
+        "assets/gallery/1790595686629-1000078200.jpg",
+        "assets/gallery/1790595690098-1000078201.jpg"
+      ],
+      "image": "assets/gallery/1790595679552-1000078202.jpg",
+      "featured": false,
+      "visible": false,
+      "consent": false
+    }
+  ],
   "management": {
     "orders": [
       {
