@@ -1433,7 +1433,7 @@
         "id": "c1fbb948-d5b7-4921-b288-38550c9b238a",
         "number": "NP-2026-0001",
         "date": "2026-07-23",
-        "status": "ready",
+        "status": "paid",
         "priority": "normal",
         "category": "Epoxidharz",
         "progress": 100,
@@ -1451,13 +1451,13 @@
         "shippedDate": "",
         "invoiceNumber": "RE-0025",
         "notes": "",
-        "updatedAt": "2026-07-29T18:21:29.460Z",
+        "updatedAt": "2026-09-28T10:20:03.193Z",
         "payment": {
           "invoiceDate": "2026-07-23",
           "days": 14,
           "dueDate": "2026-08-06",
           "status": "open",
-          "paidDate": "",
+          "paidDate": "2026-09-25",
           "smallBusiness": true
         },
         "customerId": "4e421ac0-6e40-4c2f-87a5-0f95d8fe0153"
