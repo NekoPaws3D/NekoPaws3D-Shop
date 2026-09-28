@@ -1362,10 +1362,10 @@
     {
       "id": 1,
       "sort": 1,
-      "title": "Neuer Referenzauftrag",
-      "category": "Zeichnung",
-      "date": "2026-09-28",
-      "customer": "",
+      "title": "Sturmdrache Resindruck",
+      "category": "Epoxidharz",
+      "date": "2026-09-30",
+      "customer": "Anonym",
       "description": "",
       "tags": [],
       "images": [
@@ -1374,6 +1374,25 @@
         "assets/gallery/1790595690098-1000078201.jpg"
       ],
       "image": "assets/gallery/1790595679552-1000078202.jpg",
+      "featured": false,
+      "visible": true,
+      "consent": true
+    },
+    {
+      "id": 2,
+      "sort": 2,
+      "title": "Neuer Referenzauftrag",
+      "category": "Zeichnung",
+      "date": "2026-09-28",
+      "customer": "",
+      "description": "",
+      "tags": [],
+      "images": [
+        "assets/gallery/1790595936338-277fbf46-2993-4a0b-b155-cb3e4b9f03be-1-all-5076.jpg",
+        "assets/gallery/1790595953486-277fbf46-2993-4a0b-b155-cb3e4b9f03be-1-all-5075.jpg",
+        "assets/gallery/1790595969767-277fbf46-2993-4a0b-b155-cb3e4b9f03be-1-all-5074.jpg"
+      ],
+      "image": "assets/gallery/1790595936338-277fbf46-2993-4a0b-b155-cb3e4b9f03be-1-all-5076.jpg",
       "featured": false,
       "visible": false,
       "consent": false
