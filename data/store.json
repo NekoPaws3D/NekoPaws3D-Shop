@@ -1150,8 +1150,8 @@
       "carrier": "Dhl",
       "price": 4.19,
       "freeFrom": 30,
-      "minClass": "brief",
-      "maxClass": "sperrgut",
+      "minClass": "small",
+      "maxClass": "small",
       "active": true
     },
     {
@@ -1231,7 +1231,7 @@
       "price": 5.19,
       "freeFrom": 30,
       "minClass": "small",
-      "maxClass": "small",
+      "maxClass": "medium",
       "active": true
     },
     {
@@ -1240,8 +1240,8 @@
       "carrier": "DHL",
       "price": 6.19,
       "freeFrom": 30,
-      "minClass": "small",
-      "maxClass": "medium",
+      "minClass": "medium",
+      "maxClass": "large",
       "active": true
     },
     {
@@ -1250,8 +1250,8 @@
       "carrier": "DHL",
       "price": 7.69,
       "freeFrom": 30,
-      "minClass": "medium",
-      "maxClass": "large",
+      "minClass": "large",
+      "maxClass": "xl",
       "active": true
     },
     {
