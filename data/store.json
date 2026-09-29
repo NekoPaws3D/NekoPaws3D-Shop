@@ -1141,7 +1141,7 @@
       "price": 5.19,
       "freeFrom": 50,
       "minClass": "small",
-      "maxClass": "sperrgut",
+      "maxClass": "small",
       "active": true
     },
     {
@@ -1171,7 +1171,7 @@
       "price": 2.55,
       "freeFrom": 10,
       "minClass": "brief",
-      "maxClass": "small",
+      "maxClass": "brief",
       "active": true
     },
     {
@@ -1191,7 +1191,7 @@
       "price": 5.79,
       "freeFrom": 30,
       "minClass": "small",
-      "maxClass": "medium",
+      "maxClass": "small",
       "active": true
     },
     {
@@ -1201,7 +1201,7 @@
       "price": 6.99,
       "freeFrom": 50,
       "minClass": "medium",
-      "maxClass": "large",
+      "maxClass": "medium",
       "active": true
     },
     {
@@ -1211,7 +1211,7 @@
       "price": 10.99,
       "freeFrom": 80,
       "minClass": "large",
-      "maxClass": "xl",
+      "maxClass": "large",
       "active": true
     },
     {
@@ -1231,7 +1231,7 @@
       "price": 5.19,
       "freeFrom": 30,
       "minClass": "small",
-      "maxClass": "medium",
+      "maxClass": "small",
       "active": true
     },
     {
@@ -1241,7 +1241,7 @@
       "price": 6.19,
       "freeFrom": 30,
       "minClass": "medium",
-      "maxClass": "large",
+      "maxClass": "medium",
       "active": true
     },
     {
@@ -1251,7 +1251,7 @@
       "price": 7.69,
       "freeFrom": 30,
       "minClass": "large",
-      "maxClass": "xl",
+      "maxClass": "large",
       "active": true
     },
     {
@@ -1260,7 +1260,7 @@
       "carrier": "DHL",
       "price": 10.49,
       "freeFrom": 80,
-      "minClass": "large",
+      "minClass": "xl",
       "maxClass": "xl",
       "active": true
     },
