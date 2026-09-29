@@ -1199,7 +1199,7 @@
       "label": "Hermes Paket M",
       "carrier": "Hermes",
       "price": 6.99,
-      "freeFrom": 30,
+      "freeFrom": 50,
       "minClass": "medium",
       "maxClass": "large",
       "active": true
@@ -1228,7 +1228,7 @@
       "key": "dhl-paeckchen",
       "label": "DHL Päckchen",
       "carrier": "DHL",
-      "price": 4.19,
+      "price": 5.19,
       "freeFrom": 30,
       "minClass": "small",
       "maxClass": "small",
