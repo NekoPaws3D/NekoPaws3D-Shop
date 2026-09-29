@@ -1171,7 +1171,7 @@
       "price": 2.55,
       "freeFrom": 10,
       "minClass": "brief",
-      "maxClass": "brief",
+      "maxClass": "small",
       "active": true
     },
     {
@@ -1229,7 +1229,7 @@
       "label": "DHL Päckchen",
       "carrier": "DHL",
       "price": 5.19,
-      "freeFrom": 30,
+      "freeFrom": 50,
       "minClass": "small",
       "maxClass": "small",
       "active": true
@@ -1239,7 +1239,7 @@
       "label": "DHL Paket bis 2 kg",
       "carrier": "DHL",
       "price": 6.19,
-      "freeFrom": 30,
+      "freeFrom": 50,
       "minClass": "medium",
       "maxClass": "medium",
       "active": true
@@ -1249,7 +1249,7 @@
       "label": "DHL Paket bis 5 kg",
       "carrier": "DHL",
       "price": 7.69,
-      "freeFrom": 30,
+      "freeFrom": 80,
       "minClass": "large",
       "maxClass": "large",
       "active": true
@@ -1259,7 +1259,7 @@
       "label": "DHL Paket bis 10 kg",
       "carrier": "DHL",
       "price": 10.49,
-      "freeFrom": 80,
+      "freeFrom": 100,
       "minClass": "xl",
       "maxClass": "xl",
       "active": true
@@ -1269,7 +1269,7 @@
       "label": "DHL Paket bis 20 kg",
       "carrier": "DHL",
       "price": 18.99,
-      "freeFrom": 100,
+      "freeFrom": 150,
       "minClass": "xl",
       "maxClass": "xxl",
       "active": true
