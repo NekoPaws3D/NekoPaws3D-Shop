@@ -1401,6 +1401,40 @@
   "management": {
     "orders": [
       {
+        "id": "d17acceb-3684-405b-9ace-bf040782202a",
+        "createdAt": "2026-09-30T16:48:42.348Z",
+        "number": "NP-2026-0004",
+        "date": "2026-09-30",
+        "status": "shipped",
+        "priority": "normal",
+        "category": "Epoxidharz",
+        "progress": 100,
+        "dueDate": "",
+        "total": 35,
+        "customer": {
+          "name": "Philipp Schulze",
+          "email": "Philippschulze94@gmail.com",
+          "phone": "",
+          "address": ""
+        },
+        "items": "2x Blindboxen Waldgeister",
+        "carrier": "DHL",
+        "tracking": "",
+        "shippedDate": "",
+        "invoiceNumber": "",
+        "payment": {
+          "invoiceDate": "",
+          "days": 14,
+          "dueDate": "",
+          "status": "open",
+          "paidDate": "",
+          "smallBusiness": true
+        },
+        "notes": "",
+        "updatedAt": "2026-09-30T16:48:42.349Z",
+        "customerId": "4e421ac0-6e40-4c2f-87a5-0f95d8fe0153"
+      },
+      {
         "id": "666db451-214c-41fa-b03f-76478c9d4978",
         "createdAt": "2026-08-05T20:20:40.379Z",
         "number": "NP-2026-0003",
