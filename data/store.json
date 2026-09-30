@@ -1421,17 +1421,17 @@
         "carrier": "DHL",
         "tracking": "",
         "shippedDate": "",
-        "invoiceNumber": "",
+        "invoiceNumber": "0032",
         "payment": {
-          "invoiceDate": "",
+          "invoiceDate": "2026-09-30",
           "days": 14,
-          "dueDate": "",
-          "status": "open",
-          "paidDate": "",
+          "dueDate": "2026-10-14",
+          "status": "paid",
+          "paidDate": "2026-09-30",
           "smallBusiness": true
         },
         "notes": "",
-        "updatedAt": "2026-09-30T16:48:42.349Z",
+        "updatedAt": "2026-09-30T16:50:48.653Z",
         "customerId": "4e421ac0-6e40-4c2f-87a5-0f95d8fe0153"
       },
       {
@@ -1442,7 +1442,7 @@
         "status": "completed",
         "priority": "normal",
         "category": "3D-Druck",
-        "progress": 80,
+        "progress": 100,
         "dueDate": "2026-08-15",
         "total": 50,
         "customer": {
@@ -1460,12 +1460,12 @@
           "invoiceDate": "2026-08-06",
           "days": 14,
           "dueDate": "2026-08-20",
-          "status": "open",
-          "paidDate": "",
+          "status": "paid",
+          "paidDate": "2026-09-30",
           "smallBusiness": true
         },
         "notes": "",
-        "updatedAt": "2026-09-28T10:20:25.577Z",
+        "updatedAt": "2026-09-30T16:51:18.733Z",
         "customerId": "52f51ee8-b261-49b6-9574-5b5a9ae6afb7"
       },
       {
@@ -1524,12 +1524,12 @@
         "shippedDate": "",
         "invoiceNumber": "RE-0025",
         "notes": "",
-        "updatedAt": "2026-09-28T10:20:36.219Z",
+        "updatedAt": "2026-09-30T16:51:09.466Z",
         "payment": {
           "invoiceDate": "2026-07-23",
           "days": 14,
           "dueDate": "2026-08-06",
-          "status": "open",
+          "status": "paid",
           "paidDate": "2026-09-25",
           "smallBusiness": true
         },
