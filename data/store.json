@@ -1511,6 +1511,13 @@
         "cipher": "u+tj6HBGX4iWdxCa5u3u+FG5LCs3hqcqEpULPzWG5pE0vAc2MMj6eu3iNflxMXYkvevC8AM8e9zlSlMj1MBujztMu+CZDIa7xEZcLws54aKs6IN6ii8GJ04JTjT7DXUCQ331HMSD3efpwKrOOGavexbjYBO0hwKTwKXZ3qNJ+SyRmqFAwAvT2qpRHLE8hjUxXOqNJm+/w5dzDa8f8M9zekba9iEWo1Yc2hFaltiD/S15O6Avznz/6Qr2boTVBiLq9Ai/CPrObdDSDBlUpwD3kKu8qFTEYbDcJ11FtdJmxLDgUIEk8x9OM1yuSlfo88gyznf6zEd+AKTCn7jsSpn25IjsVq1cdT2qM6vWwE2uPHbVMRvbcV3kbfs1PfXLJodxxPeyHLkd/dVKhKySfR4WDj7IDLRNg3liln1uCpKXNXzh9maFR4VjkLQPjzM6NogR0mcbOcBRNJQxWeZ7MQVgaIx4erOhtKikgtNqMx9Xt/GUFPI8O0jghCUmjSif0kgnGhsQ",
         "updatedAt": "2026-07-29T11:16:43.505Z",
         "active": true
+      },
+      {
+        "emailHash": "zTmtvYYOyyHR/wQfTjn0fJ6e9vz1MBhWaFfr7Cgo1U8=",
+        "salt": "RXP2DtnPYphDiE5NqRPzUQ==",
+        "iv": "SEaZFujgqCxu0hca",
+        "cipher": "G0I01iuA3Vj49A23RQNpuSuaEWRqsueWW/TWFVjm5mFzJksW0aWu8iH6bxkb2rOdN3fm1aDwuccPhKPiaDwI5yqbYKYTIHTPGnt+gS/GBuIR7euvQmL+zWxZ3NeNS7Wsk+ImhMLeBdrkT7JTFhzp/FCQq4vmp8u5KkV1mk/vqKaeyn1ldR2ZdBIwnwxpjBwLQQevkHHYhIaLsePnB22geEYKK8HGDYL9aUmTWJWRb9B3KY/ZfyDJd1HYIC/uGhbHfP4GNWVDBiccRVtkz/HOzm+VKMcqFbH9FnksrSsbUtYmLRY+S0Rek2KspaFP/NTDGcLEFAxwcol+WRpHmyRNNjNmZNr6FXCgHuAkzhY5q4t6GmWd50byzUlwm64P2D9JL4gVgHdECaIniTQMFQEbN+BywO3ZwTkCSIfq3LVxzfiEEatQmxxV+oQQMK/JEWe5G+wsmJICP0fvD6+36v7p9aRefgJMaMbBV2nt3bRL556bodqwC5w2uxPocPkZXInOmSCkRXZObtQApsdb+nihvhLGBi3KC6z4vbDe1Mq5v+2n9w8nOBENNM+1Qtq/F6DNKXcnRrhMoIlMfopahP6DPLxt50CYnf0jVKBHg9wB15F82dbMBktBlymw+syXIjiQehla5bKZoYnzPk2wDnT56wKDs/PxFevhDyovHZBcAvBlYkziHte3qaNWB0SoLVzAlyrwupA/GNTWHd4BoUhToz3tnCfyIgNAyvxw67pvRvwr7f/wdBrwlWWXM2NwlbPPAS809iiIWhcSg8rm0HnTaRblHDPq8CxHxLNXGn9HobtL/7dil/5JABI4qgmvl6xns01Bt8wREewyf7rBdNlThVGDF/MeLLG4FF1XnQ==",
+        "updatedAt": "2026-09-30T16:46:06.459Z"
       }
     ],
     "version": 3,
