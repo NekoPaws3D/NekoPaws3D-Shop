@@ -1414,8 +1414,8 @@
         "customer": {
           "name": "Philipp Schulze",
           "email": "Philippschulze94@gmail.com",
-          "phone": "",
-          "address": ""
+          "phone": "+491742808920",
+          "address": "Ipser Weg 29\n39638 Gardelegen"
         },
         "items": "2x Blindboxen Waldgeister",
         "carrier": "DHL",
@@ -1431,7 +1431,7 @@
           "smallBusiness": true
         },
         "notes": "",
-        "updatedAt": "2026-09-30T16:53:19.459Z",
+        "updatedAt": "2026-09-30T16:55:39.549Z",
         "customerId": "4e421ac0-6e40-4c2f-87a5-0f95d8fe0153"
       },
       {
