@@ -1311,7 +1311,7 @@
       "type": "percent",
       "value": 20,
       "label": "20 % Rabatt",
-      "active": true
+      "active": false
     },
     {
       "code": "PAWS5",
