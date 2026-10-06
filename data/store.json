@@ -1401,6 +1401,40 @@
   "management": {
     "orders": [
       {
+        "id": "da0b417b-f990-4e8c-834b-38aaa0bbd921",
+        "createdAt": "2026-10-06T18:14:46.905Z",
+        "number": "NP-2026-0005",
+        "date": "2026-10-06",
+        "status": "payment_pending",
+        "priority": "normal",
+        "category": "3D-Druck",
+        "progress": 90,
+        "dueDate": "",
+        "total": 0,
+        "customer": {
+          "name": "Sabine Werner",
+          "email": "binesw2026@gmail.com",
+          "phone": "01708079251",
+          "address": "Wilhelmstraße 4\n09117 Chemnitz"
+        },
+        "items": "Maxi Scoop Mix | Menge: 3 | Einzelpreis: 10.00 € | Summe: 30.00 €",
+        "carrier": "",
+        "tracking": "",
+        "shippedDate": "2026-10-07",
+        "invoiceNumber": "",
+        "payment": {
+          "invoiceDate": "2026-10-06",
+          "days": 14,
+          "dueDate": "2026-10-20",
+          "status": "open",
+          "paidDate": "",
+          "smallBusiness": true
+        },
+        "notes": "",
+        "updatedAt": "2026-10-06T18:14:46.905Z",
+        "customerId": "d0b9d2e9-4a73-4a4a-ae32-71531c72251d"
+      },
+      {
         "id": "d17acceb-3684-405b-9ace-bf040782202a",
         "createdAt": "2026-09-30T16:48:42.348Z",
         "number": "NP-2026-0004",
@@ -1552,6 +1586,13 @@
         "iv": "SEaZFujgqCxu0hca",
         "cipher": "G0I01iuA3Vj49A23RQNpuSuaEWRqsueWW/TWFVjm5mFzJksW0aWu8iH6bxkb2rOdN3fm1aDwuccPhKPiaDwI5yqbYKYTIHTPGnt+gS/GBuIR7euvQmL+zWxZ3NeNS7Wsk+ImhMLeBdrkT7JTFhzp/FCQq4vmp8u5KkV1mk/vqKaeyn1ldR2ZdBIwnwxpjBwLQQevkHHYhIaLsePnB22geEYKK8HGDYL9aUmTWJWRb9B3KY/ZfyDJd1HYIC/uGhbHfP4GNWVDBiccRVtkz/HOzm+VKMcqFbH9FnksrSsbUtYmLRY+S0Rek2KspaFP/NTDGcLEFAxwcol+WRpHmyRNNjNmZNr6FXCgHuAkzhY5q4t6GmWd50byzUlwm64P2D9JL4gVgHdECaIniTQMFQEbN+BywO3ZwTkCSIfq3LVxzfiEEatQmxxV+oQQMK/JEWe5G+wsmJICP0fvD6+36v7p9aRefgJMaMbBV2nt3bRL556bodqwC5w2uxPocPkZXInOmSCkRXZObtQApsdb+nihvhLGBi3KC6z4vbDe1Mq5v+2n9w8nOBENNM+1Qtq/F6DNKXcnRrhMoIlMfopahP6DPLxt50CYnf0jVKBHg9wB15F82dbMBktBlymw+syXIjiQehla5bKZoYnzPk2wDnT56wKDs/PxFevhDyovHZBcAvBlYkziHte3qaNWB0SoLVzAlyrwupA/GNTWHd4BoUhToz3tnCfyIgNAyvxw67pvRvwr7f/wdBrwlWWXM2NwlbPPAS809iiIWhcSg8rm0HnTaRblHDPq8CxHxLNXGn9HobtL/7dil/5JABI4qgmvl6xns01Bt8wREewyf7rBdNlThVGDF/MeLLG4FF1XnQ==",
         "updatedAt": "2026-09-30T16:46:06.459Z"
+      },
+      {
+        "emailHash": "88L1NIZANfQ9ELjuN5Z0VhTBKfqBA4BjhPpFBrvI/Lk=",
+        "salt": "nk1eQDXhqgzBKxpP7IrCzA==",
+        "iv": "3kQWoXpNcxcZAxZS",
+        "cipher": "mpCxd4ZjKEuML13+3qFss2yjN7UB2VLiqUZrHzymXpi3BaEbUh40e1rIigpZbDEGteKaa3lvxEv6P7zutwusFjxTG2uSxnjx0CeSxvgUtYQNW2rxhHM+xJ92gsLhaG8RmLOzqct9GtwleA8IN6KfekcN1lKEMKksQ7TwKobe8kdqpMJRoNf5e6Lxbe63HgZQv54mCqNh5zi9Ol0vUZXf2LZpGugmzFZGJNMLNsqNqhWSuOY7hBH4qIHuxrhaZiqA4x9bYawhCJcLPzVVDjxmgsLMFcB1UnKzEFu1yNAqF5ez5CLGU72X+F9AKxcimdGdTbFRAdK7hWW2xbkjbJoQ7nX83LP5XAYJ5Gs/UXmGt3GFCCbkwDVbsowjOovbR+dAoSy8DUY6a5NkhtXS7jZc3xNncxiabt4eq3h6IOnOFcO0SSHE6/0M7bR/O53jrFSZDJ4NVFgQM5O8x/KDyrri/jhzWAcoeFNyY6RJSF+FXt1I+wMSZiJil0Tc5K5IbPtAjU9TRw3aA2Kbk+BJLkCPczKzrVpDh6pTolLdlF0s/+zbKnQ0uN5d/gkbY9tyTJU8pvCr8vWBbrTr0rZuu8JUYZNVLhjssKiwOs8INLgrRalJr3O7lfSq0yyBtH3WnsSqvSgG5jBYiwHwMbWe8Ww6WZDLWz5HhCBpNuxX+TUoPElyeZYGTTZ6k4gK6aOj6FcPBpnIjTWi17uV9cmbzjsDgaIZ2SpPognSQPjYIacViR/cat5k1NDYEUa/EzihF25uZX7VS8w4g+031mzehKGuu7yp4KSPSojseE7/bJ9IyUnsMXN5sYgYjCtJ0j3sZqpWj/vAo0ETImDledwhvCTAd5AGyf0fx8FM3LFqU6bjmdHDYBDdeyAwBU0=",
+        "updatedAt": "2026-10-06T18:15:40.443Z"
       }
     ],
     "version": 3,
@@ -1616,6 +1657,19 @@
         "notes": "",
         "createdAt": "2026-08-05T20:20:40.379Z",
         "updatedAt": "2026-08-05T20:20:40.397Z"
+      },
+      {
+        "id": "d0b9d2e9-4a73-4a4a-ae32-71531c72251d",
+        "number": "KD-2026-0005",
+        "active": true,
+        "name": "Sabine Werner",
+        "email": "binesw2026@gmail.com",
+        "phone": "01708079251",
+        "billingAddress": "Wilhelmstraße 4\n09117 Chemnitz",
+        "shippingAddress": "Wilhelmstraße 4\n09117 Chemnitz",
+        "notes": "",
+        "createdAt": "2026-10-06T18:14:46.905Z",
+        "updatedAt": "2026-10-06T18:14:46.911Z"
       }
     ]
   },
