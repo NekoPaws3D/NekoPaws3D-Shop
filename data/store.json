@@ -1230,6 +1230,39 @@
       "productionTime": "",
       "shippingTime": "",
       "deliveryNote": ""
+    },
+    {
+      "id": 51,
+      "name": "3D-gedrucktes Dekotablett „Eichenlaub“ – 3er Set",
+      "category": "Bundles",
+      "price": 39.99,
+      "priceOnRequest": false,
+      "image": "assets/products/1791354522184-1000080466.png",
+      "images": [
+        "assets/products/1791354522184-1000080466.png",
+        "assets/products/1791354524905-1000080471.jpg",
+        "assets/products/1791354527152-1000080472.jpg",
+        "assets/products/1791354529373-1000080467.png",
+        "assets/products/1791354531247-1000080473.jpg",
+        "assets/products/1791354533504-1000080465.jpg",
+        "assets/products/1791354535138-1000080464.jpg"
+      ],
+      "description": "Dekotablett Eichenlaub – 3D-Druck Bundle\nRundes, dekoratives Tablett mit filigranem Eichenlaub- und Eicheldesign, hergestellt im 3D-Druck. Perfekt für Herbstdeko, Kerzen, Vasen oder als stilvolle Tischdeko.\n📏 Ø 22cm/18cm/10cm\n🖨️ 3D-gedruckt\n🌿 3er Set\n\nHinweis:\nDa jedes Stück im 3D-Druckverfahren gefertigt wird, können leichte, charakteristische Druckstrukturen und minimale Abweichungen auftreten. Genau das macht jedes Tablett zu einem individuellen Einzelstück.",
+      "customizable": false,
+      "visible": true,
+      "stock": 0,
+      "sku": "NEKO-048-KOPIE-KOPIE-KOPIE",
+      "featured": true,
+      "sort": 40,
+      "shippingClass": "small",
+      "weightGrams": 100,
+      "maxPerPackage": 10,
+      "lowStockThreshold": 3,
+      "showStockWarning": false,
+      "availabilityType": "made_to_order",
+      "productionTime": "",
+      "shippingTime": "",
+      "deliveryNote": ""
     }
   ],
   "shippingMethods": [
