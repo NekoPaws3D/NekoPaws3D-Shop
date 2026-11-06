@@ -1811,7 +1811,7 @@
       "name": "Sticker",
       "label": "Sticker",
       "sort": 1,
-      "active": true,
+      "active": false,
       "system": true
     },
     {
@@ -1851,7 +1851,7 @@
       "name": "Lasern und Gravuren",
       "label": "Lasern & Gravuren",
       "sort": 6,
-      "active": true,
+      "active": false,
       "system": true
     },
     {
