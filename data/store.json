@@ -1450,14 +1450,14 @@
       "type": "fixed",
       "value": 5,
       "label": "5 € Rabatt",
-      "active": true
+      "active": false
     },
     {
       "code": "FREESHIP",
       "type": "shipping",
       "value": 0,
       "label": "Kostenloser Versand",
-      "active": true
+      "active": false
     }
   ],
   "guestbookEntries": [
